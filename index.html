@@ -11,13 +11,13 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>GPUVault — أسعار ومقارنات كروت الشاشة في مصر</title>
-<meta name="description" content="أكثر من 250 كارت شاشة + حاسبة عنق الزجاجة (Bottleneck) — أسعار المستعمل والجديد في مصر + مقارنات أداء من مصادر موثوقة.">
+<meta name="description" content="أكثر من 300 كارت شاشة + 300 معالج + حاسبة عنق الزجاجة — أسعار المستعمل والجديد في مصر + مقارنات أداء.">
 <link rel="canonical" href="https://egy-tc.github.io/gpu_prices/">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><rect x='3' y='7' width='18' height='10' rx='1.5' fill='%23182635' stroke='%23e8b45a' stroke-width='1.6'/><circle cx='9' cy='12' r='2.4' fill='none' stroke='%238fd14f' stroke-width='1.6'/><circle cx='16.5' cy='12' r='1.6' fill='none' stroke='%23ef7d7d' stroke-width='1.4'/></svg>">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="GPUVault">
 <meta property="og:title" content="GPUVault — أسعار ومقارنات كروت الشاشة في مصر">
-<meta property="og:description" content="أكثر من 250 كارت شاشة + حاسبة عنق الزجاجة • أسعار + مقارنات أداء">
+<meta property="og:description" content="أكثر من 300 كارت شاشة + 300 معالج + حاسبة عنق الزجاجة • أسعار + مقارنات أداء">
 <meta property="og:url" content="https://egy-tc.github.io/gpu_prices/">
 <meta property="og:image" content="https://egy-tc.github.io/gpu_prices/preview.png">
 <meta property="og:image:width" content="1280">
@@ -73,6 +73,8 @@ nav{position:sticky;top:0;z-index:60;display:flex;align-items:center;gap:1.2rem;
 .badge{display:none;background:var(--gold);color:#1a1408;font-size:.62rem;font-weight:700;min-width:17px;height:17px;border-radius:9px;align-items:center;justify-content:center;padding:0 4px;font-family:var(--display)}
 .theme-btn{font-size:1rem;background:var(--panel);border:1px solid var(--line);width:36px;height:36px;border-radius:50%;cursor:pointer;transition:.25s;flex-shrink:0}
 .theme-btn:hover{border-color:var(--gold);transform:rotate(20deg)}
+.lang-sel{background:var(--panel);border:1px solid var(--line);color:var(--text);padding:.4rem .5rem;border-radius:8px;font-size:.8rem;cursor:pointer;font-family:var(--display);flex-shrink:0}
+.lang-sel:focus{border-color:var(--gold);outline:none}
 
 .deck{max-width:1180px;margin:auto;padding:2.6rem 2rem 1.2rem}
 .deck-top{display:grid;grid-template-columns:1fr auto;gap:1.5rem;align-items:start}
@@ -114,7 +116,6 @@ select.sort{background:var(--panel);border:1px solid var(--line);color:var(--tex
 .stat:nth-child(4) b{color:var(--amd)}
 .stat span{font-size:.68rem;color:var(--muted)}
 
-/* ===== CTA Banner ===== */
 .cta-banner{display:flex;align-items:center;justify-content:space-between;gap:1.5rem;background:linear-gradient(135deg,#1a4a5a,#1a5a3a);border:1px solid var(--cyan);border-radius:12px;padding:1.5rem 2rem;margin-top:1.5rem;cursor:pointer;transition:.3s;position:relative;overflow:hidden}
 .cta-banner:hover{transform:translateY(-3px);box-shadow:0 12px 30px -10px rgba(92,200,216,.4)}
 .cta-banner::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 80% 20%,rgba(92,200,216,.15),transparent 50%)}
@@ -181,6 +182,21 @@ select.sort{background:var(--panel);border:1px solid var(--line);color:var(--tex
 .crumb b{font-family:var(--display);color:var(--gold)}
 .dwrap{max-width:1180px;margin:auto;padding:2.2rem 2rem 2.5rem;animation:fadeUp .5s ease}
 @keyframes fadeUp{from{opacity:0;transform:translateY(18px)}}
+
+/* ===== Compare Hero (PC-Geeks style) ===== */
+.cmp-hero{position:relative;background:linear-gradient(135deg,#0d2438,#1a3a2a 55%,#2a1a3a);border-bottom:1px solid var(--line);padding:3.8rem 2rem;overflow:hidden;text-align:center}
+.cmp-hero::before{content:"";position:absolute;inset:0;background:radial-gradient(620px 320px at 50% -10%,rgba(92,200,216,.20),transparent 70%),radial-gradient(520px 320px at 82% 110%,rgba(232,180,90,.14),transparent 70%),radial-gradient(420px 300px at 12% 90%,rgba(239,125,125,.10),transparent 70%)}
+.cmp-hero::after{content:"";position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,.045) 1px,transparent 1px);background-size:24px 24px}
+.cmp-hero-inner{position:relative;z-index:1;max-width:780px;margin:auto}
+.cmp-hero-kick{display:inline-block;font-family:var(--display);font-size:.82rem;letter-spacing:.22em;color:var(--cyan);margin-bottom:.9rem}
+.cmp-hero-title{font-family:var(--display);font-weight:800;font-size:clamp(2.1rem,6.5vw,3.9rem);line-height:1.08;background:linear-gradient(90deg,var(--cyan),var(--gold) 60%,var(--amd));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.cmp-hero-sub{color:var(--muted);margin-top:.8rem;font-size:1.02rem;max-width:54ch;margin-inline:auto}
+.cmp-hero-add{display:flex;gap:.7rem;margin-top:1.7rem;max-width:640px;margin-inline:auto}
+.cmp-hero-add select{flex:1;min-width:0;background:rgba(13,22,32,.72);border:1px solid var(--line);color:var(--text);padding:.95rem 1.1rem;border-radius:11px;font-size:.95rem;cursor:pointer;backdrop-filter:blur(6px)}
+.cmp-hero-add select:focus{border-color:var(--cyan);outline:none}
+.cmp-hero-btn{background:var(--gold);color:#1a1408;border:none;padding:.95rem 1.7rem;border-radius:11px;font-family:var(--display);font-weight:700;font-size:.95rem;cursor:pointer;transition:.2s;white-space:nowrap}
+.cmp-hero-btn:hover{filter:brightness(1.12);transform:translateY(-2px)}
+
 .dhero{display:grid;grid-template-columns:1.15fr .85fr;gap:2rem;align-items:center;margin-bottom:2rem}
 .dkick{display:inline-flex;gap:.5rem;align-items:center;font-family:var(--display);font-size:.82rem;letter-spacing:.1em;margin-bottom:.7rem}
 .dname{font-family:var(--display);font-weight:800;font-size:clamp(2.2rem,6vw,4rem);line-height:1}
@@ -202,13 +218,6 @@ select.sort{background:var(--panel);border:1px solid var(--line);color:var(--tex
 .hp-box.u b{color:var(--gold)}.hp-box.n b{color:var(--cyan)}
 .hp-box i{font-style:normal;font-size:.72rem;color:var(--muted)}
 .hp-box em{font-style:normal;display:block;font-size:.66rem;color:var(--muted);margin-top:.2rem}
-.hp-src{width:100%;display:flex;flex-wrap:wrap;gap:.45rem;align-items:center}
-.src-lbl{width:100%;font-size:.68rem;color:var(--muted);margin-top:.3rem}
-.src{font-size:.7rem;padding:.22rem .75rem;border-radius:14px;border:1px solid}
-.src.d{color:var(--nv);border-color:rgba(143,209,79,.4)}
-.src.f{color:#7aa7e8;border-color:rgba(122,167,232,.4)}
-.src.n{color:var(--cyan);border-color:rgba(92,200,216,.4)}
-.src.s{color:#ef9d5c;border-color:rgba(239,157,92,.4)}
 .gpu{position:relative;width:min(440px,100%);margin:auto;animation:float 5.5s ease-in-out infinite}
 .gpu:hover{--fan-dur:.45s}
 @keyframes float{50%{transform:translateY(-10px)}}
@@ -226,7 +235,12 @@ select.sort{background:var(--panel);border:1px solid var(--line);color:var(--tex
 .pcie{height:11px;margin:.4rem 2rem 0;background:repeating-linear-gradient(90deg,#caa24c 0 6px,#7a5c22 6px 9px)}
 .glow{position:absolute;inset:-8%;background:radial-gradient(circle,color-mix(in srgb,var(--brand) 22%,transparent),transparent 65%);filter:blur(26px);z-index:-1}
 .sec-head{display:flex;align-items:center;gap:.9rem;margin:2.2rem 0 1.2rem}
-.sec-tag{font-family:var(--display);color:var(--cyan);border:1px solid rgba(92,200,216,.4);padding:.08rem .6rem;font-size:.72rem;letter-spacing:.18em}
+.sec-tag{font-family:var(--display);padding:.08rem .6rem;font-size:.72rem;letter-spacing:.18em;border-radius:4px}
+.sec-tag.c1{color:var(--cyan);border:1px solid rgba(92,200,216,.4);background:rgba(92,200,216,.08)}
+.sec-tag.c2{color:var(--nv);border:1px solid rgba(143,209,79,.4);background:rgba(143,209,79,.08)}
+.sec-tag.c3{color:var(--gold);border:1px solid rgba(232,180,90,.4);background:rgba(232,180,90,.08)}
+.sec-tag.c4{color:var(--amd);border:1px solid rgba(239,125,125,.4);background:rgba(239,125,125,.08)}
+.sec-tag.c5{color:#a78bfa;border:1px solid rgba(167,139,250,.4);background:rgba(167,139,250,.08)}
 h2{font-family:var(--display);font-size:clamp(1.3rem,3.5vw,1.9rem);font-weight:800}
 .sec-line{flex:1;height:1px;background:linear-gradient(to left,var(--line),transparent)}
 .spec-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
@@ -301,10 +315,6 @@ h2{font-family:var(--display);font-size:clamp(1.3rem,3.5vw,1.9rem);font-weight:8
 .alt-row .go{color:var(--muted);font-size:1.1rem}
 .alt-head{font-size:.78rem;color:var(--muted);margin-bottom:.7rem}
 
-.cmp-add{display:flex;gap:.7rem;margin-bottom:1.3rem;flex-wrap:wrap}
-.cmp-add select{flex:1;min-width:200px;background:var(--panel);border:1px solid var(--line);color:var(--text);padding:.7rem 1rem;border-radius:8px;font-size:.92rem;cursor:pointer}
-.gold-btn{background:var(--gold);color:#1a1408;border:none;padding:.7rem 1.4rem;border-radius:8px;font-weight:700;cursor:pointer;font-family:var(--display);transition:.2s}
-.gold-btn:hover{filter:brightness(1.1);transform:translateY(-2px)}
 .cmp-table-wrap{overflow-x:auto;border:1px solid var(--line);background:var(--panel);-webkit-overflow-scrolling:touch}
 .cmp-table{border-collapse:collapse;width:100%;min-width:600px}
 .cmp-table th,.cmp-table td{padding:.8rem .9rem;border-bottom:1px solid var(--line);text-align:center;font-size:.88rem}
@@ -322,21 +332,7 @@ td.best{background:rgba(143,209,79,.12)!important;position:relative}
 td.best::after{content:"👑";position:absolute;top:3px;inset-inline-end:5px;font-size:.68rem}
 .cmp-empty{text-align:center;color:var(--muted);padding:2.5rem 1rem;background:var(--panel);border:1px dashed var(--line)}
 .cmp-empty b{font-size:2.3rem;display:block;margin-bottom:.5rem}
-.cmp-src{margin-top:1.3rem;background:var(--panel);border:1px solid var(--line);padding:1.2rem}
-.src-title{font-family:var(--display);margin-bottom:.8rem;font-size:.95rem}
-.src-btns{display:flex;flex-wrap:wrap;gap:.7rem}
-.src-btn{padding:.6rem 1.2rem;border-radius:8px;text-decoration:none;font-family:var(--display);font-size:.85rem;transition:.2s;border:1px solid;display:inline-flex;align-items:center;gap:.4rem}
-.src-btn.tc{color:var(--cyan);border-color:rgba(92,200,216,.4);background:rgba(92,200,216,.08)}
-.src-btn.ub{color:var(--nv);border-color:rgba(143,209,79,.4);background:rgba(143,209,79,.08)}
-.src-btn.yt{color:var(--amd);border-color:rgba(239,125,125,.4);background:rgba(239,125,125,.08)}
-.src-btn.pp{color:var(--gold);border-color:rgba(232,180,90,.4);background:rgba(232,180,90,.08)}
-.src-btn.pb{color:#a78bfa;border-color:rgba(167,139,250,.4);background:rgba(167,139,250,.08)}
-.src-btn.wb{color:#f472b6;border-color:rgba(244,114,182,.4);background:rgba(244,114,182,.08)}
-.src-btn.bc{color:#34d399;border-color:rgba(52,211,153,.4);background:rgba(52,211,153,.08)}
-.src-btn:hover{transform:translateY(-2px);filter:brightness(1.25)}
-.src-note{color:var(--muted);font-size:.72rem;margin-top:.8rem;line-height:1.8}
 
-/* ===== حاسبة عنق الزجاجة ===== */
 .bn-intro{background:var(--panel);border:1px solid var(--line);border-top:3px solid var(--cyan);padding:1.1rem 1.3rem;margin-bottom:1.5rem;font-size:.9rem;color:var(--muted);line-height:1.9}
 .bn-intro b{color:var(--cyan)}
 .bn-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;align-items:start}
@@ -367,7 +363,7 @@ td.best::after{content:"👑";position:absolute;top:3px;inset-inline-end:5px;fon
 .bn-bar-row .val{font-family:var(--display);text-align:left}
 .bn-fps{background:var(--ink);border:1px solid var(--line);border-inline-start:3px solid var(--nv);padding:.9rem 1.1rem;font-size:.9rem;line-height:1.9;color:var(--text);margin-bottom:1.2rem}
 .bn-fps b{color:var(--nv);font-family:var(--display);font-size:1.1rem}
-.bn-tips{background:var(--ink);border:1px solid var(--line);border-inline-start:3px solid var(--gold);padding:.9rem 1.1rem;font-size:.85rem;line-height:1.9;color:var(--text);margin-bottom:1.2rem}
+.bn-tips{background:var(--ink);border:1px solid var(--line);border-inline-start:3px solid var(--gold);padding:.9rem 1.1rem;font-size:.85rem;line-height:1.9;color:var(--text)}
 .bn-tips b{color:var(--gold)}
 .bn-empty{text-align:center;color:var(--muted);padding:2rem 1rem}
 .bn-empty b{font-size:2rem;display:block;margin-bottom:.5rem}
@@ -438,7 +434,6 @@ footer b{color:var(--gold);font-family:var(--display)}
   .ibtn{width:31px;height:31px;font-size:.9rem}
   .theme-btn{width:32px;height:32px}
   .game-picker select{min-width:0;width:100%}
-  .cmp-add select{min-width:0}
   .gb-info b{font-size:1rem}
   h1{font-size:clamp(1.7rem,7vw,2.4rem)}
   .sub{font-size:.84rem}
@@ -474,6 +469,9 @@ footer b{color:var(--gold);font-family:var(--display)}
   .cta-banner{padding:1.2rem 1rem}
   .cta-txt h2{font-size:1.3rem}
   .cta-btn{width:100%;padding:.8rem 1rem}
+  .cmp-hero{padding:2.4rem 1rem}
+  .cmp-hero-add{flex-direction:column}
+  .cmp-hero-btn{width:100%}
 }
 </style>
 </head>
@@ -486,11 +484,15 @@ footer b{color:var(--gold);font-family:var(--display)}
     GPU<b>Vault</b>
   </button>
   <div class="links">
-    <button id="navList">الكروت</button>
-    <button id="navBn" title="حاسبة عنق الزجاجة">🧮 <span class="nav-label">عنق الزجاجة</span></button>
-    <button id="navFav" title="المفضلة">❤️ <span class="nav-label">المفضلة</span> <span class="badge" id="favCount">0</span></button>
-    <button id="navCmp" title="صفحة المقارنة">⚖️ <span class="nav-label">قارن</span> <span class="badge" id="cmpCount">0</span></button>
-    <button id="navTips">نصايح</button>
+    <button id="navList" data-i18n="cards">الكروت</button>
+    <button id="navBn" title="حاسبة عنق الزجاجة">🧮 <span class="nav-label" data-i18n="bn">عنق الزجاجة</span></button>
+    <button id="navFav" title="المفضلة">❤️ <span class="nav-label" data-i18n="fav">المفضلة</span> <span class="badge" id="favCount">0</span></button>
+    <button id="navCmp" title="صفحة المقارنة">⚖️ <span class="nav-label" data-i18n="cmp">قارن</span> <span class="badge" id="cmpCount">0</span></button>
+    <button id="navTips" data-i18n="tips">نصايح</button>
+    <select id="langSel" class="lang-sel" title="Language / اللغة">
+      <option value="ar">🇪🇬 عربي</option>
+      <option value="en">🇬🇧 English</option>
+    </select>
     <button id="themeBtn" class="theme-btn" title="الوضع">🌙</button>
   </div>
 </nav>
@@ -499,65 +501,65 @@ footer b{color:var(--gold);font-family:var(--display)}
   <header class="deck">
     <div class="deck-top">
       <div>
-        <span class="kick">🇪🇬 أسعار مصر • مستعمل: دوبيزل + فيسبوك • جديد: نون + أمازون + Sigma + Maximum</span>
+        <span class="kick" data-i18n="kick">🇪 أسعار مصر • مستعمل: دوبيزل + فيسبوك • جديد: نون + أمازون + Sigma + Maximum</span>
         <h1>GPU<span style="color:var(--gold)">Vault</span> <span class="yr">2026</span></h1>
-        <p class="sub"><b id="stCount2">0</b> كارت من NVIDIA وAMD وIntel بأسعار حقيقية + مقارنات أداء من مصادر موثوقة.</p>
+        <p class="sub"><b id="stCount2">0</b> <span data-i18n="sub">كارت من NVIDIA وAMD وIntel بأسعار حقيقية + مقارنات أداء.</span></p>
       </div>
       <div class="pulse">
-        <div class="pulse-head">🔥 صفقة اليوم <span class="dot"></span></div>
+        <div class="pulse-head"><span data-i18n="deal">🔥 صفقة اليوم</span> <span class="dot"></span></div>
         <button id="deal"></button>
       </div>
     </div>
     <div class="search-wrap">
       <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
-      <input id="q" type="search" placeholder="دوّر بالاسم أو الماركة أو المعمارية... مثال: 3060 أو Polaris أو Turing" autocomplete="off">
+      <input id="q" type="search" data-i18n-ph="search" placeholder="دوّر بالاسم أو الماركة أو المعمارية..." autocomplete="off">
     </div>
     <div class="filters">
-      <button class="chip on" data-b="all">الكل</button>
+      <button class="chip on" data-b="all" data-i18n="all">الكل</button>
       <button class="chip" data-b="nv"><span class="d" style="background:var(--nv)"></span>NVIDIA</button>
       <button class="chip" data-b="amd"><span class="d" style="background:var(--amd)"></span>AMD</button>
       <button class="chip" data-b="int"><span class="d" style="background:var(--int)"></span>Intel</button>
       <span class="vline"></span>
-      <button class="chip on" data-p="all">كل الأسعار</button>
-      <button class="chip" data-p="3">أقل من 3k</button>
-      <button class="chip" data-p="8">⭐ 8k وتحت</button>
-      <button class="chip" data-p="15">8–15k</button>
-      <button class="chip" data-p="30">15–30k</button>
-      <button class="chip" data-p="99">+30k</button>
+      <button class="chip on" data-p="all" data-i18n="allP">كل الأسعار</button>
+      <button class="chip" data-p="3" data-i18n="u3">أقل من 3k</button>
+      <button class="chip" data-p="8" data-i18n="u8">⭐ 8k وتحت</button>
+      <button class="chip" data-p="15" data-i18n="r815">8–15k</button>
+      <button class="chip" data-p="30" data-i18n="r1530">15–30k</button>
+      <button class="chip" data-p="99" data-i18n="o30">+30k</button>
       <select class="sort" id="sort">
-        <option value="perf">من الأقوى للأضعف 💪</option>
-        <option value="cheap">من الأرخص للأغلى</option>
-        <option value="value">الأفضل قيمة ⭐</option>
-        <option value="new">الأحدث</option>
+        <option value="perf" data-i18n="sPerf">من الأقوى للأضعف 💪</option>
+        <option value="cheap" data-i18n="sCheap">من الأرخص للأغلى</option>
+        <option value="value" data-i18n="sVal">الأفضل قيمة ⭐</option>
+        <option value="new" data-i18n="sNew">الأحدث</option>
       </select>
     </div>
     <div class="stats-strip">
-      <div class="stat"><b id="stTotal">0</b><span>كارت</span></div>
-      <div class="stat"><b id="stAvg">0</b><span>متوسط المستعمل (ج.م)</span></div>
-      <div class="stat"><b id="stCheap">0</b><span>أرخص كارت (ج.م)</span></div>
-      <div class="stat"><b>7</b><span>مصادر أسعار</span></div>
+      <div class="stat"><b id="stTotal">0</b><span data-i18n="total">كارت</span></div>
+      <div class="stat"><b id="stAvg">0</b><span data-i18n="avg">متوسط المستعمل (ج.م)</span></div>
+      <div class="stat"><b id="stCheap">0</b><span data-i18n="cheap">أرخص كارت (ج.م)</span></div>
+      <div class="stat"><b>🔄</b><span data-i18n="src">تحديث يومي</span></div>
     </div>
     <div class="cta-banner" id="ctaBn">
       <div class="cta-txt">
-        <h2>🧮 حاسبة عنق الزجاجة (Bottleneck)</h2>
-        <p>اعرف أنهي قطعة بتخنق جهازك — معالج، كارت، رام، هارد، بوردة، باور</p>
+        <h2 data-i18n="ctaT">🧮 حاسبة عنق الزجاجة (Bottleneck)</h2>
+        <p data-i18n="ctaD">اعرف أنهي قطعة بتخنق جهازك — معالج، كارت، رام، هارد، بوردة، باور</p>
       </div>
-      <button class="cta-btn">احسب دلوقتي ←</button>
+      <button class="cta-btn" data-i18n="ctaB">احسب دلوقتي ←</button>
     </div>
   </header>
 
   <section class="list-sec" id="listSec">
-    <p class="meta">معروض <b id="shown">0</b> من <b id="total2">0</b> كارت</p>
+    <p class="meta"><span data-i18n="show">معروض</span> <b id="shown">0</b> <span data-i18n="of">من</span> <b id="total2">0</b> <span data-i18n="total">كارت</span></p>
     <div id="rows"></div>
-    <div class="load-more hidden" id="loadMore"><button id="loadMoreBtn">عرض المزيد <span class="lm-left">(+24 • باقي <span id="lmLeft">0</span>)</span></button></div>
-    <div class="empty" id="empty"><b>🤔</b><span id="emptyMsg">مفيش كارت بالمواصفات دي</span><br><button id="resetBtn">امسح الفلاتر</button></div>
+    <div class="load-more hidden" id="loadMore"><button id="loadMoreBtn"><span data-i18n="more">عرض المزيد</span> <span class="lm-left">(+24 • <span data-i18n="rem">باقي</span> <span id="lmLeft">0</span>)</span></button></div>
+    <div class="empty" id="empty"><b>🤔</b><span id="emptyMsg" data-i18n="noRes">مفيش كارت بالمواصفات دي</span><br><button id="resetBtn" data-i18n="reset">امسح الفلاتر</button></div>
   </section>
 
   <section class="list-sec" id="tips">
-    <div class="sec-head"><span class="sec-tag">نصايح</span><h2>قبل ما تشتري</h2><span class="sec-line"></span></div>
+    <div class="sec-head"><span class="sec-tag c1">نصايح</span><h2 data-i18n="tipTitle">قبل ما تشتري</h2><span class="sec-line"></span></div>
     <div class="tips">
       <div class="tip reveal"><span class="no">01</span><div><h4>تحت 5 آلاف؟</h4><p>المستعمل طريقك — <b>RX 580</b> و<b>GTX 1060</b> ملوك الفئة دي.</p></div></div>
-      <div class="tip reveal"><span class="no">02</span><div><h4>فئة 8 آلاف</h4><p>أحلى توازن لـ 1080p: <b>RTX 2060</b> أو <b>RX 5700 XT</b>.</p></div></div>
+      <div class="tip reveal"><span class="no">02</span><div><h4>فئة 8–12 ألف</h4><p>أحلى توازن لـ 1080p: <b>RTX 2060</b> أو <b>RX 6600</b>.</p></div></div>
       <div class="tip reveal"><span class="no">03</span><div><h4>جديد بضمان</h4><p>ركّز في <b>RTX 40/50</b> أو <b>RX 7000/9000</b> من Sigma وMaximum.</p></div></div>
       <div class="tip reveal"><span class="no">04</span><div><h4>افحص المستعمل</h4><p><b>FurMark 10 دقايق</b> — حرارة أقل من 80° ومراوح سليمة.</p></div></div>
       <div class="tip reveal"><span class="no">05</span><div><h4>اسأل: كان بيتعدّن؟</h4><p>كروت الـ <b>Mining</b> أرخص بس مجهدة — فاوض على سعرها وافحصها كويس.</p></div></div>
@@ -570,7 +572,7 @@ footer b{color:var(--gold);font-family:var(--display)}
 
 <main id="detailView" class="hidden">
   <div class="crumb">
-    <button class="back-btn" id="backBtn">→ رجوع</button>
+    <button class="back-btn" id="backBtn" data-i18n="back">→ رجوع</button>
     <span>GPUVault / <b id="crumbName"></b></span>
   </div>
   <div class="dwrap" id="detailContent"></div>
@@ -578,43 +580,49 @@ footer b{color:var(--gold);font-family:var(--display)}
 
 <main id="compareView" class="hidden">
   <div class="crumb">
-    <button class="back-btn" id="cmpBack">→ رجوع</button>
-    <span>GPUVault / <b>المقارنة ⚖️</b></span>
+    <button class="back-btn" id="cmpBack" data-i18n="back">→ رجوع</button>
+    <span>GPUVault / <b data-i18n="cmpTitle">المقارنة ⚖️</b></span>
+  </div>
+  <div class="cmp-hero">
+    <div class="cmp-hero-inner">
+      <span class="cmp-hero-kick" data-i18n="cmpHeroKick">⚖️ مقارنة GPUVault</span>
+      <h1 class="cmp-hero-title" data-i18n="cmpHeroTitle">قارن كروت الشاشة</h1>
+      <p class="cmp-hero-sub" data-i18n="cmpHeroSub">اختار لحد 4 كروت وقارنهم جنب بعض — أداء، سعر، استهلاك، FPS في الألعاب</p>
+      <div class="cmp-hero-add">
+        <select id="cmpSelect"></select>
+        <button id="cmpAddBtn" class="cmp-hero-btn" type="button" data-i18n="cmpHeroAdd">➕ ضيف للمقارنة</button>
+      </div>
+    </div>
   </div>
   <div class="dwrap">
-    <div class="sec-head"><span class="sec-tag">⚖️</span><h2>قارن الكروت</h2><span class="sec-line"></span></div>
-    <div class="cmp-add">
-      <select id="cmpSelect"></select>
-      <button id="cmpAddBtn" class="gold-btn" type="button">➕ ضيف</button>
-    </div>
     <div id="cmpContent"></div>
   </div>
 </main>
 
 <main id="bnView" class="hidden">
   <div class="crumb">
-    <button class="back-btn" id="bnBack">→ رجوع</button>
-    <span>GPUVault / <b>حاسبة عنق الزجاجة 🧮</b></span>
+    <button class="back-btn" id="bnBack" data-i18n="back">→ رجوع</button>
+    <span>GPUVault / <b data-i18n="bnTitle">حاسبة عنق الزجاجة 🧮</b></span>
   </div>
   <div class="dwrap">
-    <div class="sec-head"><span class="sec-tag">🧮</span><h2>حاسبة عنق الزجاجة (Bottleneck)</h2><span class="sec-line"></span></div>
+    <div class="sec-head"><span class="sec-tag c3">🧮</span><h2 data-i18n="bnTitle">حاسبة عنق الزجاجة (Bottleneck)</h2><span class="sec-line"></span></div>
     <div class="bn-intro">
-      <b>إيه هو عنق الزجاجة؟</b> لما قطعة في جهازك (غالباً المعالج) تكون أضعف من الباقي، فبتحد من أداء الكارت القوي — زي ما تحط موتور فيراري في عربية نقل. الحاسبة دي بتقدّرلك <b>نسبة الاختناق</b> بين المعالج والكارت، وبتقولك أنهي قطعة تستاهل ترقية.
+      <b data-i18n="bnIntro">إيه هو عنق الزجاجة؟</b> <span data-i18n="bnIntro2">لما قطعة في جهازك (غالباً المعالج) تكون أضعف من الباقي، فبتحد من أداء الكارت القوي — زي ما تحط موتور فيراري في عربية نقل. الحاسبة دي بتقدّرلك نسبة الاختناق وبتقولك أنهي قطعة تستاهل ترقية.</span>
     </div>
     <div class="bn-grid">
       <div class="bn-form">
         <div class="bn-field">
-          <label>🔧 المعالج (CPU) <small>— اكتب عشان تفلتر</small></label>
-          <input type="text" id="bnCpuSearch" class="bn-search" placeholder="🔍 دوّر على المعالج...">
+          <label>🔧 <span data-i18n="cpu">المعالج (CPU)</span> <small>— <span data-i18n="cpuPh2">اكتب عشان تفلتر</span></small></label>
+          <input type="text" id="bnCpuSearch" class="bn-search" data-i18n-ph="cpuPh" placeholder="🔍 دوّر على المعالج...">
           <select id="bnCpu" size="6"></select>
         </div>
         <div class="bn-field">
-          <label>🎮 كارت الشاشة (GPU) <small>— اكتب عشان تفلتر</small></label>
-          <input type="text" id="bnGpuSearch" class="bn-search" placeholder="🔍 دوّر على الكارت...">
+          <label>🎮 <span data-i18n="gpu">كارت الشاشة (GPU)</span> <small>— <span data-i18n="gpuPh2">اكتب عشان تفلتر</span></small></label>
+          <input type="text" id="bnGpuSearch" class="bn-search" data-i18n-ph="gpuPh" placeholder="🔍 دوّر على الكارت...">
           <select id="bnGpu" size="6"></select>
         </div>
         <div class="bn-field">
-          <label>🖥️ دقة الشاشة <small>(الرزولوشن)</small></label>
+          <label>🖥️ <span data-i18n="res">دقة الشاشة</span></label>
           <select id="bnRes">
             <option value="1080">1080p (Full HD)</option>
             <option value="1440">1440p (2K)</option>
@@ -622,51 +630,30 @@ footer b{color:var(--gold);font-family:var(--display)}
           </select>
         </div>
         <div class="bn-field">
-          <label>💾 الرام (RAM) <small>— أقل من 16GB بيخنق</small></label>
+          <label>💾 <span data-i18n="ram">الرام (RAM)</span> <small>— <span data-i18n="ramNote">أقل من 16GB بيخنق</span></small></label>
           <select id="bnRam">
-            <option value="2">2 GB</option>
-            <option value="4">4 GB</option>
-            <option value="6">6 GB</option>
-            <option value="8">8 GB</option>
-            <option value="10">10 GB</option>
-            <option value="12">12 GB</option>
-            <option value="16" selected>16 GB</option>
-            <option value="20">20 GB</option>
-            <option value="24">24 GB</option>
-            <option value="32">32 GB</option>
+            <option value="2">2 GB</option><option value="4">4 GB</option><option value="6">6 GB</option>
+            <option value="8">8 GB</option><option value="10">10 GB</option><option value="12">12 GB</option>
+            <option value="16" selected>16 GB</option><option value="20">20 GB</option><option value="24">24 GB</option><option value="32">32 GB</option>
           </select>
         </div>
         <div class="bn-field">
-          <label>💽 الهارد (Storage) <small>— النوع أهم من السعة</small></label>
+          <label>💽 <span data-i18n="disk">الهارد (Storage)</span> <small>— <span data-i18n="diskNote">النوع أهم من السعة</span></small></label>
           <select id="bnDisk">
-            <option value="hdd500">HDD 500GB (بطيء)</option>
-            <option value="hdd1tb">HDD 1TB (بطيء)</option>
-            <option value="hdd2tb">HDD 2TB (بطيء)</option>
-            <option value="ssd256">SSD 256GB</option>
-            <option value="ssd512" selected>SSD 512GB</option>
-            <option value="ssd1tb">SSD 1TB</option>
-            <option value="ssd2tb">SSD 2TB</option>
-            <option value="nvme512">NVMe 512GB (سريع)</option>
-            <option value="nvme1tb">NVMe 1TB (سريع)</option>
-            <option value="nvme2tb">NVMe 2TB (سريع)</option>
-            <option value="nvme4tb">NVMe 4TB (سريع)</option>
+            <option value="hdd500">HDD 500GB</option><option value="hdd1tb">HDD 1TB</option><option value="hdd2tb">HDD 2TB</option>
+            <option value="ssd256">SSD 256GB</option><option value="ssd512" selected>SSD 512GB</option><option value="ssd1tb">SSD 1TB</option><option value="ssd2tb">SSD 2TB</option>
+            <option value="nvme512">NVMe 512GB</option><option value="nvme1tb">NVMe 1TB</option><option value="nvme2tb">NVMe 2TB</option><option value="nvme4tb">NVMe 4TB</option>
           </select>
         </div>
         <div class="bn-field">
-          <label>🔌 الباور سبلاي (PSU) <small>— بالواط</small></label>
+          <label>🔌 <span data-i18n="psu">الباور سبلاي (PSU)</span></label>
           <select id="bnPsu">
-            <option value="300">300W</option>
-            <option value="400">400W</option>
-            <option value="500">500W</option>
-            <option value="600">600W</option>
-            <option value="750" selected>750W</option>
-            <option value="850">850W</option>
-            <option value="1000">1000W</option>
-            <option value="1200">1200W+</option>
+            <option value="300">300W</option><option value="400">400W</option><option value="500">500W</option><option value="600">600W</option>
+            <option value="750" selected>750W</option><option value="850">850W</option><option value="1000">1000W</option><option value="1200">1200W+</option>
           </select>
         </div>
         <div class="bn-field">
-          <label>🔲 البوردة (Motherboard) <small>— الـ Chipset</small></label>
+          <label>🔲 <span data-i18n="mb">البوردة (Motherboard)</span></label>
           <select id="bnMb">
             <option value="h61">Intel H61/B75 (LGA 1155) — DDR3</option>
             <option value="h81">Intel H81/B85/Z97 (LGA 1150) — DDR3</option>
@@ -684,341 +671,332 @@ footer b{color:var(--gold);font-family:var(--display)}
             <option value="x870">AMD X870 (AM5) — DDR5</option>
           </select>
         </div>
-        <button class="gold-btn" id="bnCalc" style="width:100%;margin-top:.5rem">🧮 احسب عنق الزجاجة</button>
+        <button class="gold-btn" id="bnCalc" style="width:100%;margin-top:.5rem" data-i18n="bnCalc">🧮 احسب عنق الزجاجة</button>
       </div>
       <div class="bn-result" id="bnResult">
-        <div class="bn-empty"><b>🧮</b>اختار قطع جهازك من الشمال واضغط "احسب"</div>
+        <div class="bn-empty"><b>🧮</b><span data-i18n="bnEmpty">اختار قطع جهازك من الشمال واضغط "احسب"</span></div>
       </div>
     </div>
   </div>
 </main>
 
 <footer>
-  <b>GPUVault</b> — أسعار كروت الشاشة في مصر • مستعمل: دوبيزل + فيسبوك • جديد: نون + أمازون + Sigma + Maximum<br>
-  الأسعار تقريبية (يوليو 2026) وبتتغير يومياً — اتأكد قبل الشراء
+  <b>GPUVault</b> — <span data-i18n="footer">أسعار كروت الشاشة في مصر • مستعمل: دوبيزل + فيسبوك • جديد: نون + أمازون + Sigma + Maximum</span><br>
+  <span data-i18n="footerNote">الأسعار تقريبية (يوليو 2026) وبتتغير يومياً — اتأكد قبل الشراء</span>
 </footer>
 
 <div class="cmp-bar" id="cmpBar">
-  <span class="cb-txt"><span>⚖️ مختار <b id="cbN">0</b> كروت</span><small>افتح صفحة المقارنة جنب بعض</small></span>
-  <button class="cb-clear" id="cbClear">مسح</button>
-  <button class="cb-go" id="cbGo">قارن دلوقتي ←</button>
+  <span class="cb-txt"><span>⚖️ <span data-i18n="cmpSel">مختار</span> <b id="cbN">0</b> <span data-i18n="total">كروت</span></span><small data-i18n="cmpOpen">افتح صفحة المقارنة جنب بعض</small></span>
+  <button class="cb-clear" id="cbClear" data-i18n="clear">مسح</button>
+  <button class="cb-go" id="cbGo" data-i18n="cmpNow">قارن دلوقتي ←</button>
 </div>
 <button class="top-btn" id="topBtn" aria-label="فوق">↑</button>
 
 <script>
 const CARDS=[
-{n:"GeForce 8400 GS",b:"nv",y:2007,v:"256MB",w:30,s:.08,u:100,nw:null,a:"Tesla"},
-{n:"GeForce 8500 GT",b:"nv",y:2007,v:"256MB",w:45,s:.1,u:120,nw:null,a:"Tesla"},
-{n:"GeForce 8600 GT",b:"nv",y:2007,v:"256MB",w:45,s:.15,u:180,nw:null,a:"Tesla"},
-{n:"GeForce 8800 GT",b:"nv",y:2007,v:"512MB",w:110,s:.35,u:350,nw:null,a:"Tesla"},
-{n:"GeForce 8800 GTS",b:"nv",y:2007,v:"640MB",w:135,s:.3,u:300,nw:null,a:"Tesla"},
-{n:"GeForce 9400 GT",b:"nv",y:2008,v:"512MB",w:35,s:.1,u:120,nw:null,a:"Tesla"},
-{n:"GeForce 9500 GT",b:"nv",y:2008,v:"512MB",w:50,s:.15,u:150,nw:null,a:"Tesla"},
-{n:"GeForce 9600 GT",b:"nv",y:2008,v:"512MB",w:95,s:.3,u:280,nw:null,a:"Tesla"},
-{n:"GeForce 9800 GT",b:"nv",y:2008,v:"512MB",w:105,s:.4,u:380,nw:null,a:"Tesla"},
-{n:"GeForce 9800 GTX",b:"nv",y:2008,v:"512MB",w:156,s:.45,u:450,nw:null,a:"Tesla"},
-{n:"GT 220",b:"nv",y:2009,v:"1GB",w:58,s:.12,u:150,nw:null,a:"Tesla"},
-{n:"GT 240",b:"nv",y:2009,v:"1GB",w:69,s:.2,u:220,nw:null,a:"Tesla"},
-{n:"GT 430",b:"nv",y:2010,v:"1GB",w:49,s:.25,u:250,nw:null,a:"Fermi"},
-{n:"GT 440",b:"nv",y:2011,v:"1GB",w:65,s:.3,u:300,nw:null,a:"Fermi"},
-{n:"GT 520",b:"nv",y:2011,v:"1GB",w:29,s:.18,u:180,nw:null,a:"Fermi"},
-{n:"GT 620",b:"nv",y:2012,v:"1GB",w:49,s:.25,u:250,nw:null,a:"Fermi"},
-{n:"GT 630",b:"nv",y:2012,v:"2GB",w:65,s:.35,u:350,nw:null,a:"Fermi"},
-{n:"GT 640",b:"nv",y:2012,v:"2GB",w:65,s:.5,u:450,nw:null,a:"Kepler"},
-{n:"GTX 260",b:"nv",y:2008,v:"896MB",w:182,s:.5,u:500,nw:null,a:"Tesla"},
-{n:"GTX 275",b:"nv",y:2009,v:"896MB",w:219,s:.55,u:550,nw:null,a:"Tesla"},
-{n:"GTX 280",b:"nv",y:2008,v:"1GB",w:236,s:.6,u:600,nw:null,a:"Tesla"},
-{n:"GTX 285",b:"nv",y:2009,v:"1GB",w:204,s:.65,u:650,nw:null,a:"Tesla"},
-{n:"GTX 295",b:"nv",y:2009,v:"1.7GB",w:289,s:.8,u:800,nw:null,a:"Tesla"},
-{n:"GTX 460",b:"nv",y:2010,v:"1GB",w:160,s:.9,u:700,nw:null,a:"Fermi"},
-{n:"GTX 470",b:"nv",y:2010,v:"1.25GB",w:215,s:.85,u:650,nw:null,a:"Fermi"},
-{n:"GTX 480",b:"nv",y:2010,v:"1.5GB",w:250,s:1,u:850,nw:null,a:"Fermi"},
-{n:"GTX 560",b:"nv",y:2011,v:"1GB",w:150,s:1.1,u:900,nw:null,a:"Fermi"},
-{n:"GTX 590",b:"nv",y:2011,v:"3GB",w:365,s:1.5,u:1200,nw:null,a:"Fermi"},
-{n:"GeForce 210",b:"nv",y:2009,v:"1GB",w:31,s:.15,u:150,nw:null,a:"Tesla"},
-{n:"GT 610",b:"nv",y:2012,v:"1GB",w:29,s:.3,u:300,nw:null,a:"Fermi"},
-{n:"GT 710",b:"nv",y:2014,v:"2GB",w:19,s:.5,u:500,nw:null,a:"Kepler"},
-{n:"GT 720",b:"nv",y:2014,v:"2GB",w:19,s:.7,u:600,nw:null,a:"Kepler"},
-{n:"GT 730",b:"nv",y:2014,v:"2GB",w:38,s:.9,u:800,nw:null,a:"Kepler"},
-{n:"GT 740",b:"nv",y:2014,v:"2GB",w:64,s:1.2,u:1000,nw:null,a:"Kepler"},
-{n:"GT 1030",b:"nv",y:2017,v:"2GB",w:30,s:1.3,u:1200,nw:null,a:"Pascal"},
-{n:"GTX 560 Ti",b:"nv",y:2011,v:"1GB",w:170,s:1,u:800,nw:null,a:"Fermi"},
-{n:"GTX 570",b:"nv",y:2010,v:"1.25GB",w:219,s:1.4,u:950,nw:null,a:"Fermi"},
-{n:"GTX 580",b:"nv",y:2010,v:"1.5GB",w:244,s:1.7,u:1100,nw:null,a:"Fermi"},
-{n:"GTX 650",b:"nv",y:2012,v:"2GB",w:64,s:1.2,u:1000,nw:null,a:"Kepler"},
-{n:"GTX 650 Ti",b:"nv",y:2012,v:"2GB",w:110,s:1.6,u:1200,nw:null,a:"Kepler"},
-{n:"GTX 660",b:"nv",y:2012,v:"2GB",w:140,s:2.1,u:1400,nw:null,a:"Kepler"},
-{n:"GTX 660 Ti",b:"nv",y:2012,v:"2GB",w:150,s:2.3,u:1500,nw:null,a:"Kepler"},
-{n:"GTX 670",b:"nv",y:2012,v:"2GB",w:170,s:2.7,u:1700,nw:null,a:"Kepler"},
-{n:"GTX 680",b:"nv",y:2012,v:"2GB",w:195,s:3,u:1900,nw:null,a:"Kepler"},
-{n:"GTX 690",b:"nv",y:2012,v:"4GB",w:300,s:2.8,u:2200,nw:null,a:"Kepler"},
-{n:"GTX 750",b:"nv",y:2014,v:"1GB",w:55,s:1.6,u:1200,nw:null,a:"Maxwell"},
-{n:"GTX 750 Ti",b:"nv",y:2014,v:"2GB",w:60,s:1.8,u:1500,nw:null,a:"Maxwell"},
-{n:"GTX 760",b:"nv",y:2013,v:"2GB",w:170,s:2.4,u:1700,nw:null,a:"Kepler"},
-{n:"GTX 770",b:"nv",y:2013,v:"2GB",w:230,s:3,u:2000,nw:null,a:"Kepler"},
-{n:"GTX 780",b:"nv",y:2013,v:"3GB",w:250,s:3.8,u:2400,nw:null,a:"Kepler"},
-{n:"GTX 780 Ti",b:"nv",y:2013,v:"3GB",w:250,s:4.2,u:2700,nw:null,a:"Kepler"},
-{n:"GTX 950",b:"nv",y:2015,v:"2GB",w:90,s:2.2,u:1600,nw:null,a:"Maxwell"},
-{n:"GTX 960",b:"nv",y:2015,v:"2GB",w:120,s:2.6,u:1900,nw:null,a:"Maxwell"},
-{n:"GTX 970",b:"nv",y:2014,v:"4GB",w:145,s:3.6,u:2400,nw:null,a:"Maxwell"},
-{n:"GTX 980",b:"nv",y:2014,v:"4GB",w:165,s:4.3,u:2800,nw:null,a:"Maxwell"},
-{n:"GTX 980 Ti",b:"nv",y:2015,v:"6GB",w:250,s:5.4,u:3500,nw:null,a:"Maxwell"},
-{n:"GTX TITAN",b:"nv",y:2013,v:"6GB",w:250,s:4.5,u:3000,nw:null,a:"Kepler"},
-{n:"GTX TITAN Black",b:"nv",y:2014,v:"6GB",w:250,s:5,u:3400,nw:null,a:"Kepler"},
-{n:"GTX TITAN Z",b:"nv",y:2014,v:"12GB",w:375,s:6.5,u:4500,nw:null,a:"Kepler"},
-{n:"GTX TITAN X",b:"nv",y:2015,v:"12GB",w:250,s:5.8,u:3800,nw:null,a:"Maxwell"},
-{n:"GTX TITAN Xp",b:"nv",y:2017,v:"12GB",w:250,s:9.5,u:6500,nw:null,a:"Pascal"},
-{n:"TITAN V",b:"nv",y:2017,v:"12GB",w:250,s:11,u:8000,nw:null,a:"Volta"},
-{n:"TITAN RTX",b:"nv",y:2018,v:"24GB",w:280,s:14,u:11000,nw:null,a:"Turing"},
-{n:"Quadro K2000",b:"nv",y:2013,v:"2GB",w:51,s:1.2,u:800,nw:null,a:"Kepler"},
-{n:"Quadro K4000",b:"nv",y:2013,v:"3GB",w:80,s:1.8,u:1200,nw:null,a:"Kepler"},
-{n:"Quadro M2000",b:"nv",y:2016,v:"4GB",w:75,s:2.5,u:2000,nw:null,a:"Maxwell"},
-{n:"Quadro P1000",b:"nv",y:2017,v:"4GB",w:47,s:2.8,u:2500,nw:null,a:"Pascal"},
-{n:"Quadro P2000",b:"nv",y:2017,v:"5GB",w:75,s:3.2,u:3500,nw:null,a:"Pascal"},
-{n:"Quadro T1000",b:"nv",y:2019,v:"4GB",w:50,s:3.5,u:3500,nw:null,a:"Turing"},
-{n:"Quadro P4000",b:"nv",y:2017,v:"8GB",w:105,s:5.5,u:5000,nw:null,a:"Pascal"},
-{n:"Quadro RTX 4000",b:"nv",y:2018,v:"8GB",w:160,s:7,u:8000,nw:null,a:"Turing"},
-{n:"RTX A4000",b:"nv",y:2021,v:"16GB",w:140,s:13,u:14000,nw:null,a:"Ampere"},
-{n:"RTX A5000",b:"nv",y:2021,v:"24GB",w:230,s:17,u:20000,nw:null,a:"Ampere"},
-{n:"RTX A6000",b:"nv",y:2020,v:"48GB",w:300,s:18,u:35000,nw:null,a:"Ampere"},
-{n:"RTX 6000 Ada",b:"nv",y:2023,v:"48GB",w:300,s:38,u:75000,nw:115000,a:"Ada"},
-{n:"GTX 1050",b:"nv",y:2016,v:"2GB",w:75,s:2.2,u:1800,nw:null,a:"Pascal"},
-{n:"GTX 1050 3GB",b:"nv",y:2017,v:"3GB",w:75,s:2.3,u:2000,nw:null,a:"Pascal"},
-{n:"GTX 1050 Ti",b:"nv",y:2016,v:"4GB",w:75,s:2.6,u:2500,nw:null,a:"Pascal"},
-{n:"GTX 1060 3GB",b:"nv",y:2016,v:"3GB",w:120,s:3.4,u:2800,nw:null,a:"Pascal"},
-{n:"GTX 1060 5GB",b:"nv",y:2017,v:"5GB",w:120,s:3.6,u:3000,nw:null,a:"Pascal"},
-{n:"GTX 1060 6GB",b:"nv",y:2016,v:"6GB",w:120,s:3.9,u:3500,nw:null,a:"Pascal"},
-{n:"GTX 1070",b:"nv",y:2016,v:"8GB",w:150,s:5.8,u:4500,nw:null,a:"Pascal"},
-{n:"GTX 1070 Ti",b:"nv",y:2017,v:"8GB",w:180,s:6.4,u:5000,nw:null,a:"Pascal"},
-{n:"GTX 1080",b:"nv",y:2016,v:"8GB",w:180,s:7.2,u:5500,nw:null,a:"Pascal"},
-{n:"GTX 1080 Ti",b:"nv",y:2017,v:"11GB",w:250,s:9.3,u:7000,nw:null,a:"Pascal"},
-{n:"GTX 1630",b:"nv",y:2022,v:"4GB",w:75,s:1.5,u:1800,nw:null,a:"Turing"},
-{n:"GTX 1650",b:"nv",y:2019,v:"4GB",w:75,s:3.3,u:3200,nw:null,a:"Turing"},
-{n:"GTX 1650 GDDR6",b:"nv",y:2020,v:"4GB",w:75,s:3.5,u:3400,nw:null,a:"Turing"},
-{n:"GTX 1650 Super",b:"nv",y:2019,v:"4GB",w:100,s:4.1,u:4000,nw:null,a:"Turing"},
-{n:"GTX 1660",b:"nv",y:2019,v:"6GB",w:120,s:4.9,u:4800,nw:null,a:"Turing"},
-{n:"GTX 1660 Super",b:"nv",y:2019,v:"6GB",w:125,s:5.4,u:5500,nw:null,a:"Turing"},
-{n:"GTX 1660 Ti",b:"nv",y:2019,v:"6GB",w:120,s:5.7,u:5800,nw:null,a:"Turing"},
-{n:"RTX 2060",b:"nv",y:2019,v:"6GB",w:160,s:7.4,u:6500,nw:11000,a:"Turing"},
-{n:"RTX 2060 12GB",b:"nv",y:2021,v:"12GB",w:185,s:8,u:7500,nw:null,a:"Turing"},
-{n:"RTX 2060 Super",b:"nv",y:2019,v:"8GB",w:175,s:8.6,u:7200,nw:12000,a:"Turing"},
-{n:"RTX 2070",b:"nv",y:2019,v:"8GB",w:175,s:9,u:8000,nw:13000,a:"Turing"},
-{n:"RTX 2070 Super",b:"nv",y:2019,v:"8GB",w:215,s:9.8,u:8800,nw:14000,a:"Turing"},
-{n:"RTX 2080",b:"nv",y:2018,v:"8GB",w:215,s:10.8,u:9500,nw:15500,a:"Turing"},
-{n:"RTX 2080 Super",b:"nv",y:2019,v:"8GB",w:250,s:11.4,u:10500,nw:16500,a:"Turing"},
-{n:"RTX 2080 Ti",b:"nv",y:2018,v:"11GB",w:250,s:13.5,u:12500,nw:20000,a:"Turing"},
-{n:"RTX 3050",b:"nv",y:2022,v:"8GB",w:130,s:6.2,u:7500,nw:13500,a:"Ampere"},
-{n:"RTX 3050 6GB",b:"nv",y:2024,v:"6GB",w:70,s:5.5,u:6800,nw:11500,a:"Ampere"},
-{n:"RTX 3060 8GB",b:"nv",y:2022,v:"8GB",w:170,s:8.2,u:9000,nw:14500,a:"Ampere"},
-{n:"RTX 3060",b:"nv",y:2021,v:"12GB",w:170,s:8.7,u:9800,nw:16000,a:"Ampere"},
-{n:"RTX 3060 Ti",b:"nv",y:2020,v:"8GB",w:200,s:11.7,u:11500,nw:18000,a:"Ampere"},
-{n:"RTX 3060 Ti GDDR6X",b:"nv",y:2023,v:"8GB",w:200,s:12,u:12000,nw:18500,a:"Ampere"},
-{n:"RTX 3070",b:"nv",y:2020,v:"8GB",w:220,s:13.3,u:13000,nw:20000,a:"Ampere"},
-{n:"RTX 3070 Ti",b:"nv",y:2021,v:"8GB",w:290,s:14.4,u:14500,nw:22000,a:"Ampere"},
-{n:"RTX 3080",b:"nv",y:2020,v:"10GB",w:320,s:17.3,u:17000,nw:26000,a:"Ampere"},
-{n:"RTX 3080 12GB",b:"nv",y:2022,v:"12GB",w:350,s:18,u:18000,nw:null,a:"Ampere"},
-{n:"RTX 3080 Ti",b:"nv",y:2021,v:"12GB",w:350,s:18.5,u:19500,nw:29000,a:"Ampere"},
-{n:"RTX 3090",b:"nv",y:2020,v:"24GB",w:350,s:19.5,u:23000,nw:35000,a:"Ampere"},
-{n:"RTX 3090 Ti",b:"nv",y:2022,v:"24GB",w:450,s:21.5,u:27000,nw:40000,a:"Ampere"},
-{n:"RTX 4060",b:"nv",y:2023,v:"8GB",w:115,s:10.3,u:12000,nw:16500,a:"Ada"},
-{n:"RTX 4060 Ti",b:"nv",y:2023,v:"8GB",w:160,s:13.3,u:15000,nw:21000,a:"Ada"},
-{n:"RTX 4060 Ti 16GB",b:"nv",y:2023,v:"16GB",w:165,s:14,u:16500,nw:23000,a:"Ada"},
-{n:"RTX 4070",b:"nv",y:2023,v:"12GB",w:200,s:17.5,u:19000,nw:28000,a:"Ada"},
-{n:"RTX 4070 Super",b:"nv",y:2024,v:"12GB",w:220,s:20.7,u:22000,nw:32000,a:"Ada"},
-{n:"RTX 4070 Ti",b:"nv",y:2023,v:"12GB",w:285,s:22.3,u:24000,nw:40000,a:"Ada"},
-{n:"RTX 4070 Ti Super",b:"nv",y:2024,v:"16GB",w:285,s:24.3,u:28000,nw:48000,a:"Ada"},
-{n:"RTX 4080",b:"nv",y:2022,v:"16GB",w:320,s:28.2,u:32000,nw:45000,a:"Ada"},
-{n:"RTX 4080 Super",b:"nv",y:2024,v:"16GB",w:320,s:29.5,u:34000,nw:50000,a:"Ada"},
-{n:"RTX 4090",b:"nv",y:2022,v:"24GB",w:450,s:37.5,u:55000,nw:85000,a:"Ada"},
-{n:"RTX 4090 D",b:"nv",y:2024,v:"24GB",w:425,s:35,u:50000,nw:75000,a:"Ada"},
-{n:"RTX 5050",b:"nv",y:2025,v:"8GB",w:130,s:9.5,u:9500,nw:13500,a:"Blackwell"},
-{n:"RTX 5060",b:"nv",y:2025,v:"8GB",w:145,s:11.5,u:14000,nw:20000,a:"Blackwell"},
-{n:"RTX 5060 Ti 8GB",b:"nv",y:2025,v:"8GB",w:180,s:14.5,u:16000,nw:21000,a:"Blackwell"},
-{n:"RTX 5060 Ti",b:"nv",y:2025,v:"16GB",w:180,s:15,u:18000,nw:24000,a:"Blackwell"},
-{n:"RTX 5070",b:"nv",y:2025,v:"12GB",w:250,s:21,u:25000,nw:38500,a:"Blackwell"},
-{n:"RTX 5070 Ti",b:"nv",y:2025,v:"16GB",w:300,s:26,u:32000,nw:62000,a:"Blackwell"},
-{n:"RTX 5080",b:"nv",y:2025,v:"16GB",w:360,s:33,u:45000,nw:85000,a:"Blackwell"},
-{n:"RTX 5090",b:"nv",y:2025,v:"32GB",w:575,s:48,u:100000,nw:130000,a:"Blackwell"},
-{n:"RTX 5090 D",b:"nv",y:2025,v:"32GB",w:575,s:44,u:88000,nw:110000,a:"Blackwell"},
-{n:"HD 4670",b:"amd",y:2008,v:"512MB",w:59,s:.12,u:120,nw:null,a:"TeraScale"},
-{n:"HD 4850",b:"amd",y:2008,v:"512MB",w:110,s:.3,u:250,nw:null,a:"TeraScale"},
-{n:"HD 4870",b:"amd",y:2008,v:"512MB",w:150,s:.35,u:300,nw:null,a:"TeraScale"},
-{n:"HD 5450",b:"amd",y:2010,v:"512MB",w:19,s:.1,u:100,nw:null,a:"TeraScale 2"},
-{n:"HD 5570",b:"amd",y:2010,v:"1GB",w:39,s:.15,u:150,nw:null,a:"TeraScale 2"},
-{n:"HD 5670",b:"amd",y:2010,v:"1GB",w:64,s:.25,u:220,nw:null,a:"TeraScale 2"},
-{n:"HD 5750",b:"amd",y:2009,v:"1GB",w:86,s:.35,u:280,nw:null,a:"TeraScale 2"},
-{n:"HD 5770",b:"amd",y:2009,v:"1GB",w:108,s:.4,u:320,nw:null,a:"TeraScale 2"},
-{n:"HD 5850",b:"amd",y:2009,v:"1GB",w:151,s:.55,u:450,nw:null,a:"TeraScale 2"},
-{n:"HD 5870",b:"amd",y:2009,v:"1GB",w:188,s:.6,u:500,nw:null,a:"TeraScale 2"},
-{n:"HD 6450",b:"amd",y:2011,v:"512MB",w:18,s:.12,u:120,nw:null,a:"TeraScale 2"},
-{n:"HD 6570",b:"amd",y:2011,v:"1GB",w:44,s:.2,u:180,nw:null,a:"TeraScale 2"},
-{n:"HD 6670",b:"amd",y:2011,v:"1GB",w:66,s:.3,u:280,nw:null,a:"TeraScale 2"},
-{n:"HD 6770",b:"amd",y:2011,v:"1GB",w:108,s:.4,u:320,nw:null,a:"TeraScale 2"},
-{n:"HD 6790",b:"amd",y:2011,v:"1GB",w:150,s:.45,u:380,nw:null,a:"TeraScale 2"},
-{n:"HD 6850",b:"amd",y:2010,v:"1GB",w:127,s:.5,u:420,nw:null,a:"TeraScale 2"},
-{n:"HD 6870",b:"amd",y:2010,v:"1GB",w:151,s:.6,u:480,nw:null,a:"TeraScale 2"},
-{n:"HD 6950",b:"amd",y:2010,v:"2GB",w:200,s:.8,u:600,nw:null,a:"TeraScale 2"},
-{n:"HD 6970",b:"amd",y:2010,v:"2GB",w:250,s:.9,u:700,nw:null,a:"TeraScale 2"},
-{n:"HD 7730",b:"amd",y:2013,v:"1GB",w:47,s:.7,u:500,nw:null,a:"GCN"},
-{n:"HD 7750",b:"amd",y:2012,v:"1GB",w:55,s:.9,u:700,nw:null,a:"GCN"},
-{n:"HD 7770",b:"amd",y:2012,v:"1GB",w:80,s:1.2,u:900,nw:null,a:"GCN"},
-{n:"HD 7790",b:"amd",y:2013,v:"1GB",w:85,s:1.3,u:950,nw:null,a:"GCN"},
-{n:"HD 7850",b:"amd",y:2012,v:"2GB",w:130,s:1.6,u:1100,nw:null,a:"GCN"},
-{n:"HD 7870",b:"amd",y:2012,v:"2GB",w:175,s:2,u:1400,nw:null,a:"GCN"},
-{n:"HD 7950",b:"amd",y:2012,v:"3GB",w:200,s:2.2,u:1500,nw:null,a:"GCN"},
-{n:"HD 7970",b:"amd",y:2012,v:"3GB",w:250,s:2.5,u:1700,nw:null,a:"GCN"},
-{n:"R5 220",b:"amd",y:2014,v:"1GB",w:31,s:.15,u:150,nw:null,a:"GCN"},
-{n:"R5 230",b:"amd",y:2014,v:"1GB",w:25,s:.2,u:180,nw:null,a:"GCN"},
-{n:"R5 240",b:"amd",y:2013,v:"2GB",w:30,s:.3,u:250,nw:null,a:"GCN"},
-{n:"R5 340",b:"amd",y:2015,v:"2GB",w:50,s:.4,u:350,nw:null,a:"GCN"},
-{n:"R7 240",b:"amd",y:2013,v:"2GB",w:30,s:.3,u:250,nw:null,a:"GCN"},
-{n:"R7 250",b:"amd",y:2013,v:"1GB",w:55,s:.5,u:400,nw:null,a:"GCN"},
-{n:"R7 250X",b:"amd",y:2014,v:"1GB",w:80,s:.7,u:550,nw:null,a:"GCN"},
-{n:"R7 260X",b:"amd",y:2013,v:"2GB",w:115,s:1.4,u:1000,nw:null,a:"GCN"},
-{n:"R7 370",b:"amd",y:2015,v:"2GB",w:110,s:1,u:750,nw:null,a:"GCN"},
-{n:"R7 370X",b:"amd",y:2015,v:"2GB",w:180,s:1.2,u:900,nw:null,a:"GCN"},
-{n:"R9 270",b:"amd",y:2013,v:"2GB",w:150,s:2,u:1300,nw:null,a:"GCN"},
-{n:"R9 270X",b:"amd",y:2013,v:"2GB",w:180,s:2.3,u:1500,nw:null,a:"GCN"},
-{n:"R9 280",b:"amd",y:2014,v:"3GB",w:250,s:2.7,u:1700,nw:null,a:"GCN"},
-{n:"R9 280X",b:"amd",y:2013,v:"3GB",w:250,s:3.1,u:1900,nw:null,a:"GCN"},
-{n:"R9 290",b:"amd",y:2013,v:"4GB",w:275,s:3.5,u:2100,nw:null,a:"GCN"},
-{n:"R9 290X",b:"amd",y:2013,v:"4GB",w:290,s:3.9,u:2400,nw:null,a:"GCN"},
-{n:"R9 295X2",b:"amd",y:2014,v:"8GB",w:500,s:5.5,u:3800,nw:null,a:"GCN"},
-{n:"R9 380",b:"amd",y:2015,v:"4GB",w:190,s:3.2,u:2100,nw:null,a:"GCN"},
-{n:"R9 380X",b:"amd",y:2015,v:"4GB",w:190,s:3.4,u:2300,nw:null,a:"GCN"},
-{n:"R9 390",b:"amd",y:2015,v:"8GB",w:275,s:4.2,u:2600,nw:null,a:"GCN"},
-{n:"R9 390X",b:"amd",y:2015,v:"8GB",w:275,s:4.6,u:2900,nw:null,a:"GCN"},
-{n:"R9 Fury",b:"amd",y:2015,v:"4GB",w:275,s:4.5,u:2900,nw:null,a:"GCN"},
-{n:"R9 Nano",b:"amd",y:2015,v:"4GB",w:175,s:4.3,u:2800,nw:null,a:"GCN"},
-{n:"R9 Fury X",b:"amd",y:2015,v:"4GB",w:275,s:5,u:3200,nw:null,a:"GCN"},
-{n:"Radeon Pro W5500",b:"amd",y:2020,v:"8GB",w:125,s:5,u:4500,nw:null,a:"RDNA 1"},
-{n:"Radeon Pro W5700",b:"amd",y:2019,v:"8GB",w:205,s:7,u:6000,nw:null,a:"RDNA 1"},
-{n:"Radeon Pro W6600",b:"amd",y:2021,v:"8GB",w:100,s:8,u:7000,nw:null,a:"RDNA 2"},
-{n:"Radeon Pro W6800",b:"amd",y:2021,v:"32GB",w:250,s:16,u:20000,nw:null,a:"RDNA 2"},
-{n:"Radeon Pro W7800",b:"amd",y:2023,v:"32GB",w:260,s:22,u:32000,nw:60000,a:"RDNA 3"},
-{n:"Radeon Pro W7900",b:"amd",y:2023,v:"48GB",w:295,s:27,u:48000,nw:90000,a:"RDNA 3"},
-{n:"RX 460",b:"amd",y:2016,v:"2GB",w:75,s:1.6,u:1400,nw:null,a:"Polaris"},
-{n:"RX 470",b:"amd",y:2016,v:"4GB",w:120,s:3,u:2200,nw:null,a:"Polaris"},
-{n:"RX 470 Mining",b:"amd",y:2017,v:"4GB",w:120,s:2.8,u:1800,nw:null,a:"Polaris"},
-{n:"RX 470D",b:"amd",y:2016,v:"4GB",w:120,s:2.7,u:2000,nw:null,a:"Polaris"},
-{n:"RX 480",b:"amd",y:2016,v:"8GB",w:150,s:3.4,u:2600,nw:null,a:"Polaris"},
-{n:"RX 550",b:"amd",y:2017,v:"4GB",w:50,s:1.4,u:1100,nw:null,a:"Polaris"},
-{n:"RX 560",b:"amd",y:2017,v:"4GB",w:80,s:1.9,u:1600,nw:null,a:"Polaris"},
-{n:"RX 560 8GB",b:"amd",y:2018,v:"8GB",w:80,s:2,u:1700,nw:null,a:"Polaris"},
-{n:"RX 570 4GB",b:"amd",y:2017,v:"4GB",w:150,s:2.9,u:1900,nw:null,a:"Polaris"},
-{n:"RX 570",b:"amd",y:2017,v:"8GB",w:150,s:3.1,u:2200,nw:null,a:"Polaris"},
-{n:"RX 570 Mining 4GB",b:"amd",y:2017,v:"4GB",w:150,s:2.7,u:1600,nw:null,a:"Polaris"},
-{n:"RX 570 Mining 8GB",b:"amd",y:2017,v:"8GB",w:150,s:2.9,u:1900,nw:null,a:"Polaris"},
-{n:"RX 580 4GB",b:"amd",y:2017,v:"4GB",w:185,s:3.3,u:2800,nw:null,a:"Polaris"},
-{n:"RX 580",b:"amd",y:2017,v:"8GB",w:185,s:3.6,u:3500,nw:null,a:"Polaris"},
-{n:"RX 580 2048SP",b:"amd",y:2019,v:"8GB",w:185,s:3.3,u:2800,nw:null,a:"Polaris"},
-{n:"RX 580 Mining 8GB",b:"amd",y:2017,v:"8GB",w:185,s:3.4,u:2400,nw:null,a:"Polaris"},
-{n:"RX 590",b:"amd",y:2018,v:"8GB",w:225,s:4,u:3800,nw:null,a:"Polaris"},
-{n:"RX 590 GME",b:"amd",y:2020,v:"8GB",w:175,s:3.7,u:3200,nw:null,a:"Polaris"},
-{n:"RX 5500 XT",b:"amd",y:2019,v:"8GB",w:130,s:3.8,u:3600,nw:null,a:"RDNA 1"},
-{n:"RX 5600",b:"amd",y:2020,v:"6GB",w:150,s:6,u:4600,nw:null,a:"RDNA 1"},
-{n:"RX 5600 XT",b:"amd",y:2020,v:"6GB",w:150,s:6.5,u:5000,nw:null,a:"RDNA 1"},
-{n:"RX 5700",b:"amd",y:2019,v:"8GB",w:180,s:7.6,u:5800,nw:null,a:"RDNA 1"},
-{n:"RX 5700 XT",b:"amd",y:2019,v:"8GB",w:225,s:8.8,u:6500,nw:null,a:"RDNA 1"},
-{n:"RX Vega 56",b:"amd",y:2017,v:"8GB",w:210,s:6.8,u:4500,nw:null,a:"Vega"},
-{n:"RX Vega 64",b:"amd",y:2017,v:"8GB",w:295,s:7.8,u:5200,nw:null,a:"Vega"},
-{n:"RX 6400",b:"amd",y:2022,v:"4GB",w:53,s:2.6,u:3800,nw:7000,a:"RDNA 2"},
-{n:"RX 6500 XT",b:"amd",y:2022,v:"4GB",w:107,s:3,u:4400,nw:8000,a:"RDNA 2"},
-{n:"RX 6600",b:"amd",y:2021,v:"8GB",w:132,s:7.9,u:7000,nw:12000,a:"RDNA 2"},
-{n:"RX 6600 XT",b:"amd",y:2021,v:"8GB",w:160,s:9.3,u:8000,nw:13000,a:"RDNA 2"},
-{n:"RX 6650 XT",b:"amd",y:2022,v:"8GB",w:175,s:9.9,u:8800,nw:13500,a:"RDNA 2"},
-{n:"RX 6700",b:"amd",y:2021,v:"10GB",w:175,s:10.5,u:9200,nw:null,a:"RDNA 2"},
-{n:"RX 6700 XT",b:"amd",y:2021,v:"12GB",w:230,s:11.6,u:10500,nw:16000,a:"RDNA 2"},
-{n:"RX 6750 GRE",b:"amd",y:2023,v:"10GB",w:175,s:11,u:9800,nw:null,a:"RDNA 2"},
-{n:"RX 6750 XT",b:"amd",y:2022,v:"12GB",w:250,s:12.4,u:11500,nw:17000,a:"RDNA 2"},
-{n:"RX 6800",b:"amd",y:2020,v:"16GB",w:250,s:15,u:13000,nw:19000,a:"RDNA 2"},
-{n:"RX 6800 XT",b:"amd",y:2020,v:"16GB",w:300,s:17.6,u:15000,nw:22000,a:"RDNA 2"},
-{n:"RX 6900 XT",b:"amd",y:2020,v:"16GB",w:300,s:19.4,u:16500,nw:24000,a:"RDNA 2"},
-{n:"RX 6950 XT",b:"amd",y:2022,v:"16GB",w:335,s:20.5,u:18000,nw:26000,a:"RDNA 2"},
-{n:"RX 7600",b:"amd",y:2023,v:"8GB",w:165,s:10.6,u:9800,nw:14500,a:"RDNA 3"},
-{n:"RX 7600 XT",b:"amd",y:2024,v:"16GB",w:190,s:12.5,u:11500,nw:16500,a:"RDNA 3"},
-{n:"RX 7700 XT",b:"amd",y:2023,v:"12GB",w:245,s:16.9,u:15000,nw:21000,a:"RDNA 3"},
-{n:"RX 7800 XT",b:"amd",y:2023,v:"16GB",w:263,s:18.8,u:17500,nw:30000,a:"RDNA 3"},
-{n:"RX 7900 GRE",b:"amd",y:2024,v:"16GB",w:260,s:20.3,u:19000,nw:27000,a:"RDNA 3"},
-{n:"RX 7900 XT",b:"amd",y:2022,v:"20GB",w:315,s:24.4,u:23000,nw:38500,a:"RDNA 3"},
-{n:"RX 7900 XTX",b:"amd",y:2022,v:"24GB",w:355,s:28.3,u:28000,nw:57000,a:"RDNA 3"},
-{n:"RX 9060",b:"amd",y:2025,v:"8GB",w:150,s:12,u:12000,nw:18000,a:"RDNA 4"},
-{n:"RX 9060 XT",b:"amd",y:2025,v:"16GB",w:180,s:14.5,u:15000,nw:27000,a:"RDNA 4"},
-{n:"RX 9070",b:"amd",y:2025,v:"16GB",w:220,s:22,u:22000,nw:30000,a:"RDNA 4"},
-{n:"RX 9070 XT",b:"amd",y:2025,v:"16GB",w:304,s:25,u:27000,nw:34000,a:"RDNA 4"},
-{n:"Arc A350",b:"int",y:2023,v:"4GB",w:55,s:1.3,u:1800,nw:4000,a:"Xe"},
-{n:"Arc A310",b:"int",y:2023,v:"4GB",w:75,s:1.8,u:2200,nw:4500,a:"Xe"},
-{n:"Arc A380",b:"int",y:2022,v:"6GB",w:75,s:2.8,u:3500,nw:6500,a:"Xe"},
-{n:"Arc A580",b:"int",y:2023,v:"8GB",w:185,s:6,u:5500,nw:9000,a:"Xe"},
-{n:"Arc A750",b:"int",y:2022,v:"8GB",w:225,s:6.8,u:6200,nw:9500,a:"Xe"},
-{n:"Arc A770",b:"int",y:2022,v:"16GB",w:225,s:8,u:7500,nw:11500,a:"Xe"},
-{n:"Arc B570",b:"int",y:2025,v:"10GB",w:150,s:10,u:8000,nw:11500,a:"Xe2"},
-{n:"Arc B580",b:"int",y:2024,v:"12GB",w:190,s:11.5,u:9500,nw:13500,a:"Xe2"}
+{n:"GeForce 8400 GS",b:"nv",y:2007,v:"256MB",w:30,s:.08,u:150,nw:null,a:"Tesla"},
+{n:"GeForce 8500 GT",b:"nv",y:2007,v:"256MB",w:45,s:.1,u:180,nw:null,a:"Tesla"},
+{n:"GeForce 8600 GT",b:"nv",y:2007,v:"256MB",w:45,s:.15,u:250,nw:null,a:"Tesla"},
+{n:"GeForce 8800 GT",b:"nv",y:2007,v:"512MB",w:110,s:.35,u:450,nw:null,a:"Tesla"},
+{n:"GeForce 8800 GTS",b:"nv",y:2007,v:"640MB",w:135,s:.3,u:400,nw:null,a:"Tesla"},
+{n:"GeForce 8800 Ultra",b:"nv",y:2007,v:"768MB",w:175,s:.4,u:550,nw:null,a:"Tesla"},
+{n:"GeForce 9400 GT",b:"nv",y:2008,v:"512MB",w:35,s:.1,u:180,nw:null,a:"Tesla"},
+{n:"GeForce 9500 GT",b:"nv",y:2008,v:"512MB",w:50,s:.15,u:220,nw:null,a:"Tesla"},
+{n:"GeForce 9600 GT",b:"nv",y:2008,v:"512MB",w:95,s:.3,u:400,nw:null,a:"Tesla"},
+{n:"GeForce 9800 GT",b:"nv",y:2008,v:"512MB",w:105,s:.4,u:500,nw:null,a:"Tesla"},
+{n:"GeForce 9800 GTX",b:"nv",y:2008,v:"512MB",w:156,s:.45,u:600,nw:null,a:"Tesla"},
+{n:"GT 220",b:"nv",y:2009,v:"1GB",w:58,s:.12,u:200,nw:null,a:"Tesla"},
+{n:"GT 240",b:"nv",y:2009,v:"1GB",w:69,s:.2,u:300,nw:null,a:"Tesla"},
+{n:"GT 430",b:"nv",y:2010,v:"1GB",w:49,s:.25,u:350,nw:null,a:"Fermi"},
+{n:"GT 440",b:"nv",y:2011,v:"1GB",w:65,s:.3,u:400,nw:null,a:"Fermi"},
+{n:"GT 520",b:"nv",y:2011,v:"1GB",w:29,s:.18,u:250,nw:null,a:"Fermi"},
+{n:"GT 620",b:"nv",y:2012,v:"1GB",w:49,s:.25,u:350,nw:null,a:"Fermi"},
+{n:"GT 630",b:"nv",y:2012,v:"2GB",w:65,s:.35,u:450,nw:null,a:"Fermi"},
+{n:"GT 640",b:"nv",y:2012,v:"2GB",w:65,s:.5,u:600,nw:null,a:"Kepler"},
+{n:"GTX 260",b:"nv",y:2008,v:"896MB",w:182,s:.5,u:700,nw:null,a:"Tesla"},
+{n:"GTX 275",b:"nv",y:2009,v:"896MB",w:219,s:.55,u:750,nw:null,a:"Tesla"},
+{n:"GTX 280",b:"nv",y:2008,v:"1GB",w:236,s:.6,u:800,nw:null,a:"Tesla"},
+{n:"GTX 285",b:"nv",y:2009,v:"1GB",w:204,s:.65,u:900,nw:null,a:"Tesla"},
+{n:"GTX 295",b:"nv",y:2009,v:"1.7GB",w:289,s:.8,u:1100,nw:null,a:"Tesla"},
+{n:"GTX 460",b:"nv",y:2010,v:"1GB",w:160,s:.9,u:950,nw:null,a:"Fermi"},
+{n:"GTX 465",b:"nv",y:2010,v:"1GB",w:200,s:.8,u:900,nw:null,a:"Fermi"},
+{n:"GTX 470",b:"nv",y:2010,v:"1.25GB",w:215,s:.85,u:900,nw:null,a:"Fermi"},
+{n:"GTX 480",b:"nv",y:2010,v:"1.5GB",w:250,s:1,u:1200,nw:null,a:"Fermi"},
+{n:"GTX 560",b:"nv",y:2011,v:"1GB",w:150,s:1.1,u:1200,nw:null,a:"Fermi"},
+{n:"GTX 560 Ti",b:"nv",y:2011,v:"1GB",w:170,s:1,u:1100,nw:null,a:"Fermi"},
+{n:"GTX 560 Ti 448",b:"nv",y:2011,v:"1.25GB",w:210,s:1.2,u:1300,nw:null,a:"Fermi"},
+{n:"GTX 570",b:"nv",y:2010,v:"1.25GB",w:219,s:1.4,u:1300,nw:null,a:"Fermi"},
+{n:"GTX 580",b:"nv",y:2010,v:"1.5GB",w:244,s:1.7,u:1500,nw:null,a:"Fermi"},
+{n:"GTX 590",b:"nv",y:2011,v:"3GB",w:365,s:1.5,u:1700,nw:null,a:"Fermi"},
+{n:"GeForce 210",b:"nv",y:2009,v:"1GB",w:31,s:.15,u:200,nw:null,a:"Tesla"},
+{n:"GT 610",b:"nv",y:2012,v:"1GB",w:29,s:.3,u:400,nw:null,a:"Fermi"},
+{n:"GT 710",b:"nv",y:2014,v:"2GB",w:19,s:.5,u:700,nw:null,a:"Kepler"},
+{n:"GT 720",b:"nv",y:2014,v:"2GB",w:19,s:.7,u:800,nw:null,a:"Kepler"},
+{n:"GT 730",b:"nv",y:2014,v:"2GB",w:38,s:.9,u:1100,nw:null,a:"Kepler"},
+{n:"GT 740",b:"nv",y:2014,v:"2GB",w:64,s:1.2,u:1400,nw:null,a:"Kepler"},
+{n:"GT 1030",b:"nv",y:2017,v:"2GB",w:30,s:1.3,u:1800,nw:null,a:"Pascal"},
+{n:"GTX 650",b:"nv",y:2012,v:"2GB",w:64,s:1.2,u:1400,nw:null,a:"Kepler"},
+{n:"GTX 650 Ti",b:"nv",y:2012,v:"2GB",w:110,s:1.6,u:1700,nw:null,a:"Kepler"},
+{n:"GTX 660",b:"nv",y:2012,v:"2GB",w:140,s:2.1,u:2000,nw:null,a:"Kepler"},
+{n:"GTX 660 Ti",b:"nv",y:2012,v:"2GB",w:150,s:2.3,u:2200,nw:null,a:"Kepler"},
+{n:"GTX 670",b:"nv",y:2012,v:"2GB",w:170,s:2.7,u:2500,nw:null,a:"Kepler"},
+{n:"GTX 680",b:"nv",y:2012,v:"2GB",w:195,s:3,u:2800,nw:null,a:"Kepler"},
+{n:"GTX 690",b:"nv",y:2012,v:"4GB",w:300,s:2.8,u:3500,nw:null,a:"Kepler"},
+{n:"GTX 750",b:"nv",y:2014,v:"1GB",w:55,s:1.6,u:1800,nw:null,a:"Maxwell"},
+{n:"GTX 750 Ti",b:"nv",y:2014,v:"2GB",w:60,s:1.8,u:2300,nw:null,a:"Maxwell"},
+{n:"GTX 760",b:"nv",y:2013,v:"2GB",w:170,s:2.4,u:2500,nw:null,a:"Kepler"},
+{n:"GTX 770",b:"nv",y:2013,v:"2GB",w:230,s:3,u:3000,nw:null,a:"Kepler"},
+{n:"GTX 780",b:"nv",y:2013,v:"3GB",w:250,s:3.8,u:3500,nw:null,a:"Kepler"},
+{n:"GTX 780 Ti",b:"nv",y:2013,v:"3GB",w:250,s:4.2,u:4000,nw:null,a:"Kepler"},
+{n:"GTX 950",b:"nv",y:2015,v:"2GB",w:90,s:2.2,u:2400,nw:null,a:"Maxwell"},
+{n:"GTX 960",b:"nv",y:2015,v:"2GB",w:120,s:2.6,u:3000,nw:null,a:"Maxwell"},
+{n:"GTX 970",b:"nv",y:2014,v:"4GB",w:145,s:3.6,u:4000,nw:null,a:"Maxwell"},
+{n:"GTX 980",b:"nv",y:2014,v:"4GB",w:165,s:4.3,u:4800,nw:null,a:"Maxwell"},
+{n:"GTX 980 Ti",b:"nv",y:2015,v:"6GB",w:250,s:5.4,u:6000,nw:null,a:"Maxwell"},
+{n:"GTX TITAN",b:"nv",y:2013,v:"6GB",w:250,s:4.5,u:4500,nw:null,a:"Kepler"},
+{n:"GTX TITAN Black",b:"nv",y:2014,v:"6GB",w:250,s:5,u:5000,nw:null,a:"Kepler"},
+{n:"GTX TITAN Z",b:"nv",y:2014,v:"12GB",w:375,s:6.5,u:7000,nw:null,a:"Kepler"},
+{n:"GTX TITAN X",b:"nv",y:2015,v:"12GB",w:250,s:5.8,u:6000,nw:null,a:"Maxwell"},
+{n:"GTX TITAN Xp",b:"nv",y:2017,v:"12GB",w:250,s:9.5,u:9000,nw:null,a:"Pascal"},
+{n:"TITAN V",b:"nv",y:2017,v:"12GB",w:250,s:11,u:12000,nw:null,a:"Volta"},
+{n:"TITAN RTX",b:"nv",y:2018,v:"24GB",w:280,s:14,u:16000,nw:null,a:"Turing"},
+{n:"Quadro K600",b:"nv",y:2013,v:"1GB",w:41,s:.8,u:800,nw:null,a:"Kepler"},
+{n:"Quadro K620",b:"nv",y:2014,v:"2GB",w:45,s:1,u:1000,nw:null,a:"Maxwell"},
+{n:"Quadro K2000",b:"nv",y:2013,v:"2GB",w:51,s:1.2,u:1100,nw:null,a:"Kepler"},
+{n:"Quadro K2200",b:"nv",y:2014,v:"4GB",w:68,s:1.5,u:1600,nw:null,a:"Maxwell"},
+{n:"Quadro K4000",b:"nv",y:2013,v:"3GB",w:80,s:1.8,u:1700,nw:null,a:"Kepler"},
+{n:"Quadro M2000",b:"nv",y:2016,v:"4GB",w:75,s:2.5,u:2800,nw:null,a:"Maxwell"},
+{n:"Quadro M4000",b:"nv",y:2015,v:"8GB",w:120,s:4,u:4500,nw:null,a:"Maxwell"},
+{n:"Quadro M5000",b:"nv",y:2015,v:"8GB",w:150,s:5,u:6000,nw:null,a:"Maxwell"},
+{n:"Quadro P600",b:"nv",y:2017,v:"2GB",w:40,s:1.5,u:2000,nw:null,a:"Pascal"},
+{n:"Quadro P620",b:"nv",y:2018,v:"2GB",w:40,s:1.8,u:2500,nw:null,a:"Pascal"},
+{n:"Quadro P1000",b:"nv",y:2017,v:"4GB",w:47,s:2.8,u:3500,nw:null,a:"Pascal"},
+{n:"Quadro P2000",b:"nv",y:2017,v:"5GB",w:75,s:3.2,u:5000,nw:null,a:"Pascal"},
+{n:"Quadro P4000",b:"nv",y:2017,v:"8GB",w:105,s:5.5,u:7500,nw:null,a:"Pascal"},
+{n:"Quadro P5000",b:"nv",y:2016,v:"16GB",w:180,s:7,u:10000,nw:null,a:"Pascal"},
+{n:"Quadro T1000",b:"nv",y:2019,v:"4GB",w:50,s:3.5,u:5000,nw:null,a:"Turing"},
+{n:"Quadro RTX 4000",b:"nv",y:2018,v:"8GB",w:160,s:7,u:12000,nw:null,a:"Turing"},
+{n:"RTX A2000",b:"nv",y:2021,v:"6GB",w:70,s:6,u:9000,nw:null,a:"Ampere"},
+{n:"RTX A4000",b:"nv",y:2021,v:"16GB",w:140,s:13,u:20000,nw:null,a:"Ampere"},
+{n:"RTX A4500",b:"nv",y:2021,v:"20GB",w:200,s:15,u:26000,nw:null,a:"Ampere"},
+{n:"RTX A5000",b:"nv",y:2021,v:"24GB",w:230,s:17,u:30000,nw:null,a:"Ampere"},
+{n:"RTX A6000",b:"nv",y:2020,v:"48GB",w:300,s:18,u:50000,nw:null,a:"Ampere"},
+{n:"RTX 2000 Ada",b:"nv",y:2023,v:"16GB",w:70,s:10,u:18000,nw:26000,a:"Ada"},
+{n:"RTX 4000 Ada",b:"nv",y:2023,v:"20GB",w:130,s:16,u:30000,nw:45000,a:"Ada"},
+{n:"RTX 5000 Ada",b:"nv",y:2023,v:"32GB",w:250,s:22,u:50000,nw:75000,a:"Ada"},
+{n:"RTX 6000 Ada",b:"nv",y:2023,v:"48GB",w:300,s:38,u:100000,nw:150000,a:"Ada"},
+{n:"CMP 30HX",b:"nv",y:2021,v:"6GB",w:125,s:4,u:3000,nw:null,a:"Turing"},
+{n:"CMP 40HX",b:"nv",y:2021,v:"8GB",w:185,s:6,u:4500,nw:null,a:"Turing"},
+{n:"CMP 50HX",b:"nv",y:2021,v:"10GB",w:250,s:8,u:6500,nw:null,a:"Turing"},
+{n:"CMP 90HX",b:"nv",y:2021,v:"10GB",w:320,s:12,u:10000,nw:null,a:"Ampere"},
+{n:"CMP 170HX",b:"nv",y:2021,v:"8GB",w:250,s:15,u:15000,nw:null,a:"Ampere"},
+{n:"GTX 1050",b:"nv",y:2016,v:"2GB",w:75,s:2.2,u:2500,nw:null,a:"Pascal"},
+{n:"GTX 1050 3GB",b:"nv",y:2017,v:"3GB",w:75,s:2.3,u:2800,nw:null,a:"Pascal"},
+{n:"GTX 1050 Ti",b:"nv",y:2016,v:"4GB",w:75,s:2.6,u:3500,nw:null,a:"Pascal"},
+{n:"GTX 1060 3GB",b:"nv",y:2016,v:"3GB",w:120,s:3.4,u:4000,nw:null,a:"Pascal"},
+{n:"GTX 1060 5GB",b:"nv",y:2017,v:"5GB",w:120,s:3.6,u:4300,nw:null,a:"Pascal"},
+{n:"GTX 1060 6GB",b:"nv",y:2016,v:"6GB",w:120,s:3.9,u:5000,nw:null,a:"Pascal"},
+{n:"GTX 1070",b:"nv",y:2016,v:"8GB",w:150,s:5.8,u:6500,nw:null,a:"Pascal"},
+{n:"GTX 1070 Ti",b:"nv",y:2017,v:"8GB",w:180,s:6.4,u:7500,nw:null,a:"Pascal"},
+{n:"GTX 1080",b:"nv",y:2016,v:"8GB",w:180,s:7.2,u:8500,nw:null,a:"Pascal"},
+{n:"GTX 1080 Ti",b:"nv",y:2017,v:"11GB",w:250,s:9.3,u:11000,nw:null,a:"Pascal"},
+{n:"GTX 1630",b:"nv",y:2022,v:"4GB",w:75,s:1.5,u:2500,nw:null,a:"Turing"},
+{n:"GTX 1650",b:"nv",y:2019,v:"4GB",w:75,s:3.3,u:4200,nw:6500,a:"Turing"},
+{n:"GTX 1650 GDDR6",b:"nv",y:2020,v:"4GB",w:75,s:3.5,u:4500,nw:7000,a:"Turing"},
+{n:"GTX 1650 Super",b:"nv",y:2019,v:"4GB",w:100,s:4.1,u:5200,nw:7500,a:"Turing"},
+{n:"GTX 1660",b:"nv",y:2019,v:"6GB",w:120,s:4.9,u:6500,nw:9000,a:"Turing"},
+{n:"GTX 1660 Super",b:"nv",y:2019,v:"6GB",w:125,s:5.4,u:7500,nw:10000,a:"Turing"},
+{n:"GTX 1660 Ti",b:"nv",y:2019,v:"6GB",w:120,s:5.7,u:8000,nw:11000,a:"Turing"},
+{n:"RTX 2060",b:"nv",y:2019,v:"6GB",w:160,s:7.4,u:9000,nw:13000,a:"Turing"},
+{n:"RTX 2060 12GB",b:"nv",y:2021,v:"12GB",w:185,s:8,u:10500,nw:null,a:"Turing"},
+{n:"RTX 2060 Super",b:"nv",y:2019,v:"8GB",w:175,s:8.6,u:10000,nw:14000,a:"Turing"},
+{n:"RTX 2070",b:"nv",y:2019,v:"8GB",w:175,s:9,u:11000,nw:15000,a:"Turing"},
+{n:"RTX 2070 Super",b:"nv",y:2019,v:"8GB",w:215,s:9.8,u:12500,nw:16000,a:"Turing"},
+{n:"RTX 2080",b:"nv",y:2018,v:"8GB",w:215,s:10.8,u:13500,nw:18000,a:"Turing"},
+{n:"RTX 2080 Super",b:"nv",y:2019,v:"8GB",w:250,s:11.4,u:14500,nw:19000,a:"Turing"},
+{n:"RTX 2080 Ti",b:"nv",y:2018,v:"11GB",w:250,s:13.5,u:17000,nw:23000,a:"Turing"},
+{n:"RTX 3050",b:"nv",y:2022,v:"8GB",w:130,s:6.2,u:9000,nw:14000,a:"Ampere"},
+{n:"RTX 3050 6GB",b:"nv",y:2024,v:"6GB",w:70,s:5.5,u:8000,nw:12000,a:"Ampere"},
+{n:"RTX 3060 8GB",b:"nv",y:2022,v:"8GB",w:170,s:8.2,u:11000,nw:15000,a:"Ampere"},
+{n:"RTX 3060",b:"nv",y:2021,v:"12GB",w:170,s:8.7,u:12500,nw:17000,a:"Ampere"},
+{n:"RTX 3060 Ti",b:"nv",y:2020,v:"8GB",w:200,s:11.7,u:15000,nw:20000,a:"Ampere"},
+{n:"RTX 3060 Ti GDDR6X",b:"nv",y:2023,v:"8GB",w:200,s:12,u:15500,nw:21000,a:"Ampere"},
+{n:"RTX 3070",b:"nv",y:2020,v:"8GB",w:220,s:13.3,u:17000,nw:23000,a:"Ampere"},
+{n:"RTX 3070 Ti",b:"nv",y:2021,v:"8GB",w:290,s:14.4,u:19000,nw:25000,a:"Ampere"},
+{n:"RTX 3080",b:"nv",y:2020,v:"10GB",w:320,s:17.3,u:23000,nw:30000,a:"Ampere"},
+{n:"RTX 3080 12GB",b:"nv",y:2022,v:"12GB",w:350,s:18,u:24000,nw:null,a:"Ampere"},
+{n:"RTX 3080 Ti",b:"nv",y:2021,v:"12GB",w:350,s:18.5,u:27000,nw:34000,a:"Ampere"},
+{n:"RTX 3090",b:"nv",y:2020,v:"24GB",w:350,s:19.5,u:32000,nw:42000,a:"Ampere"},
+{n:"RTX 3090 Ti",b:"nv",y:2022,v:"24GB",w:450,s:21.5,u:38000,nw:48000,a:"Ampere"},
+{n:"RTX 4060",b:"nv",y:2023,v:"8GB",w:115,s:10.3,u:15000,nw:18000,a:"Ada"},
+{n:"RTX 4060 Ti",b:"nv",y:2023,v:"8GB",w:160,s:13.3,u:19000,nw:23000,a:"Ada"},
+{n:"RTX 4060 Ti 16GB",b:"nv",y:2023,v:"16GB",w:165,s:14,u:21000,nw:26000,a:"Ada"},
+{n:"RTX 4070",b:"nv",y:2023,v:"12GB",w:200,s:17.5,u:25000,nw:30000,a:"Ada"},
+{n:"RTX 4070 Super",b:"nv",y:2024,v:"12GB",w:220,s:20.7,u:29000,nw:35000,a:"Ada"},
+{n:"RTX 4070 Ti",b:"nv",y:2023,v:"12GB",w:285,s:22.3,u:33000,nw:42000,a:"Ada"},
+{n:"RTX 4070 Ti Super",b:"nv",y:2024,v:"16GB",w:285,s:24.3,u:38000,nw:50000,a:"Ada"},
+{n:"RTX 4080",b:"nv",y:2022,v:"16GB",w:320,s:28.2,u:42000,nw:52000,a:"Ada"},
+{n:"RTX 4080 Super",b:"nv",y:2024,v:"16GB",w:320,s:29.5,u:45000,nw:55000,a:"Ada"},
+{n:"RTX 4090",b:"nv",y:2022,v:"24GB",w:450,s:37.5,u:70000,nw:95000,a:"Ada"},
+{n:"RTX 4090 D",b:"nv",y:2024,v:"24GB",w:425,s:35,u:65000,nw:85000,a:"Ada"},
+{n:"RTX 5050",b:"nv",y:2025,v:"8GB",w:130,s:9.5,u:12000,nw:15000,a:"Blackwell"},
+{n:"RTX 5060",b:"nv",y:2025,v:"8GB",w:145,s:11.5,u:18000,nw:22000,a:"Blackwell"},
+{n:"RTX 5060 Ti 8GB",b:"nv",y:2025,v:"8GB",w:180,s:14.5,u:21000,nw:24000,a:"Blackwell"},
+{n:"RTX 5060 Ti",b:"nv",y:2025,v:"16GB",w:180,s:15,u:23000,nw:27000,a:"Blackwell"},
+{n:"RTX 5070",b:"nv",y:2025,v:"12GB",w:250,s:21,u:32000,nw:42000,a:"Blackwell"},
+{n:"RTX 5070 Ti",b:"nv",y:2025,v:"16GB",w:300,s:26,u:42000,nw:65000,a:"Blackwell"},
+{n:"RTX 5080",b:"nv",y:2025,v:"16GB",w:360,s:33,u:60000,nw:95000,a:"Blackwell"},
+{n:"RTX 5090",b:"nv",y:2025,v:"32GB",w:575,s:48,u:120000,nw:150000,a:"Blackwell"},
+{n:"RTX 5090 D",b:"nv",y:2025,v:"32GB",w:575,s:44,u:105000,nw:130000,a:"Blackwell"},
+{n:"RTX 3060 Mobile",b:"nv",y:2021,v:"6GB",w:80,s:7,u:9000,nw:null,a:"Ampere"},
+{n:"RTX 3070 Mobile",b:"nv",y:2021,v:"8GB",w:125,s:10,u:12000,nw:null,a:"Ampere"},
+{n:"RTX 3080 Mobile",b:"nv",y:2021,v:"8GB",w:150,s:13,u:16000,nw:null,a:"Ampere"},
+{n:"RTX 4060 Mobile",b:"nv",y:2023,v:"8GB",w:115,s:9,u:13000,nw:null,a:"Ada"},
+{n:"RTX 4070 Mobile",b:"nv",y:2023,v:"8GB",w:140,s:13,u:18000,nw:null,a:"Ada"},
+{n:"RTX 4080 Mobile",b:"nv",y:2023,v:"12GB",w:175,s:18,u:25000,nw:null,a:"Ada"},
+{n:"RTX 4090 Mobile",b:"nv",y:2023,v:"16GB",w:200,s:24,u:35000,nw:null,a:"Ada"},
+{n:"HD 4670",b:"amd",y:2008,v:"512MB",w:59,s:.12,u:180,nw:null,a:"TeraScale"},
+{n:"HD 4850",b:"amd",y:2008,v:"512MB",w:110,s:.3,u:350,nw:null,a:"TeraScale"},
+{n:"HD 4870",b:"amd",y:2008,v:"512MB",w:150,s:.35,u:400,nw:null,a:"TeraScale"},
+{n:"HD 4890",b:"amd",y:2009,v:"1GB",w:190,s:.4,u:500,nw:null,a:"TeraScale"},
+{n:"HD 5450",b:"amd",y:2010,v:"512MB",w:19,s:.1,u:150,nw:null,a:"TeraScale 2"},
+{n:"HD 5570",b:"amd",y:2010,v:"1GB",w:39,s:.15,u:220,nw:null,a:"TeraScale 2"},
+{n:"HD 5670",b:"amd",y:2010,v:"1GB",w:64,s:.25,u:320,nw:null,a:"TeraScale 2"},
+{n:"HD 5750",b:"amd",y:2009,v:"1GB",w:86,s:.35,u:400,nw:null,a:"TeraScale 2"},
+{n:"HD 5770",b:"amd",y:2009,v:"1GB",w:108,s:.4,u:450,nw:null,a:"TeraScale 2"},
+{n:"HD 5830",b:"amd",y:2010,v:"1GB",w:175,s:.45,u:550,nw:null,a:"TeraScale 2"},
+{n:"HD 5850",b:"amd",y:2009,v:"1GB",w:151,s:.55,u:650,nw:null,a:"TeraScale 2"},
+{n:"HD 5870",b:"amd",y:2009,v:"1GB",w:188,s:.6,u:750,nw:null,a:"TeraScale 2"},
+{n:"HD 6450",b:"amd",y:2011,v:"512MB",w:18,s:.12,u:180,nw:null,a:"TeraScale 2"},
+{n:"HD 6570",b:"amd",y:2011,v:"1GB",w:44,s:.2,u:280,nw:null,a:"TeraScale 2"},
+{n:"HD 6670",b:"amd",y:2011,v:"1GB",w:66,s:.3,u:400,nw:null,a:"TeraScale 2"},
+{n:"HD 6770",b:"amd",y:2011,v:"1GB",w:108,s:.4,u:450,nw:null,a:"TeraScale 2"},
+{n:"HD 6790",b:"amd",y:2011,v:"1GB",w:150,s:.45,u:550,nw:null,a:"TeraScale 2"},
+{n:"HD 6850",b:"amd",y:2010,v:"1GB",w:127,s:.5,u:600,nw:null,a:"TeraScale 2"},
+{n:"HD 6870",b:"amd",y:2010,v:"1GB",w:151,s:.6,u:700,nw:null,a:"TeraScale 2"},
+{n:"HD 6950",b:"amd",y:2010,v:"2GB",w:200,s:.8,u:900,nw:null,a:"TeraScale 2"},
+{n:"HD 6970",b:"amd",y:2010,v:"2GB",w:250,s:.9,u:1000,nw:null,a:"TeraScale 2"},
+{n:"HD 7730",b:"amd",y:2013,v:"1GB",w:47,s:.7,u:700,nw:null,a:"GCN"},
+{n:"HD 7750",b:"amd",y:2012,v:"1GB",w:55,s:.9,u:1000,nw:null,a:"GCN"},
+{n:"HD 7770",b:"amd",y:2012,v:"1GB",w:80,s:1.2,u:1300,nw:null,a:"GCN"},
+{n:"HD 7790",b:"amd",y:2013,v:"1GB",w:85,s:1.3,u:1400,nw:null,a:"GCN"},
+{n:"HD 7850",b:"amd",y:2012,v:"2GB",w:130,s:1.6,u:1600,nw:null,a:"GCN"},
+{n:"HD 7870",b:"amd",y:2012,v:"2GB",w:175,s:2,u:2000,nw:null,a:"GCN"},
+{n:"HD 7950",b:"amd",y:2012,v:"3GB",w:200,s:2.2,u:2200,nw:null,a:"GCN"},
+{n:"HD 7970",b:"amd",y:2012,v:"3GB",w:250,s:2.5,u:2500,nw:null,a:"GCN"},
+{n:"R5 220",b:"amd",y:2014,v:"1GB",w:31,s:.15,u:220,nw:null,a:"GCN"},
+{n:"R5 230",b:"amd",y:2014,v:"1GB",w:25,s:.2,u:260,nw:null,a:"GCN"},
+{n:"R5 240",b:"amd",y:2013,v:"2GB",w:30,s:.3,u:350,nw:null,a:"GCN"},
+{n:"R5 340",b:"amd",y:2015,v:"2GB",w:50,s:.4,u:500,nw:null,a:"GCN"},
+{n:"R7 240",b:"amd",y:2013,v:"2GB",w:30,s:.3,u:350,nw:null,a:"GCN"},
+{n:"R7 250",b:"amd",y:2013,v:"1GB",w:55,s:.5,u:600,nw:null,a:"GCN"},
+{n:"R7 250X",b:"amd",y:2014,v:"1GB",w:80,s:.7,u:800,nw:null,a:"GCN"},
+{n:"R7 260X",b:"amd",y:2013,v:"2GB",w:115,s:1.4,u:1400,nw:null,a:"GCN"},
+{n:"R7 370",b:"amd",y:2015,v:"2GB",w:110,s:1,u:1100,nw:null,a:"GCN"},
+{n:"R7 370X",b:"amd",y:2015,v:"2GB",w:180,s:1.2,u:1300,nw:null,a:"GCN"},
+{n:"R9 270",b:"amd",y:2013,v:"2GB",w:150,s:2,u:1800,nw:null,a:"GCN"},
+{n:"R9 270X",b:"amd",y:2013,v:"2GB",w:180,s:2.3,u:2100,nw:null,a:"GCN"},
+{n:"R9 280",b:"amd",y:2014,v:"3GB",w:250,s:2.7,u:2500,nw:null,a:"GCN"},
+{n:"R9 280X",b:"amd",y:2013,v:"3GB",w:250,s:3.1,u:2800,nw:null,a:"GCN"},
+{n:"R9 290",b:"amd",y:2013,v:"4GB",w:275,s:3.5,u:3000,nw:null,a:"GCN"},
+{n:"R9 290X",b:"amd",y:2013,v:"4GB",w:290,s:3.9,u:3500,nw:null,a:"GCN"},
+{n:"R9 295X2",b:"amd",y:2014,v:"8GB",w:500,s:5.5,u:5500,nw:null,a:"GCN"},
+{n:"R9 380",b:"amd",y:2015,v:"4GB",w:190,s:3.2,u:3000,nw:null,a:"GCN"},
+{n:"R9 380X",b:"amd",y:2015,v:"4GB",w:190,s:3.4,u:3300,nw:null,a:"GCN"},
+{n:"R9 390",b:"amd",y:2015,v:"8GB",w:275,s:4.2,u:3800,nw:null,a:"GCN"},
+{n:"R9 390X",b:"amd",y:2015,v:"8GB",w:275,s:4.6,u:4200,nw:null,a:"GCN"},
+{n:"R9 Fury",b:"amd",y:2015,v:"4GB",w:275,s:4.5,u:4200,nw:null,a:"GCN"},
+{n:"R9 Nano",b:"amd",y:2015,v:"4GB",w:175,s:4.3,u:4000,nw:null,a:"GCN"},
+{n:"R9 Fury X",b:"amd",y:2015,v:"4GB",w:275,s:5,u:4800,nw:null,a:"GCN"},
+{n:"Radeon Pro W5500",b:"amd",y:2020,v:"8GB",w:125,s:5,u:6500,nw:null,a:"RDNA 1"},
+{n:"Radeon Pro W5700",b:"amd",y:2019,v:"8GB",w:205,s:7,u:9000,nw:null,a:"RDNA 1"},
+{n:"Radeon Pro W6600",b:"amd",y:2021,v:"8GB",w:100,s:8,u:10000,nw:null,a:"RDNA 2"},
+{n:"Radeon Pro W6800",b:"amd",y:2021,v:"32GB",w:250,s:16,u:28000,nw:null,a:"RDNA 2"},
+{n:"Radeon Pro W7800",b:"amd",y:2023,v:"32GB",w:260,s:22,u:45000,nw:80000,a:"RDNA 3"},
+{n:"Radeon Pro W7900",b:"amd",y:2023,v:"48GB",w:295,s:27,u:65000,nw:120000,a:"RDNA 3"},
+{n:"RX 460",b:"amd",y:2016,v:"2GB",w:75,s:1.6,u:2000,nw:null,a:"Polaris"},
+{n:"RX 470",b:"amd",y:2016,v:"4GB",w:120,s:3,u:3000,nw:null,a:"Polaris"},
+{n:"RX 470 Mining",b:"amd",y:2017,v:"4GB",w:120,s:2.8,u:2500,nw:null,a:"Polaris"},
+{n:"RX 470D",b:"amd",y:2016,v:"4GB",w:120,s:2.7,u:2800,nw:null,a:"Polaris"},
+{n:"RX 480",b:"amd",y:2016,v:"8GB",w:150,s:3.4,u:3500,nw:null,a:"Polaris"},
+{n:"RX 550",b:"amd",y:2017,v:"4GB",w:50,s:1.4,u:1500,nw:null,a:"Polaris"},
+{n:"RX 560",b:"amd",y:2017,v:"4GB",w:80,s:1.9,u:2200,nw:null,a:"Polaris"},
+{n:"RX 560 8GB",b:"amd",y:2018,v:"8GB",w:80,s:2,u:2400,nw:null,a:"Polaris"},
+{n:"RX 570 4GB",b:"amd",y:2017,v:"4GB",w:150,s:2.9,u:2800,nw:null,a:"Polaris"},
+{n:"RX 570",b:"amd",y:2017,v:"8GB",w:150,s:3.1,u:3200,nw:null,a:"Polaris"},
+{n:"RX 570 Mining 4GB",b:"amd",y:2017,v:"4GB",w:150,s:2.7,u:2300,nw:null,a:"Polaris"},
+{n:"RX 570 Mining 8GB",b:"amd",y:2017,v:"8GB",w:150,s:2.9,u:2700,nw:null,a:"Polaris"},
+{n:"RX 580 4GB",b:"amd",y:2017,v:"4GB",w:185,s:3.3,u:3800,nw:null,a:"Polaris"},
+{n:"RX 580",b:"amd",y:2017,v:"8GB",w:185,s:3.6,u:4500,nw:null,a:"Polaris"},
+{n:"RX 580 2048SP",b:"amd",y:2019,v:"8GB",w:185,s:3.3,u:3800,nw:null,a:"Polaris"},
+{n:"RX 580 Mining 8GB",b:"amd",y:2017,v:"8GB",w:185,s:3.4,u:3200,nw:null,a:"Polaris"},
+{n:"RX 590",b:"amd",y:2018,v:"8GB",w:225,s:4,u:5000,nw:null,a:"Polaris"},
+{n:"RX 590 GME",b:"amd",y:2020,v:"8GB",w:175,s:3.7,u:4200,nw:null,a:"Polaris"},
+{n:"RX 5500 XT",b:"amd",y:2019,v:"8GB",w:130,s:3.8,u:4800,nw:null,a:"RDNA 1"},
+{n:"RX 5600",b:"amd",y:2020,v:"6GB",w:150,s:6,u:6000,nw:null,a:"RDNA 1"},
+{n:"RX 5600 XT",b:"amd",y:2020,v:"6GB",w:150,s:6.5,u:6500,nw:null,a:"RDNA 1"},
+{n:"RX 5700",b:"amd",y:2019,v:"8GB",w:180,s:7.6,u:7500,nw:null,a:"RDNA 1"},
+{n:"RX 5700 XT",b:"amd",y:2019,v:"8GB",w:225,s:8.8,u:9000,nw:null,a:"RDNA 1"},
+{n:"RX Vega 56",b:"amd",y:2017,v:"8GB",w:210,s:6.8,u:6000,nw:null,a:"Vega"},
+{n:"RX Vega 64",b:"amd",y:2017,v:"8GB",w:295,s:7.8,u:7000,nw:null,a:"Vega"},
+{n:"RX 6400",b:"amd",y:2022,v:"4GB",w:53,s:2.6,u:5000,nw:8000,a:"RDNA 2"},
+{n:"RX 6500 XT",b:"amd",y:2022,v:"4GB",w:107,s:3,u:5500,nw:9000,a:"RDNA 2"},
+{n:"RX 6600",b:"amd",y:2021,v:"8GB",w:132,s:7.9,u:9500,nw:13000,a:"RDNA 2"},
+{n:"RX 6600 XT",b:"amd",y:2021,v:"8GB",w:160,s:9.3,u:11000,nw:14500,a:"RDNA 2"},
+{n:"RX 6650 XT",b:"amd",y:2022,v:"8GB",w:175,s:9.9,u:12000,nw:15000,a:"RDNA 2"},
+{n:"RX 6700",b:"amd",y:2021,v:"10GB",w:175,s:10.5,u:12500,nw:null,a:"RDNA 2"},
+{n:"RX 6700 XT",b:"amd",y:2021,v:"12GB",w:230,s:11.6,u:14000,nw:18000,a:"RDNA 2"},
+{n:"RX 6750 GRE",b:"amd",y:2023,v:"10GB",w:175,s:11,u:13000,nw:null,a:"RDNA 2"},
+{n:"RX 6750 XT",b:"amd",y:2022,v:"12GB",w:250,s:12.4,u:15000,nw:19000,a:"RDNA 2"},
+{n:"RX 6800",b:"amd",y:2020,v:"16GB",w:250,s:15,u:17000,nw:22000,a:"RDNA 2"},
+{n:"RX 6800 XT",b:"amd",y:2020,v:"16GB",w:300,s:17.6,u:20000,nw:26000,a:"RDNA 2"},
+{n:"RX 6900 XT",b:"amd",y:2020,v:"16GB",w:300,s:19.4,u:23000,nw:28000,a:"RDNA 2"},
+{n:"RX 6950 XT",b:"amd",y:2022,v:"16GB",w:335,s:20.5,u:25000,nw:30000,a:"RDNA 2"},
+{n:"RX 7600",b:"amd",y:2023,v:"8GB",w:165,s:10.6,u:12000,nw:15000,a:"RDNA 3"},
+{n:"RX 7600 XT",b:"amd",y:2024,v:"16GB",w:190,s:12.5,u:14000,nw:18000,a:"RDNA 3"},
+{n:"RX 7700 XT",b:"amd",y:2023,v:"12GB",w:245,s:16.9,u:19000,nw:23000,a:"RDNA 3"},
+{n:"RX 7800 XT",b:"amd",y:2023,v:"16GB",w:263,s:18.8,u:23000,nw:32000,a:"RDNA 3"},
+{n:"RX 7900 GRE",b:"amd",y:2024,v:"16GB",w:260,s:20.3,u:25000,nw:30000,a:"RDNA 3"},
+{n:"RX 7900 XT",b:"amd",y:2022,v:"20GB",w:315,s:24.4,u:30000,nw:42000,a:"RDNA 3"},
+{n:"RX 7900 XTX",b:"amd",y:2022,v:"24GB",w:355,s:28.3,u:38000,nw:62000,a:"RDNA 3"},
+{n:"RX 9060",b:"amd",y:2025,v:"8GB",w:150,s:12,u:14000,nw:20000,a:"RDNA 4"},
+{n:"RX 9060 XT",b:"amd",y:2025,v:"16GB",w:180,s:14.5,u:18000,nw:29000,a:"RDNA 4"},
+{n:"RX 9070",b:"amd",y:2025,v:"16GB",w:220,s:22,u:27000,nw:33000,a:"RDNA 4"},
+{n:"RX 9070 XT",b:"amd",y:2025,v:"16GB",w:304,s:25,u:32000,nw:38000,a:"RDNA 4"},
+{n:"RX 6600M",b:"amd",y:2021,v:"8GB",w:100,s:7,u:8000,nw:null,a:"RDNA 2"},
+{n:"RX 6700M",b:"amd",y:2021,v:"10GB",w:135,s:9,u:10000,nw:null,a:"RDNA 2"},
+{n:"RX 6800M",b:"amd",y:2021,v:"12GB",w:145,s:12,u:14000,nw:null,a:"RDNA 2"},
+{n:"RX 7600M",b:"amd",y:2023,v:"8GB",w:120,s:9,u:11000,nw:null,a:"RDNA 3"},
+{n:"RX 7700M",b:"amd",y:2023,v:"12GB",w:150,s:13,u:15000,nw:null,a:"RDNA 3"},
+{n:"Arc A350",b:"int",y:2023,v:"4GB",w:55,s:1.3,u:2500,nw:4500,a:"Xe"},
+{n:"Arc A310",b:"int",y:2023,v:"4GB",w:75,s:1.8,u:3000,nw:5000,a:"Xe"},
+{n:"Arc A380",b:"int",y:2022,v:"6GB",w:75,s:2.8,u:4500,nw:7000,a:"Xe"},
+{n:"Arc A580",b:"int",y:2023,v:"8GB",w:185,s:6,u:7000,nw:10000,a:"Xe"},
+{n:"Arc A750",b:"int",y:2022,v:"8GB",w:225,s:6.8,u:8000,nw:11000,a:"Xe"},
+{n:"Arc A770",b:"int",y:2022,v:"16GB",w:225,s:8,u:9500,nw:13000,a:"Xe"},
+{n:"Arc B570",b:"int",y:2025,v:"10GB",w:150,s:10,u:10000,nw:13000,a:"Xe2"},
+{n:"Arc B580",b:"int",y:2024,v:"12GB",w:190,s:11.5,u:12000,nw:15000,a:"Xe2"}
 ];
 
 const CPUS=[
-{n:"Intel Core 2 Duo E8400",s:5},
-{n:"Intel Core 2 Quad Q6600",s:8},
-{n:"Intel i3-530 / i3-2100",s:12},
-{n:"Intel i5-750 / i5-2300",s:15},
-{n:"Intel i5-2500K",s:18},
-{n:"Intel i7-2600K",s:20},
-{n:"Intel i5-3470 / i5-3570",s:22},
-{n:"Intel i7-3770K",s:25},
-{n:"Intel i5-4460 / i5-4590",s:28},
-{n:"Intel i7-4770K / i7-4790K",s:32},
-{n:"Intel i5-6500 / i5-6600",s:33},
-{n:"Intel i7-6700K",s:38},
-{n:"Intel i5-7400 / i5-7500",s:38},
-{n:"Intel i7-7700K",s:42},
-{n:"Intel i3-8100 / i3-9100",s:40},
-{n:"Intel i5-8400 / i5-9400F",s:45},
-{n:"Intel i7-8700K / i7-9700K",s:52},
-{n:"Intel i9-9900K",s:58},
-{n:"Intel i5-10400F / i5-10600K",s:60},
-{n:"Intel i7-10700K",s:65},
-{n:"Intel i9-10900K",s:70},
-{n:"Intel i5-11400F / i5-11600K",s:66},
-{n:"Intel i7-11700K",s:72},
-{n:"Intel i9-11900K",s:75},
-{n:"Intel i5-12400F / i5-12600K",s:74},
-{n:"Intel i7-12700K",s:82},
-{n:"Intel i9-12900K",s:88},
-{n:"Intel i5-13400F / i5-13600K",s:80},
-{n:"Intel i7-13700K",s:90},
-{n:"Intel i9-13900K",s:95},
-{n:"Intel i5-14400F / i5-14600K",s:84},
-{n:"Intel i7-14700K",s:92},
-{n:"Intel i9-14900K",s:98},
-{n:"Intel Core Ultra 5 245F",s:88},
-{n:"Intel Core Ultra 7 265K",s:95},
-{n:"Intel Core Ultra 9 285K",s:100},
-{n:"AMD FX-4100 / FX-6100",s:10},
-{n:"AMD FX-6300 / FX-8320",s:15},
-{n:"AMD FX-8350 / FX-9590",s:18},
-{n:"AMD Ryzen 3 1200 / 1300X",s:25},
-{n:"AMD Ryzen 5 1400 / 1500X",s:28},
-{n:"AMD Ryzen 5 1600 / 1600X",s:32},
-{n:"AMD Ryzen 7 1700 / 1700X",s:35},
-{n:"AMD Ryzen 5 2600 / 2600X",s:38},
-{n:"AMD Ryzen 7 2700X",s:42},
-{n:"AMD Ryzen 5 3600 / 3600X",s:48},
-{n:"AMD Ryzen 7 3700X / 3800X",s:52},
-{n:"AMD Ryzen 9 3900X",s:58},
-{n:"AMD Ryzen 5 5600 / 5600X",s:62},
-{n:"AMD Ryzen 7 5800X / 5800X3D",s:70},
-{n:"AMD Ryzen 9 5900X",s:75},
-{n:"AMD Ryzen 9 5950X",s:78},
-{n:"AMD Ryzen 5 7600 / 7600X",s:74},
-{n:"AMD Ryzen 7 7700X",s:80},
-{n:"AMD Ryzen 7 7800X3D",s:90},
-{n:"AMD Ryzen 9 7900X",s:85},
-{n:"AMD Ryzen 9 7950X",s:88},
-{n:"AMD Ryzen 5 9600X",s:82},
-{n:"AMD Ryzen 7 9700X",s:88},
-{n:"AMD Ryzen 9 9900X",s:92},
-{n:"AMD Ryzen 9 9950X",s:95},
-{n:"AMD Ryzen 7 9800X3D",s:100}
+{n:"Intel Core 2 Duo E4300",s:3},{n:"Intel Core 2 Duo E6300",s:4},{n:"Intel Core 2 Duo E6600",s:5},{n:"Intel Core 2 Duo E7200",s:5},{n:"Intel Core 2 Duo E7400",s:6},{n:"Intel Core 2 Duo E8200",s:6},{n:"Intel Core 2 Duo E8400",s:7},{n:"Intel Core 2 Duo E8500",s:7},{n:"Intel Core 2 Duo E8600",s:8},
+{n:"Intel Core 2 Quad Q6600",s:8},{n:"Intel Core 2 Quad Q6700",s:9},{n:"Intel Core 2 Quad Q8200",s:8},{n:"Intel Core 2 Quad Q8300",s:9},{n:"Intel Core 2 Quad Q8400",s:9},{n:"Intel Core 2 Quad Q9300",s:10},{n:"Intel Core 2 Quad Q9400",s:10},{n:"Intel Core 2 Quad Q9500",s:11},{n:"Intel Core 2 Quad Q9550",s:11},{n:"Intel Core 2 Quad Q9650",s:12},{n:"Intel Core 2 Extreme QX6700",s:10},{n:"Intel Core 2 Extreme QX6850",s:11},{n:"Intel Core 2 Extreme QX9650",s:12},{n:"Intel Core 2 Extreme QX9770",s:13},
+{n:"Intel Pentium G620",s:8},{n:"Intel Pentium G630",s:8},{n:"Intel Pentium G640",s:9},{n:"Intel Pentium G840",s:10},{n:"Intel Pentium G850",s:10},{n:"Intel Pentium G860",s:11},{n:"Intel Pentium G2020",s:12},{n:"Intel Pentium G2030",s:12},{n:"Intel Pentium G2120",s:13},{n:"Intel Pentium G3220",s:14},{n:"Intel Pentium G3240",s:14},{n:"Intel Pentium G3250",s:15},{n:"Intel Pentium G3258",s:15},{n:"Intel Pentium G3420",s:15},{n:"Intel Pentium G3440",s:16},{n:"Intel Pentium G3460",s:16},{n:"Intel Pentium G4400",s:18},{n:"Intel Pentium G4500",s:19},{n:"Intel Pentium G4520",s:19},{n:"Intel Pentium G4560",s:22},{n:"Intel Pentium G4600",s:23},{n:"Intel Pentium G4620",s:23},{n:"Intel Pentium G5400",s:25},{n:"Intel Pentium G5500",s:26},{n:"Intel Pentium G5600",s:26},{n:"Intel Pentium G6400",s:30},{n:"Intel Pentium G6500",s:31},{n:"Intel Pentium G6600",s:31},{n:"Intel Pentium G7400",s:35},{n:"Intel Pentium G7500",s:36},
+{n:"Intel Celeron G1610",s:10},{n:"Intel Celeron G1620",s:10},{n:"Intel Celeron G1820",s:12},{n:"Intel Celeron G1830",s:12},{n:"Intel Celeron G1840",s:13},{n:"Intel Celeron G3900",s:15},{n:"Intel Celeron G3930",s:16},{n:"Intel Celeron G4900",s:18},{n:"Intel Celeron G4930",s:19},{n:"Intel Celeron G5900",s:22},{n:"Intel Celeron G5920",s:23},{n:"Intel Celeron G6900",s:28},
+{n:"Intel i3-530",s:12},{n:"Intel i3-540",s:12},{n:"Intel i3-550",s:13},{n:"Intel i3-560",s:13},{n:"Intel i3-2100",s:14},{n:"Intel i3-2120",s:15},{n:"Intel i3-2130",s:15},{n:"Intel i3-3210",s:16},{n:"Intel i3-3220",s:17},{n:"Intel i3-3240",s:17},{n:"Intel i3-3250",s:18},{n:"Intel i3-4130",s:20},{n:"Intel i3-4150",s:20},{n:"Intel i3-4160",s:21},{n:"Intel i3-4170",s:21},{n:"Intel i3-4330",s:22},{n:"Intel i3-4340",s:22},{n:"Intel i3-4350",s:23},{n:"Intel i3-4360",s:23},{n:"Intel i3-4370",s:24},{n:"Intel i3-6100",s:25},{n:"Intel i3-6300",s:26},{n:"Intel i3-6320",s:27},{n:"Intel i3-7100",s:27},{n:"Intel i3-7300",s:28},{n:"Intel i3-7320",s:29},{n:"Intel i3-7350K",s:30},{n:"Intel i3-8100",s:32},{n:"Intel i3-8300",s:33},{n:"Intel i3-8350K",s:34},{n:"Intel i3-9100",s:34},{n:"Intel i3-9100F",s:34},{n:"Intel i3-9300",s:35},{n:"Intel i3-9350K",s:36},{n:"Intel i3-10100",s:38},{n:"Intel i3-10100F",s:38},{n:"Intel i3-10105",s:39},{n:"Intel i3-10105F",s:39},{n:"Intel i3-10300",s:40},{n:"Intel i3-10320",s:41},{n:"Intel i3-12100",s:50},{n:"Intel i3-12100F",s:50},{n:"Intel i3-12300",s:52},{n:"Intel i3-13100",s:52},{n:"Intel i3-13100F",s:52},{n:"Intel i3-14100",s:54},{n:"Intel i3-14100F",s:54},
+{n:"Intel i5-650",s:14},{n:"Intel i5-660",s:14},{n:"Intel i5-750",s:15},{n:"Intel i5-760",s:16},{n:"Intel i5-2300",s:18},{n:"Intel i5-2310",s:18},{n:"Intel i5-2320",s:19},{n:"Intel i5-2380P",s:19},{n:"Intel i5-2400",s:20},{n:"Intel i5-2400S",s:19},{n:"Intel i5-2450P",s:20},{n:"Intel i5-2500",s:21},{n:"Intel i5-2500K",s:22},{n:"Intel i5-2500S",s:20},{n:"Intel i5-2550K",s:22},{n:"Intel i5-3330",s:22},{n:"Intel i5-3340",s:23},{n:"Intel i5-3350P",s:23},{n:"Intel i5-3450",s:24},{n:"Intel i5-3470",s:24},{n:"Intel i5-3470S",s:23},{n:"Intel i5-3550",s:25},{n:"Intel i5-3570",s:25},{n:"Intel i5-3570K",s:26},{n:"Intel i5-3570S",s:24},{n:"Intel i5-4430",s:26},{n:"Intel i5-4440",s:27},{n:"Intel i5-4460",s:28},{n:"Intel i5-4570",s:28},{n:"Intel i5-4590",s:29},{n:"Intel i5-4670",s:30},{n:"Intel i5-4670K",s:30},{n:"Intel i5-4690",s:31},{n:"Intel i5-4690K",s:31},{n:"Intel i5-5675C",s:30},{n:"Intel i5-6400",s:30},{n:"Intel i5-6402P",s:30},{n:"Intel i5-6500",s:33},{n:"Intel i5-6600",s:34},{n:"Intel i5-6600K",s:35},{n:"Intel i5-7400",s:35},{n:"Intel i5-7500",s:36},{n:"Intel i5-7600",s:37},{n:"Intel i5-7600K",s:38},{n:"Intel i5-8400",s:40},{n:"Intel i5-8500",s:41},{n:"Intel i5-8600",s:42},{n:"Intel i5-8600K",s:43},{n:"Intel i5-9400",s:42},{n:"Intel i5-9400F",s:42},{n:"Intel i5-9500",s:43},{n:"Intel i5-9500F",s:43},{n:"Intel i5-9600",s:44},{n:"Intel i5-9600K",s:45},{n:"Intel i5-9600KF",s:45},{n:"Intel i5-10400",s:50},{n:"Intel i5-10400F",s:50},{n:"Intel i5-10500",s:51},{n:"Intel i5-10600",s:52},{n:"Intel i5-10600K",s:53},{n:"Intel i5-10600KF",s:53},{n:"Intel i5-11400",s:55},{n:"Intel i5-11400F",s:55},{n:"Intel i5-11500",s:56},{n:"Intel i5-11600",s:57},{n:"Intel i5-11600K",s:58},{n:"Intel i5-11600KF",s:58},{n:"Intel i5-12400",s:62},{n:"Intel i5-12400F",s:62},{n:"Intel i5-12490F",s:63},{n:"Intel i5-12500",s:64},{n:"Intel i5-12600",s:65},{n:"Intel i5-12600K",s:68},{n:"Intel i5-12600KF",s:68},{n:"Intel i5-13400",s:68},{n:"Intel i5-13400F",s:68},{n:"Intel i5-13490F",s:69},{n:"Intel i5-13500",s:70},{n:"Intel i5-13600",s:72},{n:"Intel i5-13600K",s:75},{n:"Intel i5-13600KF",s:75},{n:"Intel i5-14400",s:72},{n:"Intel i5-14400F",s:72},{n:"Intel i5-14490F",s:73},{n:"Intel i5-14500",s:74},{n:"Intel i5-14600",s:76},{n:"Intel i5-14600K",s:78},{n:"Intel i5-14600KF",s:78},
+{n:"Intel i7-860",s:16},{n:"Intel i7-870",s:17},{n:"Intel i7-875K",s:17},{n:"Intel i7-920",s:16},{n:"Intel i7-930",s:17},{n:"Intel i7-940",s:17},{n:"Intel i7-950",s:18},{n:"Intel i7-960",s:18},{n:"Intel i7-970",s:19},{n:"Intel i7-980",s:19},{n:"Intel i7-980X",s:20},{n:"Intel i7-990X",s:21},{n:"Intel i7-2600",s:24},{n:"Intel i7-2600K",s:25},{n:"Intel i7-2600S",s:23},{n:"Intel i7-2700K",s:25},{n:"Intel i7-3770",s:27},{n:"Intel i7-3770K",s:28},{n:"Intel i7-3770S",s:26},{n:"Intel i7-3820",s:26},{n:"Intel i7-3930K",s:28},{n:"Intel i7-3960X",s:30},{n:"Intel i7-3970X",s:31},{n:"Intel i7-4770",s:30},{n:"Intel i7-4770K",s:31},{n:"Intel i7-4770S",s:29},{n:"Intel i7-4771",s:30},{n:"Intel i7-4790",s:32},{n:"Intel i7-4790K",s:33},{n:"Intel i7-4790S",s:31},{n:"Intel i7-4820K",s:31},{n:"Intel i7-4930K",s:33},{n:"Intel i7-4960X",s:34},{n:"Intel i7-5775C",s:33},{n:"Intel i7-5820K",s:34},{n:"Intel i7-5930K",s:36},{n:"Intel i7-5960X",s:38},{n:"Intel i7-6700",s:36},{n:"Intel i7-6700K",s:38},{n:"Intel i7-6800K",s:37},{n:"Intel i7-6850K",s:39},{n:"Intel i7-6900K",s:41},{n:"Intel i7-6950X",s:43},{n:"Intel i7-7700",s:38},{n:"Intel i7-7700K",s:40},{n:"Intel i7-7740X",s:39},{n:"Intel i7-7800X",s:40},{n:"Intel i7-7820X",s:42},{n:"Intel i7-7900X",s:44},{n:"Intel i7-7920X",s:45},{n:"Intel i7-7940X",s:46},{n:"Intel i7-7960X",s:47},{n:"Intel i7-7980XE",s:48},{n:"Intel i7-8086K",s:44},{n:"Intel i7-8700",s:44},{n:"Intel i7-8700K",s:46},{n:"Intel i7-9700",s:46},{n:"Intel i7-9700K",s:48},{n:"Intel i7-9700KF",s:48},{n:"Intel i7-9800X",s:47},{n:"Intel i7-9820X",s:48},{n:"Intel i7-9900X",s:49},{n:"Intel i7-9920X",s:50},{n:"Intel i7-9940X",s:51},{n:"Intel i7-9960X",s:52},{n:"Intel i7-9980XE",s:53},{n:"Intel i7-10700",s:55},{n:"Intel i7-10700K",s:58},{n:"Intel i7-10700KF",s:58},{n:"Intel i7-10850K",s:57},{n:"Intel i7-11700",s:60},{n:"Intel i7-11700K",s:62},{n:"Intel i7-11700KF",s:62},{n:"Intel i7-12700",s:70},{n:"Intel i7-12700K",s:75},{n:"Intel i7-12700KF",s:75},{n:"Intel i7-13700",s:78},{n:"Intel i7-13700K",s:82},{n:"Intel i7-13700KF",s:82},{n:"Intel i7-14700",s:80},{n:"Intel i7-14700K",s:85},{n:"Intel i7-14700KF",s:85},
+{n:"Intel i9-9900K",s:50},{n:"Intel i9-9900KF",s:50},{n:"Intel i9-9900KS",s:52},{n:"Intel i9-9920X",s:52},{n:"Intel i9-9940X",s:53},{n:"Intel i9-9960X",s:54},{n:"Intel i9-9980XE",s:55},{n:"Intel i9-10850K",s:60},{n:"Intel i9-10900",s:62},{n:"Intel i9-10900K",s:65},{n:"Intel i9-10900KF",s:65},{n:"Intel i9-10920X",s:63},{n:"Intel i9-10940X",s:64},{n:"Intel i9-10960X",s:65},{n:"Intel i9-10980XE",s:66},{n:"Intel i9-11900",s:65},{n:"Intel i9-11900K",s:68},{n:"Intel i9-11900KF",s:68},{n:"Intel i9-12900",s:78},{n:"Intel i9-12900K",s:85},{n:"Intel i9-12900KF",s:85},{n:"Intel i9-12900KS",s:88},{n:"Intel i9-13900",s:85},{n:"Intel i9-13900K",s:92},{n:"Intel i9-13900KF",s:92},{n:"Intel i9-13900KS",s:95},{n:"Intel i9-14900",s:88},{n:"Intel i9-14900K",s:95},{n:"Intel i9-14900KF",s:95},{n:"Intel i9-14900KS",s:98},
+{n:"Intel Core Ultra 5 245",s:80},{n:"Intel Core Ultra 5 245F",s:80},{n:"Intel Core Ultra 5 245K",s:82},{n:"Intel Core Ultra 5 245KF",s:82},{n:"Intel Core Ultra 7 265",s:88},{n:"Intel Core Ultra 7 265K",s:90},{n:"Intel Core Ultra 7 265KF",s:90},{n:"Intel Core Ultra 9 285",s:95},{n:"Intel Core Ultra 9 285K",s:98},{n:"Intel Core Ultra 9 285KF",s:98},
+{n:"Intel Xeon E3-1230",s:22},{n:"Intel Xeon E3-1230 v2",s:25},{n:"Intel Xeon E3-1230 v3",s:28},{n:"Intel Xeon E3-1230 v5",s:32},{n:"Intel Xeon E3-1230 v6",s:35},{n:"Intel Xeon E3-1240 v3",s:29},{n:"Intel Xeon E3-1240 v5",s:33},{n:"Intel Xeon E3-1240 v6",s:36},{n:"Intel Xeon E3-1270 v3",s:30},{n:"Intel Xeon E3-1270 v5",s:34},{n:"Intel Xeon E3-1270 v6",s:37},{n:"Intel Xeon E3-1280 v3",s:31},{n:"Intel Xeon E3-1280 v5",s:35},{n:"Intel Xeon E3-1280 v6",s:38},{n:"Intel Xeon E5-1620",s:28},{n:"Intel Xeon E5-1620 v2",s:30},{n:"Intel Xeon E5-1620 v3",s:33},{n:"Intel Xeon E5-1620 v4",s:35},{n:"Intel Xeon E5-1650",s:30},{n:"Intel Xeon E5-1650 v2",s:32},{n:"Intel Xeon E5-1650 v3",s:35},{n:"Intel Xeon E5-1650 v4",s:37},{n:"Intel Xeon E5-1660",s:31},{n:"Intel Xeon E5-1660 v2",s:33},{n:"Intel Xeon E5-1660 v3",s:36},{n:"Intel Xeon E5-1660 v4",s:38},{n:"Intel Xeon E5-2620",s:28},{n:"Intel Xeon E5-2620 v2",s:30},{n:"Intel Xeon E5-2620 v3",s:33},{n:"Intel Xeon E5-2620 v4",s:35},{n:"Intel Xeon E5-2630",s:29},{n:"Intel Xeon E5-2630 v2",s:31},{n:"Intel Xeon E5-2630 v3",s:34},{n:"Intel Xeon E5-2630 v4",s:36},{n:"Intel Xeon E5-2640",s:30},{n:"Intel Xeon E5-2640 v2",s:32},{n:"Intel Xeon E5-2640 v3",s:35},{n:"Intel Xeon E5-2640 v4",s:37},{n:"Intel Xeon E5-2650",s:31},{n:"Intel Xeon E5-2650 v2",s:33},{n:"Intel Xeon E5-2650 v3",s:36},{n:"Intel Xeon E5-2650 v4",s:38},{n:"Intel Xeon E5-2660",s:32},{n:"Intel Xeon E5-2660 v2",s:34},{n:"Intel Xeon E5-2660 v3",s:37},{n:"Intel Xeon E5-2660 v4",s:39},{n:"Intel Xeon E5-2670",s:33},{n:"Intel Xeon E5-2670 v2",s:35},{n:"Intel Xeon E5-2670 v3",s:38},{n:"Intel Xeon E5-2670 v4",s:40},{n:"Intel Xeon E5-2680",s:34},{n:"Intel Xeon E5-2680 v2",s:36},{n:"Intel Xeon E5-2680 v3",s:39},{n:"Intel Xeon E5-2680 v4",s:41},{n:"Intel Xeon E5-2690",s:35},{n:"Intel Xeon E5-2690 v2",s:37},{n:"Intel Xeon E5-2690 v3",s:40},{n:"Intel Xeon E5-2690 v4",s:42},{n:"Intel Xeon E5-2695 v3",s:40},{n:"Intel Xeon E5-2695 v4",s:42},{n:"Intel Xeon E5-2697 v3",s:42},{n:"Intel Xeon E5-2697 v4",s:44},{n:"Intel Xeon E5-2699 v3",s:43},{n:"Intel Xeon E5-2699 v4",s:45},
+{n:"AMD Athlon II X2 240",s:6},{n:"AMD Athlon II X2 250",s:7},{n:"AMD Athlon II X2 260",s:7},{n:"AMD Athlon II X2 270",s:8},{n:"AMD Athlon II X3 440",s:8},{n:"AMD Athlon II X3 450",s:9},{n:"AMD Athlon II X4 620",s:9},{n:"AMD Athlon II X4 630",s:10},{n:"AMD Athlon II X4 640",s:10},{n:"AMD Athlon II X4 645",s:11},{n:"AMD Athlon X4 740",s:12},{n:"AMD Athlon X4 750K",s:13},{n:"AMD Athlon X4 760K",s:13},{n:"AMD Athlon X4 840",s:15},{n:"AMD Athlon X4 860K",s:16},{n:"AMD Athlon X4 880K",s:17},{n:"AMD Athlon 200GE",s:20},{n:"AMD Athlon 220GE",s:21},{n:"AMD Athlon 240GE",s:22},{n:"AMD Athlon 3000G",s:22},{n:"AMD Athlon 300GE",s:23},{n:"AMD Athlon 320GE",s:24},
+{n:"AMD Phenom II X2 545",s:8},{n:"AMD Phenom II X2 550",s:8},{n:"AMD Phenom II X2 555",s:9},{n:"AMD Phenom II X2 560",s:9},{n:"AMD Phenom II X3 720",s:9},{n:"AMD Phenom II X4 940",s:10},{n:"AMD Phenom II X4 945",s:10},{n:"AMD Phenom II X4 955",s:11},{n:"AMD Phenom II X4 965",s:12},{n:"AMD Phenom II X4 970",s:12},{n:"AMD Phenom II X4 980",s:13},{n:"AMD Phenom II X6 1045T",s:13},{n:"AMD Phenom II X6 1055T",s:14},{n:"AMD Phenom II X6 1065T",s:14},{n:"AMD Phenom II X6 1090T",s:15},{n:"AMD Phenom II X6 1100T",s:16},
+{n:"AMD FX-4100",s:10},{n:"AMD FX-4130",s:11},{n:"AMD FX-4150",s:11},{n:"AMD FX-4170",s:12},{n:"AMD FX-4300",s:12},{n:"AMD FX-4320",s:13},{n:"AMD FX-4350",s:13},{n:"AMD FX-6100",s:12},{n:"AMD FX-6120",s:13},{n:"AMD FX-6200",s:13},{n:"AMD FX-6300",s:14},{n:"AMD FX-6350",s:15},{n:"AMD FX-8100",s:14},{n:"AMD FX-8120",s:15},{n:"AMD FX-8140",s:15},{n:"AMD FX-8150",s:16},{n:"AMD FX-8170",s:16},{n:"AMD FX-8300",s:16},{n:"AMD FX-8310",s:16},{n:"AMD FX-8320",s:17},{n:"AMD FX-8320E",s:16},{n:"AMD FX-8350",s:18},{n:"AMD FX-8370",s:18},{n:"AMD FX-8370E",s:17},{n:"AMD FX-9370",s:19},{n:"AMD FX-9590",s:20},
+{n:"AMD Ryzen 3 1200",s:22},{n:"AMD Ryzen 3 1300X",s:24},{n:"AMD Ryzen 3 2200G",s:25},{n:"AMD Ryzen 3 2300X",s:26},{n:"AMD Ryzen 3 3100",s:32},{n:"AMD Ryzen 3 3200G",s:28},{n:"AMD Ryzen 3 3300X",s:34},{n:"AMD Ryzen 3 4100",s:35},{n:"AMD Ryzen 3 4300G",s:36},{n:"AMD Ryzen 3 5300G",s:40},{n:"AMD Ryzen 3 5300GE",s:38},
+{n:"AMD Ryzen 5 1400",s:25},{n:"AMD Ryzen 5 1500X",s:27},{n:"AMD Ryzen 5 1600",s:30},{n:"AMD Ryzen 5 1600X",s:32},{n:"AMD Ryzen 5 2400G",s:30},{n:"AMD Ryzen 5 2500X",s:31},{n:"AMD Ryzen 5 2600",s:35},{n:"AMD Ryzen 5 2600X",s:37},{n:"AMD Ryzen 5 3400G",s:34},{n:"AMD Ryzen 5 3500",s:36},{n:"AMD Ryzen 5 3500X",s:38},{n:"AMD Ryzen 5 3600",s:42},{n:"AMD Ryzen 5 3600X",s:44},{n:"AMD Ryzen 5 3600XT",s:45},{n:"AMD Ryzen 5 4500",s:42},{n:"AMD Ryzen 5 4600G",s:45},{n:"AMD Ryzen 5 5500",s:50},{n:"AMD Ryzen 5 5600",s:55},{n:"AMD Ryzen 5 5600G",s:52},{n:"AMD Ryzen 5 5600X",s:56},{n:"AMD Ryzen 5 5600XT",s:57},{n:"AMD Ryzen 5 7500F",s:62},{n:"AMD Ryzen 5 7600",s:65},{n:"AMD Ryzen 5 7600X",s:68},{n:"AMD Ryzen 5 7600X3D",s:72},{n:"AMD Ryzen 5 8400F",s:62},{n:"AMD Ryzen 5 8500G",s:60},{n:"AMD Ryzen 5 8600G",s:65},{n:"AMD Ryzen 5 9600",s:70},{n:"AMD Ryzen 5 9600X",s:72},
+{n:"AMD Ryzen 7 1700",s:32},{n:"AMD Ryzen 7 1700X",s:34},{n:"AMD Ryzen 7 1800X",s:36},{n:"AMD Ryzen 7 2700",s:38},{n:"AMD Ryzen 7 2700X",s:40},{n:"AMD Ryzen 7 3700X",s:48},{n:"AMD Ryzen 7 3800X",s:50},{n:"AMD Ryzen 7 3800XT",s:51},{n:"AMD Ryzen 7 5700G",s:58},{n:"AMD Ryzen 7 5700X",s:60},{n:"AMD Ryzen 7 5700X3D",s:68},{n:"AMD Ryzen 7 5800X",s:62},{n:"AMD Ryzen 7 5800X3D",s:72},{n:"AMD Ryzen 7 7700",s:70},{n:"AMD Ryzen 7 7700X",s:72},{n:"AMD Ryzen 7 7800X3D",s:82},{n:"AMD Ryzen 7 8700G",s:70},{n:"AMD Ryzen 7 9700X",s:78},{n:"AMD Ryzen 7 9800X3D",s:90},
+{n:"AMD Ryzen 9 3900X",s:52},{n:"AMD Ryzen 9 3900XT",s:53},{n:"AMD Ryzen 9 3950X",s:55},{n:"AMD Ryzen 9 5900X",s:65},{n:"AMD Ryzen 9 5900XT",s:66},{n:"AMD Ryzen 9 5950X",s:68},{n:"AMD Ryzen 9 7900",s:75},{n:"AMD Ryzen 9 7900X",s:78},{n:"AMD Ryzen 9 7900X3D",s:82},{n:"AMD Ryzen 9 7950X",s:80},{n:"AMD Ryzen 9 7950X3D",s:85},{n:"AMD Ryzen 9 9900X",s:82},{n:"AMD Ryzen 9 9900X3D",s:88},{n:"AMD Ryzen 9 9950X",s:85},{n:"AMD Ryzen 9 9950X3D",s:92},
+{n:"AMD Threadripper 1900X",s:40},{n:"AMD Threadripper 1920X",s:45},{n:"AMD Threadripper 1950X",s:48},{n:"AMD Threadripper 2920X",s:50},{n:"AMD Threadripper 2950X",s:52},{n:"AMD Threadripper 2970WX",s:53},{n:"AMD Threadripper 2990WX",s:55},{n:"AMD Threadripper 3960X",s:65},{n:"AMD Threadripper 3970X",s:68},{n:"AMD Threadripper 3990X",s:70},{n:"AMD Threadripper 5965WX",s:72},{n:"AMD Threadripper 5975WX",s:75},{n:"AMD Threadripper 5995WX",s:78},{n:"AMD Threadripper 7960X",s:80},{n:"AMD Threadripper 7970X",s:82},{n:"AMD Threadripper 7980X",s:85},{n:"AMD Threadripper 7995WX",s:88}
 ];
 
 const GAMES={
@@ -1114,43 +1092,44 @@ function score10(c){
 }
 function reason10(c,sc){
   const v=c.u?value(c):99999;
-  if(sc>=8.5)return"أداء قمة، وسعره مبرر لقوته — من أقوى اختيارات السوق.";
-  if(sc>=7)return c.u&&v<1300?"أداء عالي وسعره مبرر — قيمة ممتازة لفئته.":"أداء عالي يناسب الفئة العليا و1440p.";
-  if(sc>=5.5)return"توازن كويس بين السعر والأداء — اختيار آمن لفئته.";
-  if(sc>=4)return c.y<=2016?"كارت قديم — مناسب للألعاب الخفيفة والأونلاين بس.":"كارت اقتصادي — للألعاب الخفيفة والأونلاين على 1080p.";
-  return"ضعيف جداً — للشاشة والمهام الخفيفة بس، مش للألعاب الحديثة.";
+  if(sc>=8.5)return t('rTop');
+  if(sc>=7)return c.u&&v<1300?t('rHighVal'):t('rHigh');
+  if(sc>=5.5)return t('rMid');
+  if(sc>=4)return c.y<=2016?t('rOld'):t('rEco');
+  return t('rWeak');
 }
 function forWho(c){
-  if(c.s<1.5)return"لتشغيل الشاشة والمهام الخفيفة بس — مش للألعاب";
-  if(c.s<3)return"للألعاب الخفيفة (LoL، ألعاب قديمة) على إعدادات منخفضة";
-  if(c.s<6)return"لألعاب الأونلاين (Valorant، CS2، Fortnite) على 1080p";
-  if(c.s<10)return"لـ 1080p Medium/High — أحلى توازن لجهاز اقتصادي";
-  if(c.s<16)return"لـ 1080p Ultra و1440p Medium — كارت شامل";
-  if(c.s<24)return"لـ 1440p مريح على إعدادات عالية";
-  if(c.s<32)return"لـ 1440p Ultra و4K خفيف";
-  return"لـ 4K على أعلى إعدادات — قمة الأداء"}
+  if(c.s<1.5)return t('w0');
+  if(c.s<3)return t('w1');
+  if(c.s<6)return t('w2');
+  if(c.s<10)return t('w3');
+  if(c.s<16)return t('w4');
+  if(c.s<24)return t('w5');
+  if(c.s<32)return t('w6');
+  return t('w7');
+}
 function prosCons(c){const P=[],C=[],vramN=parseFloat(c.v);
-  if(c.w<=75)P.push("مش محتاج باور إضافي — أي باور سبلاي يشيله");
-  if(c.u&&value(c)<1100)P.push("من أفضل قيمة مقابل السعر في السوق ⭐");
-  if(vramN>=12)P.push("ذاكرة كبيرة "+c.v+" مناسبة للألعاب الحديثة");
-  else if(vramN>=8&&c.y>=2019)P.push("ذاكرة كافية لأغلب ألعاب 1080p الحالية");
-  if(c.y>=2023)P.push("حديث بيدعم "+(c.b==="nv"?"DLSS 3/4":"FSR 3")+" وتوليد الفريمات");
-  if(c.b==="nv"&&c.y>=2018)P.push("بيدعم NVENC — ممتاز للاستريم والتسجيل");
-  if(c.s>=15&&c.s<28)P.push("حلو جداً للـ 1440p");
-  else if(c.s>=10&&c.s<15)P.push("حلو جداً للـ 1080p Ultra");
-  if(c.s>=28)P.push("أداء 4K ممتاز");
-  if(c.b==="int")P.push("سعره منافس جداً مقابل الأداء");
-  if(c.u&&price(c)<5000)P.push("سعر مستعمل مغري للميزانيات المحدودة");
-  if(c.w>=250)C.push("استهلاك عالي — محتاج باور "+psu(c)+"W حقيقي");
-  if(vramN<=4)C.push("ذاكرة "+c.v+" قليلة لألعاب 2026");
-  else if(vramN===8&&c.y>=2023)C.push("8GB بدأت تبقى حد أدنى لألعاب 2026 على إعدادات عالية");
-  if(c.y<=2016)C.push("قديم — أغلب المعروض مستعمل ومن غير ضمان");
-  if(c.s<3)C.push("مش هيشيل الألعاب الحديثة التقيلة");
-  if(c.b==="int")C.push("درايفرات Intel لسه بتتحسّن — اتأكد من توافق ألعابك");
-  if(!c.nw&&c.y>=2017)C.push("مفيش منه جديد — هتدور على مستعمل نضيف");
-  if(c.y>=2018&&c.y<=2020&&c.w>=200)C.push("جيل استهلاكه عالي نسبياً مقارنة بالأحدث");
-  if(c.s>=20&&c.u&&value(c)>2000)C.push("سعره عالي مقابل الأداء — فيه بدائل أرخص");
-  if(/Mining/i.test(c.n))C.push("كارت تعدين سابق — افحصه كويس قبل الشراء");
+  if(c.w<=75)P.push(t('pNoPw'));
+  if(c.u&&value(c)<1100)P.push(t('pValue'));
+  if(vramN>=12)P.push(t('pVramBig')+' '+c.v);
+  else if(vramN>=8&&c.y>=2019)P.push(t('pVramOk'));
+  if(c.y>=2023)P.push(t('pModern')+(c.b==="nv"?"DLSS 3/4":"FSR 3"));
+  if(c.b==="nv"&&c.y>=2018)P.push(t('pNvenc'));
+  if(c.s>=15&&c.s<28)P.push(t('p1440'));
+  else if(c.s>=10&&c.s<15)P.push(t('p1080u'));
+  if(c.s>=28)P.push(t('p4k'));
+  if(c.b==="int")P.push(t('pIntPrice'));
+  if(c.u&&price(c)<5000)P.push(t('pCheapUsed'));
+  if(c.w>=250)C.push(t('cHighPw')+psu(c)+'W');
+  if(vramN<=4)C.push(t('cVramLow')+c.v);
+  else if(vramN===8&&c.y>=2023)C.push(t('cVram8'));
+  if(c.y<=2016)C.push(t('cOld'));
+  if(c.s<3)C.push(t('cWeak'));
+  if(c.b==="int")C.push(t('cIntDrv'));
+  if(!c.nw&&c.y>=2017)C.push(t('cNoNew'));
+  if(c.y>=2018&&c.y<=2020&&c.w>=200)C.push(t('cGenPw'));
+  if(c.s>=20&&c.u&&value(c)>2000)C.push(t('cExpensive'));
+  if(/Mining/i.test(c.n))C.push(t('cMining'));
   return{P:P.slice(0,5),C:C.slice(0,5)}}
 
 function matchScore(c,q){
@@ -1172,20 +1151,25 @@ function tcSlug(c){const base=c.n.replace(/\s+/g,'-');
   if(c.b==='nv')return'GeForce-'+base;
   if(c.b==='amd')return'Radeon-'+base;
   return'Arc-'+base.replace(/^Arc-/,'');}
-const tcURL=(a,b)=>`https://technical.city/en/video/${tcSlug(a)}-vs-${tcSlug(b)}`;
-const ubURL=n=>`https://www.userbenchmark.com/Search/Search?term=${encodeURIComponent(n)}`;
-const ytURL=names=>`https://www.youtube.com/results?search_query=${encodeURIComponent(names.join(' vs ')+' benchmark 1080p')}`;
 
 let favs=JSON.parse(localStorage.getItem('fav_cards')||'[]');
 let cmpList=JSON.parse(localStorage.getItem('compare_list')||'[]');
 let theme=localStorage.getItem('theme')||'dark';
+let lang=localStorage.getItem('lang')||'ar';
 let fBrand='all',fPrice='all',showFavOnly=false,currentCard=null,curGame='val';
 let currentList=[],visibleCount=24,renderedCount=0;
 const isFav=n=>favs.includes(n);
+const EGP=()=>lang==='ar'?'ج.م':'EGP';
 
-function toast(msg){let t=document.getElementById('toast');
-  t.textContent=msg;t.classList.add('show');
-  clearTimeout(t._t);t._t=setTimeout(()=>t.classList.remove('show'),2400)}
+const I18N={
+ar:{cards:'الكروت',bn:'عنق الزجاجة',fav:'المفضلة',cmp:'قارن',tips:'نصايح',search:'دوّر بالاسم أو الماركة أو المعمارية...',all:'الكل',allP:'كل الأسعار',u3:'أقل من 3k',u8:'⭐ 8k وتحت',r815:'8–15k',r1530:'15–30k',o30:'+30k',sPerf:'من الأقوى للأضعف 💪',sCheap:'من الأرخص للأغلى',sVal:'الأفضل قيمة ⭐',sNew:'الأحدث',total:'كارت',avg:'متوسط المستعمل (ج.م)',cheap:'أرخص كارت (ج.م)',src:'تحديث يومي',ctaT:'🧮 حاسبة عنق الزجاجة (Bottleneck)',ctaD:'اعرف أنهي قطعة بتخنق جهازك — معالج، كارت، رام، هارد، بوردة، باور',ctaB:'احسب دلوقتي ←',show:'معروض',of:'من',more:'عرض المزيد',rem:'باقي',noRes:'مفيش كارت بالمواصفات دي',noFav:'مفيش كروت في المفضلة — دوس ♥ جنب أي كارت',reset:'امسح الفلاتر',used:'مستعمل',new:'جديد',usedOnly:'مستعمل بس',value:'قيمة ⭐',favAdded:'اتضاف للمفضلة ❤️',favRemoved:'اتشال من المفضلة',cmpMax:'المقارنة بحد أقصى 4 كروت',bnTitle:'حاسبة عنق الزجاجة (Bottleneck)',bnIntro:'إيه هو عنق الزجاجة؟',bnIntro2:'لما قطعة في جهازك (غالباً المعالج) تكون أضعف من الباقي، فبتحد من أداء الكارت القوي — زي ما تحط موتور فيراري في عربية نقل. الحاسبة دي بتقدّرلك نسبة الاختناق وبتقولك أنهي قطعة تستاهل ترقية.',bnCalc:'🧮 احسب عنق الزجاجة',cpu:'المعالج (CPU)',gpu:'كارت الشاشة (GPU)',res:'دقة الشاشة',ram:'الرام (RAM)',disk:'الهارد (Storage)',psu:'الباور سبلاي (PSU)',mb:'البوردة (Motherboard)',cpuPh:'🔍 دوّر على المعالج...',gpuPh:'🔍 دوّر على الكارت...',cpuPh2:'اكتب عشان تفلتر',gpuPh2:'اكتب عشان تفلتر',ramNote:'أقل من 16GB بيخنق',diskNote:'النوع أهم من السعة',bnScore:'نسبة عنق الزجاجة',bnFps:'FPS متوقع (1080p High):',bnTips:'💡 النصايح:',bnEmpty:'اختار قطع جهازك من الشمال واضغط "احسب"',bnGood:'✅ مفيش عنق زجاجة — جهازك متوازن',bnMid:'🟡 عنق زجاجة بسيط — مقبول',bnBad:'🔴 عنق زجاجة كبير — فيه قطعة بتخنق التانية',bnGoodTip:'جهازك متوازن جداً، استمتع بالألعاب من غير ما تقلق.',bnMidTip:'فيه اختناق بسيط بس مش هيأثر كتير على تجربتك.',bnBadTip:'فيه قطعة بتحد من أداء الباقي بشكل واضح. شوف النصايح تحت.',bnAllGood:'✅ كل القطع متوازنة — مفيش ترقية ضرورية دلوقتي.',bnCpuBn:'المعالج بيخنق الكارت',bnCpuTip:'الكارت أقوى من المعالج، فمش هتستفيد من قوته كاملة. فكّر في ترقية المعالج.',bnGpuBn:'الكارت أضعف من المعالج',bnGpuTip:'المعالج بتاعك قوي والكارت هو اللي بيحد. ترقية الكارت هتفرق جداً.',bnRamLow:'الرام قليلة',bnRamTip:'الألعاب الحديثة بتحتاج 16GB على الأقل. الترقية دي رخيصة وهتفرق.',bnHdd:'عندك HDD',bnHddTip:'مش بيأثر على الفريمات بس بيخلي التحميل طويل. SSD هيغير تجربتك.',bnPsuLow:'الباور قليل',bnPsuTip:'الكارت ده محتاج باور أقوى. متغامرش بباور ضعيف.',bnApprox:'تقريبي — الألعاب الخفيفة هتبقى أعلى، والتقيلة هتبقى أقل.',cmpTitle:'قارن الكروت',cmpHeroKick:'⚖️ مقارنة GPUVault',cmpHeroTitle:'قارن كروت الشاشة',cmpHeroSub:'اختار لحد 4 كروت وقارنهم جنب بعض — أداء، سعر، استهلاك، FPS في الألعاب',cmpHeroAdd:'➕ ضيف للمقارنة',cmpAdd:'➕ ضيف',cmpEmpty:'لسه مختارتش كروت — اختار من فوق أو دوس ⚖ جنب أي كارت',cmpPerf:'فرق الأداء *',cmpVal:'القيمة (ج.م/نقطة)',cmpBest:'الأحسن في الصف',cmpSel:'مختار',cmpOpen:'افتح صفحة المقارنة جنب بعض',cmpNow:'قارن دلوقتي ←',clear:'مسح',detSpecs:'المواصفات',detGames:'أداء الألعاب — 1080p',detPower:'الباور والاستهلاك',detVerdict:'الحكم النهائي',detAlts:'بدائل بنفس السعر (الأحسن الأول)',detFav:'ضيف للمفضلة',detFavOn:'في المفضلة',detCmp:'قارن',detWhy:'ليه',detWho:'مين يشتريه؟',detUsed:'متوسط المستعمل',detNew:'متوسط الجديد',detRange:'النطاق',detNewDiff:'فرق الجديد',detNoNew:'مفيش جديد',detUsedOnly:'مستعمل بس',detMfg:'المصنع',detArch:'المعمارية',detYear:'سنة الإصدار',detVram:'الذاكرة',detDx:'DirectX',detPerf:'نقاط الأداء',detTdp:'الاستهلاك',detPsu:'الباور المقترح',detPw:'الباور الإضافي',detGameNote:'📊 أرقام تقريبية بتختلف حسب البروسيسور والرامات — 60+ فريم = سلس • دوس على أي لعبة',detPowerNote:'من أصل 575W (RTX 5090)',detPwComp:'⚡ مقارنة الاستهلاك',detDaily:'الحمل اليومي',detPros:'✅ المميزات',detCons:'⚠️ العيوب',detAltHead:'⬆ أقوى = أداء أعلى في نفس السعر • ⭐ قيمة أحسن = أرخص لكل نقطة أداء',detAltUp:'⬆ أقوى',detAltVal:'⭐ قيمة أحسن',detChooseGame:'اختار لعبة:',detHover:'عدّي بالماوس — المراوح هتسرع',tipTitle:'قبل ما تشتري',back:'→ رجوع',deal:'🔥 صفقة اليوم',kick:'🇪🇬 أسعار مصر • مستعمل: دوبيزل + فيسبوك • جديد: نون + أمازون + Sigma + Maximum',sub:'كارت من NVIDIA وAMD وIntel بأسعار حقيقية + مقارنات أداء.',footer:'أسعار كروت الشاشة في مصر • مستعمل: دوبيزل + فيسبوك • جديد: نون + أمازون + Sigma + Maximum',footerNote:'الأسعار تقريبية (يوليو 2026) وبتتغير يومياً — اتأكد قبل الشراء',dealPerf:'ج.م لكل نقطة أداء',fpsSmooth:'✅ سلس جداً — هتعلّب براحة',fpsOk:'🟡 قابل للعب — نزل الإعدادات شوية',fpsBad:'🔴 هتعاني — دوّر على كارت أقوى',rTop:'أداء قمة، وسعره مبرر لقوته — من أقوى اختيارات السوق.',rHighVal:'أداء عالي وسعره مبرر — قيمة ممتازة لفئته.',rHigh:'أداء عالي يناسب الفئة العليا و1440p.',rMid:'توازن كويس بين السعر والأداء — اختيار آمن لفئته.',rOld:'كارت قديم — مناسب للألعاب الخفيفة والأونلاين بس.',rEco:'كارت اقتصادي — للألعاب الخفيفة والأونلاين على 1080p.',rWeak:'ضعيف جداً — للشاشة والمهام الخفيفة بس، مش للألعاب الحديثة.',w0:'لتشغيل الشاشة والمهام الخفيفة بس — مش للألعاب',w1:'للألعاب الخفيفة (LoL، ألعاب قديمة) على إعدادات منخفضة',w2:'لألعاب الأونلاين (Valorant، CS2، Fortnite) على 1080p',w3:'لـ 1080p Medium/High — أحلى توازن لجهاز اقتصادي',w4:'لـ 1080p Ultra و1440p Medium — كارت شامل',w5:'لـ 1440p مريح على إعدادات عالية',w6:'لـ 1440p Ultra و4K خفيف',w7:'لـ 4K على أعلى إعدادات — قمة الأداء',pNoPw:'مش محتاج باور إضافي — أي باور سبلاي يشيله',pValue:'من أفضل قيمة مقابل السعر في السوق ⭐',pVramBig:'ذاكرة كبيرة مناسبة للألعاب الحديثة:',pVramOk:'ذاكرة كافية لأغلب ألعاب 1080p الحالية',pModern:'حديث بيدعم ',pNvenc:'بيدعم NVENC — ممتاز للاستريم والتسجيل',p1440:'حلو جداً للـ 1440p',p1080u:'حلو جداً للـ 1080p Ultra',p4k:'أداء 4K ممتاز',pIntPrice:'سعره منافس جداً مقابل الأداء',pCheapUsed:'سعر مستعمل مغري للميزانيات المحدودة',cHighPw:'استهلاك عالي — محتاج باور ',cVramLow:'ذاكرة قليلة لألعاب 2026: ',cVram8:'8GB بدأت تبقى حد أدنى لألعاب 2026 على إعدادات عالية',cOld:'قديم — أغلب المعروض مستعمل ومن غير ضمان',cWeak:'مش هيشيل الألعاب الحديثة التقيلة',cIntDrv:'درايفرات Intel لسه بتتحسّن — اتأكد من توافق ألعابك',cNoNew:'مفيش منه جديد — هتدور على مستعمل نضيف',cGenPw:'جيل استهلاكه عالي نسبياً مقارنة بالأحدث',cExpensive:'سعره عالي مقابل الأداء — فيه بدائل أرخص',cMining:'كارت تعدين سابق — افحصه كويس قبل الشراء',langToast:'تم التغيير للعربية 🇪',themeLight:'الوضع النهاري ☀️',themeDark:'الوضع الليلي 🌙'},
+en:{cards:'Cards',bn:'Bottleneck',fav:'Favorites',cmp:'Compare',tips:'Tips',search:'Search by name, brand, or architecture...',all:'All',allP:'All Prices',u3:'Under 3k',u8:'Under 8k ⭐',r815:'8–15k',r1530:'15–30k',o30:'30k+',sPerf:'Strongest to Weakest 💪',sCheap:'Cheapest to Most Expensive',sVal:'Best Value ⭐',sNew:'Newest',total:'cards',avg:'Avg Used (EGP)',cheap:'Cheapest Card (EGP)',src:'Daily updates',ctaT:'🧮 Bottleneck Calculator',ctaD:'Find which component bottlenecks your PC — CPU, GPU, RAM, storage, motherboard, PSU',ctaB:'Calculate Now ←',show:'Showing',of:'of',more:'Load More',rem:'remaining',noRes:'No cards match these specs',noFav:'No favorites yet — tap ♥ next to any card',reset:'Reset Filters',used:'Used',new:'New',usedOnly:'Used only',value:'Value ⭐',favAdded:'Added to favorites ❤️',favRemoved:'Removed from favorites',cmpMax:'Compare up to 4 cards max',bnTitle:'Bottleneck Calculator',bnIntro:'What is a bottleneck?',bnIntro2:'When a component (usually the CPU) is weaker than the rest, it limits the powerful GPU — like putting a Ferrari engine in a truck. This calculator estimates the bottleneck percentage and tells you which part to upgrade.',bnCalc:'🧮 Calculate Bottleneck',cpu:'CPU',gpu:'GPU',res:'Resolution',ram:'RAM',disk:'Storage',psu:'PSU',mb:'Motherboard',cpuPh:'🔍 Search CPU...',gpuPh:'🔍 Search GPU...',cpuPh2:'type to filter',gpuPh2:'type to filter',ramNote:'Less than 16GB bottlenecks',diskNote:'Type matters more than size',bnScore:'Bottleneck Percentage',bnFps:'Estimated FPS (1080p High):',bnTips:'💡 Tips:',bnEmpty:'Select your components on the left and click "Calculate"',bnGood:'✅ No bottleneck — your PC is balanced',bnMid:'🟡 Slight bottleneck — acceptable',bnBad:'🔴 Major bottleneck — a component is holding back the rest',bnGoodTip:'Your PC is very balanced, enjoy gaming without worry.',bnMidTip:'Slight bottleneck but won\'t affect your experience much.',bnBadTip:'A component is significantly limiting the rest. See tips below.',bnAllGood:'✅ All components are balanced — no upgrade needed right now.',bnCpuBn:'CPU is bottlenecking the GPU',bnCpuTip:'The GPU is stronger than the CPU, so you won\'t get full performance. Consider a CPU upgrade.',bnGpuBn:'GPU weaker than CPU',bnGpuTip:'Your CPU is strong and the GPU is the limiting factor. A GPU upgrade will help a lot.',bnRamLow:'Low RAM',bnRamTip:'Modern games need at least 16GB. This upgrade is cheap and makes a difference.',bnHdd:'You have an HDD',bnHddTip:'Doesn\'t affect FPS but makes loading slow. An SSD will change your experience.',bnPsuLow:'Weak PSU',bnPsuTip:'This GPU needs a stronger PSU. Don\'t risk a weak PSU.',bnApprox:'Approximate — light games will be higher, heavy games will be lower.',cmpTitle:'Compare Cards',cmpHeroKick:'⚖️ GPUVault Compare',cmpHeroTitle:'Compare Graphics Cards',cmpHeroSub:'Pick up to 4 cards and compare side by side — performance, price, power, FPS in games',cmpHeroAdd:'➕ Add to Compare',cmpAdd:'➕ Add',cmpEmpty:'No cards selected yet — pick from above or tap ⚖ next to any card',cmpPerf:'Perf Diff *',cmpVal:'Value (EGP/point)',cmpBest:'Best in row',cmpSel:'Selected',cmpOpen:'Open comparison page side by side',cmpNow:'Compare Now ←',clear:'Clear',detSpecs:'Specifications',detGames:'Game Performance — 1080p',detPower:'Power & Consumption',detVerdict:'Final Verdict',detAlts:'Alternatives at Same Price (Best First)',detFav:'Add to Favorites',detFavOn:'In Favorites',detCmp:'Compare',detWhy:'Why',detWho:'Who should buy it?',detUsed:'Avg Used',detNew:'Avg New',detRange:'Range',detNewDiff:'New premium',detNoNew:'No new',detUsedOnly:'Used only',detMfg:'Manufacturer',detArch:'Architecture',detYear:'Release Year',detVram:'Memory',detDx:'DirectX',detPerf:'Performance Score',detTdp:'Power Draw',detPsu:'Recommended PSU',detPw:'Power Connectors',detGameNote:'📊 Approximate numbers depending on CPU & RAM — 60+ FPS = smooth • click any game',detPowerNote:'out of 575W (RTX 5090)',detPwComp:'⚡ Power Comparison',detDaily:'Daily load',detPros:'✅ Pros',detCons:'⚠️ Cons',detAltHead:'⬆ Stronger = higher performance at same price • ⭐ Better value = cheaper per performance point',detAltUp:'⬆ Stronger',detAltVal:'⭐ Better Value',detChooseGame:'Choose a game:',detHover:'Hover — fans will speed up',tipTitle:'Before You Buy',back:'→ Back',deal:'🔥 Deal of the Day',kick:'🇪 Egypt prices • Used: Dubizzle + Facebook • New: Noon + Amazon + Sigma + Maximum',sub:'cards from NVIDIA, AMD & Intel with real prices + performance comparisons.',footer:'GPU Prices in Egypt • Used: Dubizzle + Facebook • New: Noon + Amazon + Sigma + Maximum',footerNote:'Prices are approximate (July 2026) and change daily — verify before buying',dealPerf:'EGP per performance point',fpsSmooth:'✅ Very smooth — play comfortably',fpsOk:'🟡 Playable — lower settings a bit',fpsBad:'🔴 You\'ll struggle — look for a stronger card',rTop:'Top performance, price justified by its power — one of the strongest choices.',rHighVal:'High performance at a fair price — excellent value for its class.',rHigh:'High performance suited for the high-end tier and 1440p.',rMid:'Good balance between price and performance — a safe choice for its class.',rOld:'Old card — only for light and online games.',rEco:'Budget card — for light and online games at 1080p.',rWeak:'Very weak — for display and light tasks only, not modern games.',w0:'For display and light tasks only — not for gaming',w1:'For light games (LoL, old titles) on low settings',w2:'For online games (Valorant, CS2, Fortnite) at 1080p',w3:'For 1080p Medium/High — best balance for a budget rig',w4:'For 1080p Ultra and 1440p Medium — an all-rounder',w5:'For comfortable 1440p on high settings',w6:'For 1440p Ultra and light 4K',w7:'For 4K on max settings — peak performance',pNoPw:'No extra power needed — any PSU runs it',pValue:'Among the best value for money in the market ⭐',pVramBig:'Large memory suited for modern games:',pVramOk:'Enough memory for most current 1080p games',pModern:'Modern, supports ',pNvenc:'Supports NVENC — great for streaming & recording',p1440:'Great for 1440p',p1080u:'Great for 1080p Ultra',p4k:'Excellent 4K performance',pIntPrice:'Very competitive price for the performance',pCheapUsed:'Attractive used price for tight budgets',cHighPw:'High power draw — needs a real ',cVramLow:'Low memory for 2026 games: ',cVram8:'8GB is becoming the minimum for 2026 games on high settings',cOld:'Old — most listings are used with no warranty',cWeak:'Won\'t handle heavy modern games',cIntDrv:'Intel drivers still improving — check your games\' compatibility',cNoNew:'No new stock — you\'ll hunt for a clean used one',cGenPw:'This generation draws relatively high power vs newer ones',cExpensive:'Pricey for the performance — cheaper alternatives exist',cMining:'Ex-mining card — inspect carefully before buying',langToast:'Switched to English 🇬🇧',themeLight:'Light mode ☀️',themeDark:'Dark mode 🌙'}
+};
+function t(k){return (I18N[lang]&&I18N[lang][k])||k;}
+
+function toast(msg){let el=document.getElementById('toast');
+  el.textContent=msg;el.classList.add('show');
+  clearTimeout(el._t);el._t=setTimeout(()=>el.classList.remove('show'),2400)}
 function updateBadges(){
   const f=document.getElementById('favCount'),c=document.getElementById('cmpCount');
   f.textContent=favs.length;c.textContent=cmpList.length;
@@ -1198,22 +1182,22 @@ function updateCmpBar(){
   bar.classList.toggle('show',cmpList.length>0);}
 
 function rowHTML(c){
-  const t=tier(c),star=value(c)<1100?'<span class="star">قيمة ⭐</span>':'';
+  const ti=tier(c),star=value(c)<1100?'<span class="star">'+t('value')+'</span>':'';
   return `<div class="lrow" data-n="${c.n}" tabindex="0" role="button">
-  <span class="l-bar bg-${t.cl}"></span>
+  <span class="l-bar bg-${ti.cl}"></span>
   <span class="l-main">
     <span class="l-name"><i class="bdot ${c.b}"></i><b>${c.n}</b>${star}</span>
     <span class="l-chips">${c.v} • ${c.y} • ${c.w}W</span>
-    <span class="tbadge ${t.cl}">${t.t} ${t.e}</span>
+    <span class="tbadge ${ti.cl}">${ti.t} ${ti.e}</span>
   </span>
   <span class="l-perf"><span class="pbar"><i class="${c.b}" data-w="${Math.max(2,c.s/MAX_S*100)}"></i></span><em>${c.s}</em></span>
   <span class="l-price">
-    <span><span class="u">${fmt(c.u)}</span> <small>مستعمل</small></span>
-    ${c.nw?`<span><span class="nw">${fmt(c.nw)}</span> <small>جديد</small></span>`:'<span class="none" style="font-size:.68rem">مستعمل بس</span>'}
+    <span><span class="u">${fmt(c.u)}</span> <small>${t('used')}</small></span>
+    ${c.nw?`<span><span class="nw">${fmt(c.nw)}</span> <small>${t('new')}</small></span>`:'<span class="none" style="font-size:.68rem">'+t('usedOnly')+'</span>'}
   </span>
   <span class="l-acts">
-    <button type="button" class="ibtn fav ${isFav(c.n)?'on':''}" data-fav="${c.n}" title="مفضلة">♥</button>
-    <button type="button" class="ibtn cmp ${cmpList.includes(c.n)?'on':''}" data-cmp="${c.n}" title="قارن">⚖</button>
+    <button type="button" class="ibtn fav ${isFav(c.n)?'on':''}" data-fav="${c.n}" title="${t('fav')}">♥</button>
+    <button type="button" class="ibtn cmp ${cmpList.includes(c.n)?'on':''}" data-cmp="${c.n}" title="${t('cmp')}">⚖</button>
   </span>
   <span class="l-go">←</span></div>`}
 
@@ -1237,7 +1221,7 @@ function applyFilters(){
   box.innerHTML='';renderedCount=0;visibleCount=24;
   document.getElementById('shown').textContent=list.length;
   document.getElementById('total2').textContent=showFavOnly?favs.length:CARDS.length;
-  document.getElementById('emptyMsg').textContent=showFavOnly&&!favs.length?'مفيش كروت في المفضلة — دوس ♥ جنب أي كارت':(q?'مفيش نتائج لـ "'+esc(q)+'" — جرّب كلمة تانية':'مفيش كارت بالمواصفات دي');
+  document.getElementById('emptyMsg').textContent=showFavOnly&&!favs.length?t('noFav'):(q?t('noRes')+' "'+esc(q)+'"':t('noRes'));
   document.getElementById('empty').style.display=list.length?'none':'block';
   renderSlice();
 }
@@ -1289,13 +1273,13 @@ function toggleFav(n){
   if(showFavOnly)applyFilters();
   else document.querySelectorAll('[data-fav]').forEach(b=>{if(b.dataset.fav===n)b.classList.toggle('on',isFav(n))});
   const df=document.getElementById('detailFav');
-  if(df&&df.dataset.fav===n){df.classList.toggle('on',isFav(n));df.querySelector('span').textContent=isFav(n)?'في المفضلة':'ضيف للمفضلة';}
-  toast(isFav(n)?'اتضاف للمفضلة ❤️':'اتشال من المفضلة');
+  if(df&&df.dataset.fav===n){df.classList.toggle('on',isFav(n));df.querySelector('span').textContent=isFav(n)?t('detFavOn'):t('detFav');}
+  toast(isFav(n)?t('favAdded'):t('favRemoved'));
 }
 
 function toggleCmp(n){
   if(cmpList.includes(n))cmpList=cmpList.filter(x=>x!==n);
-  else{if(cmpList.length>=4){toast('المقارنة بحد أقصى 4 كروت');return;}cmpList.push(n);}
+  else{if(cmpList.length>=4){toast(t('cmpMax'));return;}cmpList.push(n);}
   localStorage.setItem('compare_list',JSON.stringify(cmpList));
   updateBadges();
   document.querySelectorAll('[data-cmp]').forEach(b=>{if(b.dataset.cmp===n)b.classList.toggle('on',cmpList.includes(n))});
@@ -1310,29 +1294,39 @@ function showCompare(){
 }
 function renderCompare(){
   const sel=document.getElementById('cmpSelect');
-  sel.innerHTML=CARDS.filter(c=>!cmpList.includes(c.n)).map(c=>`<option value="${c.n}">${c.n} — ${fmt(price(c))} ج.م</option>`).join('');
+  sel.innerHTML=CARDS.filter(c=>!cmpList.includes(c.n)).map(c=>`<option value="${c.n}">${c.n} — ${fmt(price(c))} ${EGP()}</option>`).join('');
   const box=document.getElementById('cmpContent');
-  if(!cmpList.length){box.innerHTML='<div class="cmp-empty"><b>⚖️</b>لسه مختارتش كروت<br>اختار من فوق أو دوس ⚖ جنب أي كارت</div>';return;}
+  if(!cmpList.length){box.innerHTML='<div class="cmp-empty"><b>⚖️</b>'+t('cmpEmpty')+'</div>';return;}
   const cards=cmpList.map(n=>CARDS.find(c=>c.n===n)).filter(Boolean);
   const bestVal=cards.reduce((a,b)=>value(a)<value(b)?a:b);
   const bestPerf=cards.reduce((a,b)=>a.s>b.s?a:b);
   const minS=Math.min(...cards.map(c=>c.s));
   const rows=[
-    ['الفئة',c=>`<span class="tbadge ${tier(c).cl}">${tier(c).t} ${tier(c).e}</span>`,''],
-    ['مستعمل',c=>`<b class="pu">${fmt(c.u)} ج.م</b>`,''],
-    ['جديد',c=>c.nw?`<b class="pn">${fmt(c.nw)} ج.م</b>`:'<span class="none">—</span>',''],
-    ['الأداء',c=>`<div class="mini-bar"><i class="${c.b}" style="width:${c.s/MAX_S*100}%"></i></div><em>${c.s}</em>`,'perf'],
-    ['فرق الأداء *',c=>{const d=Math.round((c.s-minS)/minS*100);return d===0?'<span class="none">الأساس</span>':`<b style="color:var(--nv)">+${d}%</b>`;},''],
-    ['القيمة (ج.م/نقطة)',c=>value(c),'val'],
-    ['الذاكرة',c=>c.v+' '+memType(c),''],
-    ['الاستهلاك',c=>c.w+'W',''],
+    [t('detMfg'),c=>BN[c.b],''],
+    [t('detArch'),c=>c.a,''],
+    [t('detYear'),c=>c.y,''],
+    [t('detVram'),c=>c.v+' '+memType(c),''],
+    [t('detDx'),c=>dx(c),''],
+    [t('detPerf'),c=>`<div class="mini-bar"><i class="${c.b}" style="width:${c.s/MAX_S*100}%"></i></div><em>${c.s}</em>`,'perf'],
+    [t('cmpPerf'),c=>{const d=Math.round((c.s-minS)/minS*100);return d===0?'<span class="none">—</span>':`<b style="color:var(--nv)">+${d}%</b>`;},''],
+    [t('cmpVal'),c=>value(c),'val'],
+    [t('detTdp'),c=>c.w+'W',''],
+    [t('detPsu'),c=>psu(c)+'W',''],
+    [t('detPw'),c=>pwConn(c),''],
     ['Valorant',c=>gameFPS(c,'val')+' FPS',''],
+    ['CS2',c=>gameFPS(c,'cs')+' FPS',''],
     ['Fortnite',c=>gameFPS(c,'fn')+' FPS',''],
     ['GTA V',c=>gameFPS(c,'gta')+' FPS',''],
-    ['Cyberpunk',c=>gameFPS(c,'cy')+' FPS','']
+    ['Cyberpunk',c=>gameFPS(c,'cy')+' FPS',''],
+    ['Elden Ring',c=>gameFPS(c,'elden')+' FPS',''],
+    ['RDR2',c=>gameFPS(c,'rdr2')+' FPS',''],
+    ['Hogwarts',c=>gameFPS(c,'hog')+' FPS',''],
+    [t('detUsed'),c=>`<b class="pu">${fmt(c.u)} ${EGP()}</b>`,''],
+    [t('detNew'),c=>c.nw?`<b class="pn">${fmt(c.nw)} ${EGP()}</b>`:'<span class="none">—</span>',''],
+    [t('detVerdict'),c=>{const sc=score10(c);return `<b style="color:${sc>=7?'var(--nv)':sc>=5?'var(--gold)':'var(--amd)'}">${sc}/10</b>`;},'']
   ];
-  let html='<div class="cmp-table-wrap"><table class="cmp-table"><thead><tr><th class="rh">المقارنة</th>';
-  cards.forEach(c=>html+=`<th><button type="button" class="cmp-x" data-cmp="${c.n}" title="شيل">✕</button><i class="bdot ${c.b}"></i> ${c.n}</th>`);
+  let html='<div class="cmp-table-wrap"><table class="cmp-table"><thead><tr><th class="rh">'+t('cmpTitle')+'</th>';
+  cards.forEach(c=>html+=`<th><button type="button" class="cmp-x" data-cmp="${c.n}" title="✕">✕</button><i class="bdot ${c.b}"></i> ${c.n}</th>`);
   html+='</tr></thead><tbody>';
   rows.forEach(([label,fn,key])=>{
     html+=`<tr><td class="rh">${label}</td>`;
@@ -1343,18 +1337,7 @@ function renderCompare(){
       html+=`<td class="${cls}">${fn(c)}</td>`;});
     html+='</tr>';});
   html+='</tbody></table></div>';
-  if(cards.length>1)html+=`<p class="g-note" style="margin-top:.8rem">👑 = الأحسن في الصف • <b style="color:var(--gold)">${bestVal.n}</b> أحسن قيمة، <b style="color:var(--cyan)">${bestPerf.n}</b> أقوى أداء</p>`;
-  if(cards.length>=2){
-    html+=`<div class="cmp-src">
-      <p class="src-title">🔍 قارن على مصادر موثوقة:</p>
-      <div class="src-btns">
-        <a class="src-btn tc" target="_blank" rel="noopener" href="${tcURL(cards[0],cards[1])}">📊 technical.city</a>
-        <a class="src-btn ub" target="_blank" rel="noopener" href="${ubURL(cards[0].n)}">📈 UserBenchmark</a>
-        <a class="src-btn yt" target="_blank" rel="noopener" href="${ytURL(cards.map(c=>c.n))}">▶️ YouTube Benchmarks</a>
-      </div>
-      <p class="src-note">* فرق الأداء تقديري بناءً على نقاط الأداء في القاعدة — راجع المصادر الموثوقة (technical.city وUserBenchmark) للتأكد قبل الشراء. لينك technical.city بيقارن أول كارتين.</p>
-    </div>`;
-  }
+  if(cards.length>1)html+=`<p class="g-note" style="margin-top:.8rem">👑 = ${t('cmpBest')} • <b style="color:var(--gold)">${bestVal.n}</b> ${t('sVal')}, <b style="color:var(--cyan)">${bestPerf.n}</b> ${t('sPerf')}</p>`;
   box.innerHTML=html;
 }
 document.getElementById('cmpContent').addEventListener('click',e=>{
@@ -1368,11 +1351,11 @@ document.getElementById('cbClear').addEventListener('click',()=>{
   document.querySelectorAll('[data-cmp]').forEach(b=>b.classList.remove('on'));
   const dc=document.getElementById('detailCmp');if(dc)dc.classList.remove('on');
   if(!document.getElementById('compareView').classList.contains('hidden'))renderCompare();
-  toast('اتمسحت المقارنة');});
+  toast(t('clear'));});
 
 function gameBigHTML(c,k){
   const g=GAMES[k],f=gameFPS(c,k);
-  const verdict=f>=60?'✅ سلس جداً — هتعلّب براحة':f>=45?'🟡 قابل للعب — نزل الإعدادات شوية':'🔴 هتعاني — دوّر على كارت أقوى';
+  const verdict=f>=60?t('fpsSmooth'):f>=45?t('fpsOk'):t('fpsBad');
   return `<div class="gb-row">
     <div class="gb-info"><b>${g.name}</b><span>${g.set} • 1080p</span></div>
     <div class="gb-bar"><i style="width:${f/g.max*100}%"></i></div>
@@ -1387,7 +1370,7 @@ function updateGameBig(){
 function openCard(name){
   const c=CARDS.find(x=>x.n===name);if(!c)return;
   currentCard=name;curGame='val';
-  const t=tier(c),sc=score10(c),reason=reason10(c,sc),{P,C}=prosCons(c);
+  const ti=tier(c),sc=score10(c),reason=reason10(c,sc),{P,C}=prosCons(c);
   const lo=r50(c.u*.85),hi=r50(c.u*1.15);
   const near=[...CARDS].filter(x=>x.n!==c.n).sort((a,b)=>Math.abs(a.s-c.s)-Math.abs(b.s-c.s)).slice(0,3);
   const maxW=Math.max(c.w,...near.map(x=>x.w));
@@ -1403,29 +1386,21 @@ function openCard(name){
       <span class="dkick" style="color:${bc(c.b)}">■ ${BN[c.b]} • ${c.a} • ${c.y}</span>
       <h1 class="dname">${c.n}</h1>
       <div class="dchips">
-        <span class="tbadge ${t.cl}" style="font-size:.78rem">${t.t} ${t.e}</span>
-        <span class="dchip">الذاكرة <b>${c.v} ${memType(c)}</b></span>
-        <span class="dchip">الاستهلاك <b>${c.w}W</b></span>
-        <span class="dchip">الأداء <b>${c.s}/${MAX_S}</b></span>
+        <span class="tbadge ${ti.cl}" style="font-size:.78rem">${ti.t} ${ti.e}</span>
+        <span class="dchip">${t('detVram')} <b>${c.v} ${memType(c)}</b></span>
+        <span class="dchip">${t('detTdp')} <b>${c.w}W</b></span>
+        <span class="dchip">${t('detPerf')} <b>${c.s}/${MAX_S}</b></span>
       </div>
       <div class="d-actions">
-        <button type="button" id="detailFav" class="act-btn fav ${isFav(c.n)?'on':''}" data-fav="${c.n}">♥ <span>${isFav(c.n)?'في المفضلة':'ضيف للمفضلة'}</span></button>
-        <button type="button" id="detailCmp" class="act-btn cmp ${cmpList.includes(c.n)?'on':''}" data-cmp="${c.n}">⚖ <span>قارن</span></button>
+        <button type="button" id="detailFav" class="act-btn fav ${isFav(c.n)?'on':''}" data-fav="${c.n}">♥ <span>${isFav(c.n)?t('detFavOn'):t('detFav')}</span></button>
+        <button type="button" id="detailCmp" class="act-btn cmp ${cmpList.includes(c.n)?'on':''}" data-cmp="${c.n}">⚖ <span>${t('detCmp')}</span></button>
       </div>
       <div class="hp">
-        <div class="hp-box u"><span>متوسط المستعمل</span><b>${fmt(c.u)}</b> <i>ج.م</i><em>النطاق: ${fmt(lo)} – ${fmt(hi)} ج.م</em></div>
-        ${c.nw?`<div class="hp-box n"><span>متوسط الجديد</span><b>${fmt(c.nw)}</b> <i>ج.م</i><em>فرق الجديد: +${Math.round((c.nw-c.u)/c.u*100)}%</em></div>`:'<div class="hp-box"><span>الجديد</span><b style="font-size:1.1rem;color:var(--muted)">مفيش جديد</b><em>مستعمل بس</em></div>'}
-        <div class="hp-src">
-          <span class="src-lbl">📌 المستعمل:</span>
-          <span class="src d">دوبيزل (OLX) ≈ ${fmt(r50(c.u*.97))}</span>
-          <span class="src f">فيسبوك ماركت ≈ ${fmt(r50(c.u*1.03))}</span>
-          ${c.nw?`<span class="src-lbl">📌 الجديد:</span>
-          <span class="src n">نون / أمازون ≈ ${fmt(r50(c.nw*.98))}</span>
-          <span class="src s">Sigma / Maximum ≈ ${fmt(c.nw)}</span>`:''}
-        </div>
+        <div class="hp-box u"><span>${t('detUsed')}</span><b>${fmt(c.u)}</b> <i>${EGP()}</i><em>${t('detRange')}: ${fmt(lo)} – ${fmt(hi)} ${EGP()}</em></div>
+        ${c.nw?`<div class="hp-box n"><span>${t('detNew')}</span><b>${fmt(c.nw)}</b> <i>${EGP()}</i><em>${t('detNewDiff')}: +${Math.round((c.nw-c.u)/c.u*100)}%</em></div>`:'<div class="hp-box"><span>'+t('detNew')+'</span><b style="font-size:1.1rem;color:var(--muted)">'+t('detNoNew')+'</b><em>'+t('detUsedOnly')+'</em></div>'}
       </div>
     </div>
-    <div class="gpu" style="--brand:${bc(c.b)}" title="عدّي بالماوس — المراوح هتسرع">
+    <div class="gpu" style="--brand:${bc(c.b)}" title="${t('detHover')}">
       <div class="glow"></div>
       <div class="gpu-body">
         <div class="shroud">
@@ -1438,23 +1413,23 @@ function openCard(name){
     </div>
   </div>
 
-  <div class="sec-head reveal"><span class="sec-tag">SEC.01</span><h2>المواصفات</h2><span class="sec-line"></span></div>
+  <div class="sec-head reveal"><span class="sec-tag c1">SEC.01</span><h2>${t('detSpecs')}</h2><span class="sec-line"></span></div>
   <div class="spec-grid reveal">
-    <div class="spec"><span class="k">المصنع</span><span class="v">${BN[c.b]}</span></div>
-    <div class="spec"><span class="k">المعمارية</span><span class="v">${c.a}</span></div>
-    <div class="spec"><span class="k">سنة الإصدار</span><span class="v">${c.y}</span></div>
-    <div class="spec"><span class="k">الذاكرة</span><span class="v">${c.v} ${memType(c)}</span></div>
-    <div class="spec"><span class="k">DirectX</span><span class="v">${dx(c)}</span></div>
-    <div class="spec"><span class="k">نقاط الأداء</span><span class="v">${c.s} / ${MAX_S}</span></div>
-    <div class="spec"><span class="k">الاستهلاك</span><span class="v">${c.w} واط</span></div>
-    <div class="spec"><span class="k">الباور المقترح</span><span class="v">${psu(c)}W</span></div>
-    <div class="spec"><span class="k">الباور الإضافي</span><span class="v">${pwConn(c)}</span></div>
+    <div class="spec"><span class="k">${t('detMfg')}</span><span class="v">${BN[c.b]}</span></div>
+    <div class="spec"><span class="k">${t('detArch')}</span><span class="v">${c.a}</span></div>
+    <div class="spec"><span class="k">${t('detYear')}</span><span class="v">${c.y}</span></div>
+    <div class="spec"><span class="k">${t('detVram')}</span><span class="v">${c.v} ${memType(c)}</span></div>
+    <div class="spec"><span class="k">${t('detDx')}</span><span class="v">${dx(c)}</span></div>
+    <div class="spec"><span class="k">${t('detPerf')}</span><span class="v">${c.s} / ${MAX_S}</span></div>
+    <div class="spec"><span class="k">${t('detTdp')}</span><span class="v">${c.w}W</span></div>
+    <div class="spec"><span class="k">${t('detPsu')}</span><span class="v">${psu(c)}W</span></div>
+    <div class="spec"><span class="k">${t('detPw')}</span><span class="v">${pwConn(c)}</span></div>
   </div>
 
-  <div class="sec-head reveal"><span class="sec-tag">SEC.02</span><h2>أداء الألعاب — 1080p</h2><span class="sec-line"></span></div>
+  <div class="sec-head reveal"><span class="sec-tag c2">SEC.02</span><h2>${t('detGames')}</h2><span class="sec-line"></span></div>
   <div class="reveal">
     <div class="game-picker">
-      <label>🎮 اختار لعبة:</label>
+      <label>🎮 ${t('detChooseGame')}</label>
       <select id="gameSelect">${GK.map(k=>`<option value="${k}">${GAMES[k].name}</option>`).join('')}</select>
     </div>
     <div class="game-big" id="gameBig">${gameBigHTML(c,'val')}</div>
@@ -1464,50 +1439,50 @@ function openCard(name){
         <span class="gg-bar"><i style="width:${f/GAMES[k].max*100}%"></i></span>
         <span class="gg-fps">${f} FPS</span></div>`;}).join('')}
     </div>
-    <p class="g-note">📊 أرقام تقريبية بتختلف حسب البروسيسور والرامات — 60+ فريم = سلس • دوس على أي لعبة</p>
+    <p class="g-note">${t('detGameNote')}</p>
   </div>
 
-  <div class="sec-head reveal"><span class="sec-tag">SEC.03</span><h2>الباور والاستهلاك</h2><span class="sec-line"></span></div>
+  <div class="sec-head reveal"><span class="sec-tag c3">SEC.03</span><h2>${t('detPower')}</h2><span class="sec-line"></span></div>
   <div class="pw-grid reveal">
     <div class="panel">
-      <div class="tdp-big">${c.w}<small> واط</small></div>
+      <div class="tdp-big">${c.w}<small> W</small></div>
       <div class="gauge"><i data-w="${c.w/575*100}"></i></div>
-      <div style="font-size:.7rem;color:var(--muted)">من أصل 575W (RTX 5090)</div>
+      <div style="font-size:.7rem;color:var(--muted)">${t('detPowerNote')}</div>
       <div class="pw-facts">
-        <div class="pw-fact"><span>الباور الإضافي</span><b>${pwConn(c)}</b></div>
-        <div class="pw-fact"><span>الباور المقترح</span><b>${psu(c)}W</b></div>
-        <div class="pw-fact"><span>الحمل اليومي</span><b>${Math.round(c.w*.9)} واط</b></div>
+        <div class="pw-fact"><span>${t('detPw')}</span><b>${pwConn(c)}</b></div>
+        <div class="pw-fact"><span>${t('detPsu')}</span><b>${psu(c)}W</b></div>
+        <div class="pw-fact"><span>${t('detDaily')}</span><b>${Math.round(c.w*.9)}W</b></div>
       </div>
     </div>
     <div class="panel">
-      <h3 style="font-family:var(--display);margin-bottom:.9rem;color:var(--gold);font-size:1rem">⚡ مقارنة الاستهلاك</h3>
+      <h3 style="font-family:var(--display);margin-bottom:.9rem;color:var(--gold);font-size:1rem">${t('detPwComp')}</h3>
       <div class="cmp-row me"><span>${c.n}</span><span class="cmp-track"><i data-w="${c.w/maxW*100}"></i></span><span class="cmp-num">${c.w}W</span></div>
       ${near.map(x=>`<div class="cmp-row"><span>${x.n}</span><span class="cmp-track"><i data-w="${x.w/maxW*100}"></i></span><span class="cmp-num">${x.w}W</span></div>`).join('')}
     </div>
   </div>
 
-  <div class="sec-head reveal"><span class="sec-tag">SEC.04</span><h2>الحكم النهائي</h2><span class="sec-line"></span></div>
+  <div class="sec-head reveal"><span class="sec-tag c4">SEC.04</span><h2>${t('detVerdict')}</h2><span class="sec-line"></span></div>
   <div class="verd reveal">
-    <div class="ring" style="--sc:0" data-sc="${sc}"><div class="ring-in"><b>${sc}</b><span>من 10</span></div></div>
+    <div class="ring" style="--sc:0" data-sc="${sc}"><div class="ring-in"><b>${sc}</b><span>/10</span></div></div>
     <div class="pr-box">
-      <div class="pr-side pros"><h3>✅ المميزات</h3><ul>${P.map(p=>`<li>${p}</li>`).join('')||'<li>—</li>'}</ul></div>
-      <div class="pr-side cons"><h3>⚠️ العيوب</h3><ul>${C.map(p=>`<li>${p}</li>`).join('')||'<li>—</li>'}</ul></div>
+      <div class="pr-side pros"><h3>${t('detPros')}</h3><ul>${P.map(p=>`<li>${p}</li>`).join('')||'<li>—</li>'}</ul></div>
+      <div class="pr-side cons"><h3>${t('detCons')}</h3><ul>${C.map(p=>`<li>${p}</li>`).join('')||'<li>—</li>'}</ul></div>
     </div>
   </div>
-  <p class="reason reveal">🎯 <b>ليه ${sc}/10؟</b> ${reason}</p>
-  <div class="forwho reveal">🎮 <b>مين يشتريه؟</b> ${forWho(c)}.</div>
+  <p class="reason reveal">🎯 <b>${t('detWhy')} ${sc}/10؟</b> ${reason}</p>
+  <div class="forwho reveal">🎮 <b>${t('detWho')}</b> ${forWho(c)}.</div>
 
-  <div class="sec-head reveal"><span class="sec-tag">SEC.05</span><h2>بدائل بنفس السعر (الأحسن الأول)</h2><span class="sec-line"></span></div>
+  <div class="sec-head reveal"><span class="sec-tag c5">SEC.05</span><h2>${t('detAlts')}</h2><span class="sec-line"></span></div>
   <div class="reveal">
-    <p class="alt-head">⬆ أقوى = أداء أعلى في نفس السعر • ⭐ قيمة أحسن = أرخص لكل نقطة أداء</p>
+    <p class="alt-head">${t('detAltHead')}</p>
     ${alts.map(x=>{const tt=tier(x);
-      const up=x.s>c.s?'<span class="alt-up">⬆ أقوى</span>':'';
-      const valb=value(x)<value(c)?'<span class="alt-val">⭐ قيمة أحسن</span>':'';
+      const up=x.s>c.s?`<span class="alt-up">${t('detAltUp')}</span>`:'';
+      const valb=value(x)<value(c)?`<span class="alt-val">${t('detAltVal')}</span>`:'';
       return `<button type="button" class="alt-row" data-n="${x.n}">
       <span class="l-bar bg-${tt.cl}" style="height:34px;border-radius:3px"></span>
       <span class="nm"><span><i class="bdot ${x.b}" style="margin-inline-end:.4rem"></i>${x.n}</span><span class="alt-badges">${up}${valb}</span></span>
       <span class="tb tbadge ${tt.cl}">${tt.t} ${tt.e}</span>
-      <span class="pr">${fmt(price(x))} ج.م</span>
+      <span class="pr">${fmt(price(x))} ${EGP()}</span>
       <span class="go">←</span></button>`}).join('')}
   </div>`;
 
@@ -1557,7 +1532,30 @@ document.getElementById('bnBack').addEventListener('click',showList);
 document.getElementById('ctaBn').addEventListener('click',showBn);
 addEventListener('keydown',e=>{if(e.key==='Escape')showList();});
 
-/* ===== حاسبة عنق الزجاجة ===== */
+/* ===== Language ===== */
+function applyLang(){
+  document.documentElement.lang=lang;
+  document.documentElement.dir=lang==='ar'?'rtl':'ltr';
+  document.getElementById('langSel').value=lang;
+  document.querySelectorAll('[data-i18n]').forEach(el=>{
+    const k=el.getAttribute('data-i18n');
+    if(I18N[lang][k]!==undefined)el.textContent=I18N[lang][k];
+  });
+  document.querySelectorAll('[data-i18n-ph]').forEach(el=>{
+    const k=el.getAttribute('data-i18n-ph');
+    if(I18N[lang][k]!==undefined)el.placeholder=I18N[lang][k];
+  });
+  applyFilters();
+  if(!document.getElementById('compareView').classList.contains('hidden'))renderCompare();
+  if(currentCard&&!document.getElementById('detailView').classList.contains('hidden')){
+    const sc=scrollY;openCard(currentCard);scrollTo({top:sc});}
+  showDeal();
+}
+document.getElementById('langSel').addEventListener('change',e=>{
+  lang=e.target.value;localStorage.setItem('lang',lang);applyLang();toast(t('langToast'));
+});
+
+/* ===== Bottleneck ===== */
 function showBn(){
   hideAllViews();
   document.getElementById('bnView').classList.remove('hidden');
@@ -1565,17 +1563,15 @@ function showBn(){
 }
 function initBnSelects(){
   const cpuSel=document.getElementById('bnCpu');
-  cpuSel.innerHTML=CPUS.map((c,i)=>`<option value="${i}" ${i===18?'selected':''}>${c.n}</option>`).join('');
+  cpuSel.innerHTML=CPUS.map((c,i)=>`<option value="${i}" ${i===50?'selected':''}>${c.n}</option>`).join('');
   const gpuSel=document.getElementById('bnGpu');
-  const gamingGpus=CARDS.filter(c=>!/Quadro|Radeon Pro|TITAN|A\d{4}/i.test(c.n)).sort((a,b)=>b.s-a.s);
+  const gamingGpus=CARDS.filter(c=>!/Quadro|Radeon Pro|TITAN|A\d{4}|CMP|Mobile/i.test(c.n)).sort((a,b)=>b.s-a.s);
   gpuSel.innerHTML=gamingGpus.map(c=>`<option value="${c.n}" ${c.n==='RTX 3060'?'selected':''}>${c.n} (${c.v})</option>`).join('');
 }
 function filterSelect(inputId, selectId){
   const q=document.getElementById(inputId).value.toLowerCase();
   const sel=document.getElementById(selectId);
-  Array.from(sel.options).forEach(opt=>{
-    opt.hidden=!opt.text.toLowerCase().includes(q);
-  });
+  Array.from(sel.options).forEach(opt=>{opt.hidden=!opt.text.toLowerCase().includes(q);});
 }
 document.getElementById('bnCpuSearch').addEventListener('input',()=>filterSelect('bnCpuSearch','bnCpu'));
 document.getElementById('bnGpuSearch').addEventListener('input',()=>filterSelect('bnGpuSearch','bnGpu'));
@@ -1589,7 +1585,6 @@ function calcBottleneck(){
   const disk=document.getElementById('bnDisk').value;
   const psuW=+document.getElementById('bnPsu').value;
   if(!cpu||!gpu)return;
-
   const resMult=res===1080?1:res===1440?1.5:2.2;
   const gpuLoad=gpu.s*resMult;
   const cpuScore=cpu.s;
@@ -1599,62 +1594,45 @@ function calcBottleneck(){
   else if(ratio<0.85)bn=Math.min(60,Math.round((1-ratio)*70));
   const cpuBn=bn;
   const gpuBn=ratio<0.85?Math.round((1-ratio)*70):0;
-
   let ramPen=0;
   if(ram<8)ramPen=25;else if(ram<16)ramPen=10;else if(ram<32&&gpu.s>20)ramPen=5;
   const totalBn=Math.min(95,cpuBn+ramPen);
-
   const diskType=disk.startsWith('hdd')?'hdd':disk.startsWith('nvme')?'nvme':'ssd';
   const fps1080=Math.round(Math.min(gpu.s*4,cpuScore*1.4));
-
-  let verdict,cls,tips;
-  if(totalBn<10){verdict='✅ مفيش عنق زجاجة — جهازك متوازن';cls='good';tips='جهازك متوازن جداً، استمتع بالألعاب من غير ما تقلق.';}
-  else if(totalBn<25){verdict='🟡 عنق زجاجة بسيط — مقبول';cls='mid';tips='فيه اختناق بسيط بس مش هيأثر كتير على تجربتك. لو عايز تطور، ركّز على القطعة الأضعف.';}
-  else{verdict='🔴 عنق زجاجة كبير — فيه قطعة بتخنق التانية';cls='bad';tips='فيه قطعة بتحد من أداء الباقي بشكل واضح. شوف النصايح تحت عشان تعرف تطور إيه الأول.';}
-
+  let verdict,cls;
+  if(totalBn<10){verdict=t('bnGood');cls='good';}
+  else if(totalBn<25){verdict=t('bnMid');cls='mid';}
+  else{verdict=t('bnBad');cls='bad';}
   const tipsList=[];
-  if(cpuBn>15)tipsList.push(`🔧 <b>المعالج (${cpu.n.split('/')[0].trim()}) بيخنق الكارت</b> — الكارت أقوى من المعالج، فمش هتستفيد من قوته كاملة. فكّر في ترقية المعالج (والبوردة لو محتاجة).`);
-  if(gpuBn>15)tipsList.push(`🎮 <b>الكارت (${gpu.n}) أضعف من المعالج</b> — المعالج بتاعك قوي والكارت هو اللي بيحد. ترقية الكارت هتفرق معاك جداً.`);
-  if(ramPen>=10)tipsList.push(`💾 <b>الرام ${ram}GB قليلة</b> — الألعاب الحديثة بتحتاج 16GB على الأقل. لو عندك 8GB أو أقل، الترقية دي رخيصة وهتفرق.`);
-  if(diskType==='hdd')tipsList.push(`💽 <b>عندك HDD</b> — مش بيأثر على الفريمات بس بيخلي التحميل والشاشة السودا طويلة. SSD بـ 300 جنيه هيغير تجربتك.`);
-  if(psuW<psu(gpu))tipsList.push(`🔌 <b>الباور ${psuW}W قليل</b> — الكارت ده محتاج ${psu(gpu)}W على الأقل. متغامرش بباور ضعيف، ممكن يبوظ الجهاز.`);
-  if(tipsList.length===0)tipsList.push('✅ كل القطع متوازنة — مفيش ترقية ضرورية دلوقتي.');
-
+  if(cpuBn>15)tipsList.push(`🔧 <b>${t('bnCpuBn')}</b> — ${t('bnCpuTip')}`);
+  if(gpuBn>15)tipsList.push(`🎮 <b>${t('bnGpuBn')}</b> — ${t('bnGpuTip')}`);
+  if(ramPen>=10)tipsList.push(`💾 <b>${t('bnRamLow')} (${ram}GB)</b> — ${t('bnRamTip')}`);
+  if(diskType==='hdd')tipsList.push(`💽 <b>${t('bnHdd')}</b> — ${t('bnHddTip')}`);
+  if(psuW<psu(gpu))tipsList.push(`🔌 <b>${t('bnPsuLow')} (${psuW}W)</b> — ${t('bnPsuTip')} (${psu(gpu)}W)`);
+  if(tipsList.length===0)tipsList.push(t('bnAllGood'));
   const box=document.getElementById('bnResult');
   box.innerHTML=`
-    <div class="bn-score"><b style="color:${cls==='good'?'var(--nv)':cls==='mid'?'var(--gold)':'var(--amd)'}">${totalBn}%</b><span>نسبة عنق الزجاجة</span></div>
+    <div class="bn-score"><b style="color:${cls==='good'?'var(--nv)':cls==='mid'?'var(--gold)':'var(--amd)'}">${totalBn}%</b><span>${t('bnScore')}</span></div>
     <div class="bn-verdict ${cls}">${verdict}</div>
     <div class="bn-bars">
-      <div class="bn-bar-row"><span class="lbl">🔧 المعالج</span><span class="bn-bar"><i class="cpu" style="width:${Math.min(100,cpuScore)}%"></i></span><span class="val">${cpuScore}</span></div>
-      <div class="bn-bar-row"><span class="lbl">🎮 الكارت</span><span class="bn-bar"><i class="gpu" style="width:${Math.min(100,gpuLoad/1.2)}%"></i></span><span class="val">${Math.round(gpuLoad)}</span></div>
+      <div class="bn-bar-row"><span class="lbl">🔧 ${t('cpu')}</span><span class="bn-bar"><i class="cpu" style="width:${Math.min(100,cpuScore)}%"></i></span><span class="val">${cpuScore}</span></div>
+      <div class="bn-bar-row"><span class="lbl">🎮 ${t('gpu')}</span><span class="bn-bar"><i class="gpu" style="width:${Math.min(100,gpuLoad/1.2)}%"></i></span><span class="val">${Math.round(gpuLoad)}</span></div>
     </div>
-    <div class="bn-fps">🎯 <b>FPS متوقع (1080p High):</b> ~${fps1080} FPS<br><small style="color:var(--muted)">تقريبي — الألعاب الخفيفة (Valorant, CS2) هتبقى أعلى، والتقيلة (Cyberpunk, Starfield) هتبقى أقل.</small></div>
-    <div class="bn-tips"><b>💡 النصايح:</b><br>${tipsList.join('<br><br>')}</div>
-    <div class="cmp-src" style="margin-top:0">
-      <p class="src-title">🔍 تأكد من مواقع رسمية:</p>
-      <div class="src-btns">
-        <a class="src-btn pb" target="_blank" rel="noopener" href="https://pc-builds.com/bottleneck-calculator/">🧮 PC-Builds</a>
-        <a class="src-btn wb" target="_blank" rel="noopener" href="https://www.willitbottleneck.com/">📊 WillItBottleneck</a>
-        <a class="src-btn bc" target="_blank" rel="noopener" href="https://bottleneckcalculatr.com/">⚡ BottleneckCalculatr</a>
-        <a class="src-btn tc" target="_blank" rel="noopener" href="https://technical.city/en/video/${tcSlug(gpu)}">📈 technical.city</a>
-        <a class="src-btn ub" target="_blank" rel="noopener" href="${ubURL(gpu.n)}">📉 UserBenchmark</a>
-        <a class="src-btn pp" target="_blank" rel="noopener" href="https://pcpartpicker.com/products/video-card/">🔧 PCPartPicker</a>
-      </div>
-      <p class="src-note">⚠️ الحاسبة دي تقديرية بناءً على نقاط أداء تقريبية — للأرقام الدقيقة راجع المواقع الرسمية فوق. الدقة بتقل مع الكروت القديمة جداً.</p>
-    </div>`;
+    <div class="bn-fps">🎯 <b>${t('bnFps')}</b> ~${fps1080} FPS<br><small style="color:var(--muted)">${t('bnApprox')}</small></div>
+    <div class="bn-tips"><b>${t('bnTips')}</b><br>${tipsList.join('<br><br>')}</div>`;
 }
 document.getElementById('bnCalc').addEventListener('click',calcBottleneck);
 initBnSelects();
 
 function applyTheme(){
   document.body.classList.toggle('light',theme==='light');
-  document.getElementById('themeBtn').textContent=theme==='light'?'☀️':'';
+  document.getElementById('themeBtn').textContent=theme==='light'?'☀️':'🌙';
   if(currentCard&&!document.getElementById('detailView').classList.contains('hidden')){
     const sc=scrollY;openCard(currentCard);scrollTo({top:sc});}
 }
 document.getElementById('themeBtn').addEventListener('click',()=>{
   theme=theme==='light'?'dark':'light';localStorage.setItem('theme',theme);applyTheme();
-  toast(theme==='light'?'الوضع النهاري ☀️':'الوضع الليلي 🌙');});
+  toast(theme==='light'?t('themeLight'):t('themeDark'));});
 
 const io=new IntersectionObserver(es=>es.forEach(e=>{
   if(!e.isIntersecting)return;
@@ -1665,7 +1643,7 @@ const io=new IntersectionObserver(es=>es.forEach(e=>{
   io.unobserve(e.target)}),{threshold:.12});
 function initReveals(root=document){root.querySelectorAll('.reveal').forEach(el=>io.observe(el))}
 
-function count(el,t,dur=1400){const t0=performance.now();(function s(t){const p=Math.min((t-t0)/dur,1);el.textContent=Math.round(t*(1-Math.pow(1-p,3))).toLocaleString('en-US');if(p<1)requestAnimationFrame(s)})(t0)}
+function count(el,tgt,dur=1400){const t0=performance.now();(function s(t){const p=Math.min((t-t0)/dur,1);el.textContent=Math.round(tgt*(1-Math.pow(1-p,3))).toLocaleString('en-US');if(p<1)requestAnimationFrame(s)})(t0)}
 count(document.getElementById('stTotal'),CARDS.length);
 count(document.getElementById('stAvg'),r50(CARDS.filter(c=>c.u).reduce((a,c)=>a+c.u,0)/CARDS.filter(c=>c.u).length));
 count(document.getElementById('stCheap'),Math.min(...CARDS.map(c=>price(c))));
@@ -1674,7 +1652,7 @@ document.getElementById('stCount2').textContent=CARDS.length;
 const deals=CARDS.filter(c=>c.u).sort((a,b)=>value(a)-value(b)).slice(0,5);
 let di=0;const dealBtn=document.getElementById('deal');
 function showDeal(){const c=deals[di];
-  dealBtn.innerHTML=`<b>${c.n}</b><span>${fmt(c.u)} ج.م</span><small>${value(c)} ج.م لكل نقطة أداء</small>`}
+  dealBtn.innerHTML=`<b>${c.n}</b><span>${fmt(c.u)} ${EGP()}</span><small>${value(c)} ${t('dealPerf')}</small>`}
 showDeal();
 setInterval(()=>{dealBtn.classList.add('fade');setTimeout(()=>{di=(di+1)%deals.length;showDeal();dealBtn.classList.remove('fade')},300)},4000);
 dealBtn.addEventListener('click',()=>openCard(deals[di].n));
@@ -1683,7 +1661,7 @@ const topBtn=document.getElementById('topBtn');
 addEventListener('scroll',()=>topBtn.classList.toggle('show',scrollY>600));
 topBtn.addEventListener('click',()=>scrollTo({top:0,behavior:'smooth'}));
 
-applyTheme();updateBadges();applyFilters();initReveals();
+applyTheme();applyLang();updateBadges();applyFilters();initReveals();
 </script>
 </body>
 </html>
