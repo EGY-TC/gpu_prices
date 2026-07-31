@@ -11,13 +11,13 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>GPUVault — أسعار ومقارنات كروت الشاشة في مصر</title>
-<meta name="description" content="أكثر من 240 كارت شاشة + حاسبة عنق الزجاجة (Bottleneck) — أسعار المستعمل والجديد في مصر + مقارنات أداء من مصادر موثوقة.">
+<meta name="description" content="أكثر من 250 كارت شاشة + حاسبة عنق الزجاجة (Bottleneck) — أسعار المستعمل والجديد في مصر + مقارنات أداء من مصادر موثوقة.">
 <link rel="canonical" href="https://egy-tc.github.io/gpu_prices/">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><rect x='3' y='7' width='18' height='10' rx='1.5' fill='%23182635' stroke='%23e8b45a' stroke-width='1.6'/><circle cx='9' cy='12' r='2.4' fill='none' stroke='%238fd14f' stroke-width='1.6'/><circle cx='16.5' cy='12' r='1.6' fill='none' stroke='%23ef7d7d' stroke-width='1.4'/></svg>">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="GPUVault">
 <meta property="og:title" content="GPUVault — أسعار ومقارنات كروت الشاشة في مصر">
-<meta property="og:description" content="أكثر من 240 كارت شاشة + حاسبة عنق الزجاجة • أسعار + مقارنات أداء">
+<meta property="og:description" content="أكثر من 250 كارت شاشة + حاسبة عنق الزجاجة • أسعار + مقارنات أداء">
 <meta property="og:url" content="https://egy-tc.github.io/gpu_prices/">
 <meta property="og:image" content="https://egy-tc.github.io/gpu_prices/preview.png">
 <meta property="og:image:width" content="1280">
@@ -76,7 +76,7 @@ nav{position:sticky;top:0;z-index:60;display:flex;align-items:center;gap:1.2rem;
 
 .deck{max-width:1180px;margin:auto;padding:2.6rem 2rem 1.2rem}
 .deck-top{display:grid;grid-template-columns:1fr auto;gap:1.5rem;align-items:start}
-.kick{display:inline-flex;align-items:center;gap:.5rem;color:var(--gold);font-family:var(--display);font-size:.78rem;margin-bottom:.7rem;flex-wrap:wrap}
+.kick{display:inline-flex;align-items:center;gap:.5rem;font-family:var(--display);font-size:.78rem;margin-bottom:.7rem;flex-wrap:wrap;background:linear-gradient(90deg,var(--cyan),var(--gold));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
 .kick::before{content:"";width:30px;height:2px;background:var(--gold)}
 h1{font-family:var(--display);font-weight:800;font-size:clamp(2rem,5vw,3.4rem);line-height:1.1}
 h1 .yr{color:var(--gold);font-size:.55em;vertical-align:super}
@@ -107,8 +107,22 @@ select.sort{background:var(--panel);border:1px solid var(--line);color:var(--tex
 .stats-strip{display:flex;flex-wrap:wrap;gap:.7rem;margin-top:1.2rem}
 .stat{background:var(--panel);border:1px solid var(--line);padding:.5rem 1.1rem;transition:.25s}
 .stat:hover{border-color:var(--cyan);transform:translateY(-3px)}
-.stat b{font-family:var(--display);font-size:1.3rem;color:var(--cyan);display:block;line-height:1.2}
+.stat b{font-family:var(--display);font-size:1.3rem;display:block;line-height:1.2}
+.stat:nth-child(1) b{color:var(--cyan)}
+.stat:nth-child(2) b{color:var(--nv)}
+.stat:nth-child(3) b{color:var(--gold)}
+.stat:nth-child(4) b{color:var(--amd)}
 .stat span{font-size:.68rem;color:var(--muted)}
+
+/* ===== CTA Banner ===== */
+.cta-banner{display:flex;align-items:center;justify-content:space-between;gap:1.5rem;background:linear-gradient(135deg,#1a4a5a,#1a5a3a);border:1px solid var(--cyan);border-radius:12px;padding:1.5rem 2rem;margin-top:1.5rem;cursor:pointer;transition:.3s;position:relative;overflow:hidden}
+.cta-banner:hover{transform:translateY(-3px);box-shadow:0 12px 30px -10px rgba(92,200,216,.4)}
+.cta-banner::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 80% 20%,rgba(92,200,216,.15),transparent 50%)}
+.cta-txt{z-index:1}
+.cta-txt h2{font-family:var(--display);font-size:1.6rem;color:var(--cyan);margin-bottom:.3rem}
+.cta-txt p{color:var(--muted);font-size:.9rem}
+.cta-btn{background:var(--cyan);color:#06222a;border:none;padding:.9rem 2rem;border-radius:10px;font-family:var(--display);font-weight:700;font-size:1.05rem;cursor:pointer;transition:.2s;white-space:nowrap;z-index:1}
+.cta-btn:hover{filter:brightness(1.15);transform:scale(1.05)}
 
 .list-sec{max-width:1180px;margin:auto;padding:1.3rem 2rem 2.5rem}
 .meta{color:var(--muted);font-size:.83rem;margin-bottom:.9rem}
@@ -316,6 +330,9 @@ td.best::after{content:"👑";position:absolute;top:3px;inset-inline-end:5px;fon
 .src-btn.ub{color:var(--nv);border-color:rgba(143,209,79,.4);background:rgba(143,209,79,.08)}
 .src-btn.yt{color:var(--amd);border-color:rgba(239,125,125,.4);background:rgba(239,125,125,.08)}
 .src-btn.pp{color:var(--gold);border-color:rgba(232,180,90,.4);background:rgba(232,180,90,.08)}
+.src-btn.pb{color:#a78bfa;border-color:rgba(167,139,250,.4);background:rgba(167,139,250,.08)}
+.src-btn.wb{color:#f472b6;border-color:rgba(244,114,182,.4);background:rgba(244,114,182,.08)}
+.src-btn.bc{color:#34d399;border-color:rgba(52,211,153,.4);background:rgba(52,211,153,.08)}
 .src-btn:hover{transform:translateY(-2px);filter:brightness(1.25)}
 .src-note{color:var(--muted);font-size:.72rem;margin-top:.8rem;line-height:1.8}
 
@@ -327,8 +344,11 @@ td.best::after{content:"👑";position:absolute;top:3px;inset-inline-end:5px;fon
 .bn-field{margin-bottom:1rem}
 .bn-field label{display:block;font-family:var(--display);font-size:.85rem;color:var(--text);margin-bottom:.4rem}
 .bn-field label small{color:var(--muted);font-weight:400;font-size:.72rem}
-.bn-field select,.bn-field input{width:100%;background:var(--ink);border:1px solid var(--line);color:var(--text);padding:.7rem .9rem;border-radius:7px;font-size:.9rem;cursor:pointer}
-.bn-field select:focus,.bn-field input:focus{border-color:var(--cyan);outline:none}
+.bn-search{width:100%;background:var(--ink);border:1px solid var(--line);color:var(--text);padding:.6rem .9rem;border-radius:7px;font-size:.85rem;margin-bottom:.4rem}
+.bn-search:focus{border-color:var(--cyan);outline:none}
+.bn-field select{width:100%;background:var(--ink);border:1px solid var(--line);color:var(--text);padding:.7rem .9rem;border-radius:7px;font-size:.9rem;cursor:pointer}
+.bn-field select[size]{padding:.4rem}
+.bn-field select:focus{border-color:var(--cyan);outline:none}
 .bn-result{background:var(--panel);border:1px solid var(--line);padding:1.4rem;position:sticky;top:70px}
 .bn-score{text-align:center;margin-bottom:1.2rem}
 .bn-score b{font-family:var(--display);font-size:3.5rem;line-height:1;display:block}
@@ -345,6 +365,8 @@ td.best::after{content:"👑";position:absolute;top:3px;inset-inline-end:5px;fon
 .bn-bar i.cpu{background:linear-gradient(to left,var(--cyan),#2c7c8a)}
 .bn-bar i.gpu{background:linear-gradient(to left,var(--nv),#4d8a2a)}
 .bn-bar-row .val{font-family:var(--display);text-align:left}
+.bn-fps{background:var(--ink);border:1px solid var(--line);border-inline-start:3px solid var(--nv);padding:.9rem 1.1rem;font-size:.9rem;line-height:1.9;color:var(--text);margin-bottom:1.2rem}
+.bn-fps b{color:var(--nv);font-family:var(--display);font-size:1.1rem}
 .bn-tips{background:var(--ink);border:1px solid var(--line);border-inline-start:3px solid var(--gold);padding:.9rem 1.1rem;font-size:.85rem;line-height:1.9;color:var(--text);margin-bottom:1.2rem}
 .bn-tips b{color:var(--gold)}
 .bn-empty{text-align:center;color:var(--muted);padding:2rem 1rem}
@@ -390,6 +412,7 @@ footer b{color:var(--gold);font-family:var(--display)}
   .ring{margin:0 auto}
   .tips{grid-template-columns:1fr}
   .bn-result{position:static}
+  .cta-banner{flex-direction:column;text-align:center}
 }
 @media(max-width:600px){
   :root{--lcols:5px 1fr 76px 60px 22px}
@@ -448,6 +471,9 @@ footer b{color:var(--gold);font-family:var(--display)}
   .bn-form,.bn-result{padding:1rem}
   .bn-score b{font-size:2.8rem}
   .bn-bar-row{grid-template-columns:75px 1fr 42px;font-size:.76rem}
+  .cta-banner{padding:1.2rem 1rem}
+  .cta-txt h2{font-size:1.3rem}
+  .cta-btn{width:100%;padding:.8rem 1rem}
 }
 </style>
 </head>
@@ -511,6 +537,13 @@ footer b{color:var(--gold);font-family:var(--display)}
       <div class="stat"><b id="stCheap">0</b><span>أرخص كارت (ج.م)</span></div>
       <div class="stat"><b>7</b><span>مصادر أسعار</span></div>
     </div>
+    <div class="cta-banner" id="ctaBn">
+      <div class="cta-txt">
+        <h2>🧮 حاسبة عنق الزجاجة (Bottleneck)</h2>
+        <p>اعرف أنهي قطعة بتخنق جهازك — معالج، كارت، رام، هارد، بوردة، باور</p>
+      </div>
+      <button class="cta-btn">احسب دلوقتي ←</button>
+    </div>
   </header>
 
   <section class="list-sec" id="listSec">
@@ -571,12 +604,14 @@ footer b{color:var(--gold);font-family:var(--display)}
     <div class="bn-grid">
       <div class="bn-form">
         <div class="bn-field">
-          <label>🔧 المعالج (CPU)</label>
-          <select id="bnCpu"></select>
+          <label>🔧 المعالج (CPU) <small>— اكتب عشان تفلتر</small></label>
+          <input type="text" id="bnCpuSearch" class="bn-search" placeholder="🔍 دوّر على المعالج...">
+          <select id="bnCpu" size="6"></select>
         </div>
         <div class="bn-field">
-          <label>🎮 كارت الشاشة (GPU)</label>
-          <select id="bnGpu"></select>
+          <label>🎮 كارت الشاشة (GPU) <small>— اكتب عشان تفلتر</small></label>
+          <input type="text" id="bnGpuSearch" class="bn-search" placeholder="🔍 دوّر على الكارت...">
+          <select id="bnGpu" size="6"></select>
         </div>
         <div class="bn-field">
           <label>🖥️ دقة الشاشة <small>(الرزولوشن)</small></label>
@@ -589,19 +624,32 @@ footer b{color:var(--gold);font-family:var(--display)}
         <div class="bn-field">
           <label>💾 الرام (RAM) <small>— أقل من 16GB بيخنق</small></label>
           <select id="bnRam">
+            <option value="2">2 GB</option>
             <option value="4">4 GB</option>
+            <option value="6">6 GB</option>
             <option value="8">8 GB</option>
+            <option value="10">10 GB</option>
+            <option value="12">12 GB</option>
             <option value="16" selected>16 GB</option>
+            <option value="20">20 GB</option>
+            <option value="24">24 GB</option>
             <option value="32">32 GB</option>
-            <option value="64">64 GB</option>
           </select>
         </div>
         <div class="bn-field">
-          <label>💽 الهارد <small>— HDD بيأثر على التحميل مش الفريمات</small></label>
+          <label>💽 الهارد (Storage) <small>— النوع أهم من السعة</small></label>
           <select id="bnDisk">
-            <option value="hdd">HDD (هارد عادي)</option>
-            <option value="ssd" selected>SSD SATA</option>
-            <option value="nvme">NVMe SSD (سريع)</option>
+            <option value="hdd500">HDD 500GB (بطيء)</option>
+            <option value="hdd1tb">HDD 1TB (بطيء)</option>
+            <option value="hdd2tb">HDD 2TB (بطيء)</option>
+            <option value="ssd256">SSD 256GB</option>
+            <option value="ssd512" selected>SSD 512GB</option>
+            <option value="ssd1tb">SSD 1TB</option>
+            <option value="ssd2tb">SSD 2TB</option>
+            <option value="nvme512">NVMe 512GB (سريع)</option>
+            <option value="nvme1tb">NVMe 1TB (سريع)</option>
+            <option value="nvme2tb">NVMe 2TB (سريع)</option>
+            <option value="nvme4tb">NVMe 4TB (سريع)</option>
           </select>
         </div>
         <div class="bn-field">
@@ -613,18 +661,27 @@ footer b{color:var(--gold);font-family:var(--display)}
             <option value="600">600W</option>
             <option value="750" selected>750W</option>
             <option value="850">850W</option>
-            <option value="1000">1000W+</option>
+            <option value="1000">1000W</option>
+            <option value="1200">1200W+</option>
           </select>
         </div>
         <div class="bn-field">
-          <label>🔲 البوردة (Motherboard)</label>
+          <label>🔲 البوردة (Motherboard) <small>— الـ Chipset</small></label>
           <select id="bnMb">
-            <option value="h61">H61 / قديمة (LGA 1155)</option>
-            <option value="b85">B85 / H81 (LGA 1150)</option>
-            <option value="b150">B150 / H110 (LGA 1151)</option>
-            <option value="b360" selected>B360 / B450 / B550</option>
-            <option value="b560">B560 / B660 / B760</option>
-            <option value="x670">X670 / Z790 (أحدث)</option>
+            <option value="h61">Intel H61/B75 (LGA 1155) — DDR3</option>
+            <option value="h81">Intel H81/B85/Z97 (LGA 1150) — DDR3</option>
+            <option value="h110">Intel H110/B150/Z170 (LGA 1151) — DDR4</option>
+            <option value="b360" selected>Intel B360/Z390 (LGA 1151v2) — DDR4</option>
+            <option value="b460">Intel B460/Z490 (LGA 1200) — DDR4</option>
+            <option value="b560">Intel B560/Z590 (LGA 1200) — DDR4</option>
+            <option value="b660">Intel B660/Z690 (LGA 1700) — DDR4/5</option>
+            <option value="b760">Intel B760/Z790 (LGA 1700) — DDR4/5</option>
+            <option value="z890">Intel Z890 (LGA 1851) — DDR5</option>
+            <option value="a320">AMD A320/B350/X370 (AM4) — DDR4</option>
+            <option value="b450">AMD B450/X470 (AM4) — DDR4</option>
+            <option value="b550">AMD B550/X570 (AM4) — DDR4</option>
+            <option value="b650">AMD B650/X670 (AM5) — DDR5</option>
+            <option value="x870">AMD X870 (AM5) — DDR5</option>
           </select>
         </div>
         <button class="gold-btn" id="bnCalc" style="width:100%;margin-top:.5rem">🧮 احسب عنق الزجاجة</button>
@@ -713,7 +770,12 @@ const CARDS=[
 {n:"GTX TITAN Xp",b:"nv",y:2017,v:"12GB",w:250,s:9.5,u:6500,nw:null,a:"Pascal"},
 {n:"TITAN V",b:"nv",y:2017,v:"12GB",w:250,s:11,u:8000,nw:null,a:"Volta"},
 {n:"TITAN RTX",b:"nv",y:2018,v:"24GB",w:280,s:14,u:11000,nw:null,a:"Turing"},
+{n:"Quadro K2000",b:"nv",y:2013,v:"2GB",w:51,s:1.2,u:800,nw:null,a:"Kepler"},
+{n:"Quadro K4000",b:"nv",y:2013,v:"3GB",w:80,s:1.8,u:1200,nw:null,a:"Kepler"},
+{n:"Quadro M2000",b:"nv",y:2016,v:"4GB",w:75,s:2.5,u:2000,nw:null,a:"Maxwell"},
+{n:"Quadro P1000",b:"nv",y:2017,v:"4GB",w:47,s:2.8,u:2500,nw:null,a:"Pascal"},
 {n:"Quadro P2000",b:"nv",y:2017,v:"5GB",w:75,s:3.2,u:3500,nw:null,a:"Pascal"},
+{n:"Quadro T1000",b:"nv",y:2019,v:"4GB",w:50,s:3.5,u:3500,nw:null,a:"Turing"},
 {n:"Quadro P4000",b:"nv",y:2017,v:"8GB",w:105,s:5.5,u:5000,nw:null,a:"Pascal"},
 {n:"Quadro RTX 4000",b:"nv",y:2018,v:"8GB",w:160,s:7,u:8000,nw:null,a:"Turing"},
 {n:"RTX A4000",b:"nv",y:2021,v:"16GB",w:140,s:13,u:14000,nw:null,a:"Ampere"},
@@ -829,6 +891,9 @@ const CARDS=[
 {n:"R9 Fury",b:"amd",y:2015,v:"4GB",w:275,s:4.5,u:2900,nw:null,a:"GCN"},
 {n:"R9 Nano",b:"amd",y:2015,v:"4GB",w:175,s:4.3,u:2800,nw:null,a:"GCN"},
 {n:"R9 Fury X",b:"amd",y:2015,v:"4GB",w:275,s:5,u:3200,nw:null,a:"GCN"},
+{n:"Radeon Pro W5500",b:"amd",y:2020,v:"8GB",w:125,s:5,u:4500,nw:null,a:"RDNA 1"},
+{n:"Radeon Pro W5700",b:"amd",y:2019,v:"8GB",w:205,s:7,u:6000,nw:null,a:"RDNA 1"},
+{n:"Radeon Pro W6600",b:"amd",y:2021,v:"8GB",w:100,s:8,u:7000,nw:null,a:"RDNA 2"},
 {n:"Radeon Pro W6800",b:"amd",y:2021,v:"32GB",w:250,s:16,u:20000,nw:null,a:"RDNA 2"},
 {n:"Radeon Pro W7800",b:"amd",y:2023,v:"32GB",w:260,s:22,u:32000,nw:60000,a:"RDNA 3"},
 {n:"Radeon Pro W7900",b:"amd",y:2023,v:"48GB",w:295,s:27,u:48000,nw:90000,a:"RDNA 3"},
@@ -892,26 +957,68 @@ const CARDS=[
 ];
 
 const CPUS=[
-{n:"Intel Core 2 Duo / قديم جداً",s:5},
-{n:"Intel i3-2100 / AMD FX-4100",s:12},
-{n:"Intel i5-2500 / AMD FX-6300",s:18},
-{n:"Intel i5-3470 / AMD FX-8350",s:22},
-{n:"Intel i5-4460 / Ryzen 3 1200",s:28},
-{n:"Intel i5-6500 / Ryzen 5 1400",s:33},
-{n:"Intel i5-7400 / Ryzen 5 1600",s:38},
-{n:"Intel i5-8400 / Ryzen 5 2600",s:45},
-{n:"Intel i5-9400F / Ryzen 5 3600",s:52},
-{n:"Intel i5-10400F / Ryzen 5 5600",s:60},
-{n:"Intel i5-11400F / Ryzen 5 5600X",s:66},
-{n:"Intel i5-12400F / Ryzen 5 7600",s:74},
-{n:"Intel i5-13400F / Ryzen 5 7600X",s:80},
-{n:"Intel i5-14400F / Ryzen 5 9600X",s:84},
-{n:"Intel i7-12700 / Ryzen 7 5800X",s:88},
-{n:"Intel i7-13700 / Ryzen 7 7700X",s:92},
-{n:"Intel i7-14700 / Ryzen 7 7800X3D",s:96},
-{n:"Intel i9-13900K / Ryzen 9 7900X",s:98},
-{n:"Intel i9-14900K / Ryzen 9 7950X",s:100},
-{n:"Intel i9-14900KS / Ryzen 9 9950X",s:103}
+{n:"Intel Core 2 Duo E8400",s:5},
+{n:"Intel Core 2 Quad Q6600",s:8},
+{n:"Intel i3-530 / i3-2100",s:12},
+{n:"Intel i5-750 / i5-2300",s:15},
+{n:"Intel i5-2500K",s:18},
+{n:"Intel i7-2600K",s:20},
+{n:"Intel i5-3470 / i5-3570",s:22},
+{n:"Intel i7-3770K",s:25},
+{n:"Intel i5-4460 / i5-4590",s:28},
+{n:"Intel i7-4770K / i7-4790K",s:32},
+{n:"Intel i5-6500 / i5-6600",s:33},
+{n:"Intel i7-6700K",s:38},
+{n:"Intel i5-7400 / i5-7500",s:38},
+{n:"Intel i7-7700K",s:42},
+{n:"Intel i3-8100 / i3-9100",s:40},
+{n:"Intel i5-8400 / i5-9400F",s:45},
+{n:"Intel i7-8700K / i7-9700K",s:52},
+{n:"Intel i9-9900K",s:58},
+{n:"Intel i5-10400F / i5-10600K",s:60},
+{n:"Intel i7-10700K",s:65},
+{n:"Intel i9-10900K",s:70},
+{n:"Intel i5-11400F / i5-11600K",s:66},
+{n:"Intel i7-11700K",s:72},
+{n:"Intel i9-11900K",s:75},
+{n:"Intel i5-12400F / i5-12600K",s:74},
+{n:"Intel i7-12700K",s:82},
+{n:"Intel i9-12900K",s:88},
+{n:"Intel i5-13400F / i5-13600K",s:80},
+{n:"Intel i7-13700K",s:90},
+{n:"Intel i9-13900K",s:95},
+{n:"Intel i5-14400F / i5-14600K",s:84},
+{n:"Intel i7-14700K",s:92},
+{n:"Intel i9-14900K",s:98},
+{n:"Intel Core Ultra 5 245F",s:88},
+{n:"Intel Core Ultra 7 265K",s:95},
+{n:"Intel Core Ultra 9 285K",s:100},
+{n:"AMD FX-4100 / FX-6100",s:10},
+{n:"AMD FX-6300 / FX-8320",s:15},
+{n:"AMD FX-8350 / FX-9590",s:18},
+{n:"AMD Ryzen 3 1200 / 1300X",s:25},
+{n:"AMD Ryzen 5 1400 / 1500X",s:28},
+{n:"AMD Ryzen 5 1600 / 1600X",s:32},
+{n:"AMD Ryzen 7 1700 / 1700X",s:35},
+{n:"AMD Ryzen 5 2600 / 2600X",s:38},
+{n:"AMD Ryzen 7 2700X",s:42},
+{n:"AMD Ryzen 5 3600 / 3600X",s:48},
+{n:"AMD Ryzen 7 3700X / 3800X",s:52},
+{n:"AMD Ryzen 9 3900X",s:58},
+{n:"AMD Ryzen 5 5600 / 5600X",s:62},
+{n:"AMD Ryzen 7 5800X / 5800X3D",s:70},
+{n:"AMD Ryzen 9 5900X",s:75},
+{n:"AMD Ryzen 9 5950X",s:78},
+{n:"AMD Ryzen 5 7600 / 7600X",s:74},
+{n:"AMD Ryzen 7 7700X",s:80},
+{n:"AMD Ryzen 7 7800X3D",s:90},
+{n:"AMD Ryzen 9 7900X",s:85},
+{n:"AMD Ryzen 9 7950X",s:88},
+{n:"AMD Ryzen 5 9600X",s:82},
+{n:"AMD Ryzen 7 9700X",s:88},
+{n:"AMD Ryzen 9 9900X",s:92},
+{n:"AMD Ryzen 9 9950X",s:95},
+{n:"AMD Ryzen 7 9800X3D",s:100}
 ];
 
 const GAMES={
@@ -1447,6 +1554,7 @@ document.getElementById('navCmp').addEventListener('click',showCompare);
 document.getElementById('navTips').addEventListener('click',()=>{showList();setTimeout(()=>document.getElementById('tips').scrollIntoView({behavior:'smooth'}),60)});
 document.getElementById('navBn').addEventListener('click',showBn);
 document.getElementById('bnBack').addEventListener('click',showList);
+document.getElementById('ctaBn').addEventListener('click',showBn);
 addEventListener('keydown',e=>{if(e.key==='Escape')showList();});
 
 /* ===== حاسبة عنق الزجاجة ===== */
@@ -1457,11 +1565,21 @@ function showBn(){
 }
 function initBnSelects(){
   const cpuSel=document.getElementById('bnCpu');
-  cpuSel.innerHTML=CPUS.map((c,i)=>`<option value="${i}" ${i===9?'selected':''}>${c.n}</option>`).join('');
+  cpuSel.innerHTML=CPUS.map((c,i)=>`<option value="${i}" ${i===18?'selected':''}>${c.n}</option>`).join('');
   const gpuSel=document.getElementById('bnGpu');
   const gamingGpus=CARDS.filter(c=>!/Quadro|Radeon Pro|TITAN|A\d{4}/i.test(c.n)).sort((a,b)=>b.s-a.s);
   gpuSel.innerHTML=gamingGpus.map(c=>`<option value="${c.n}" ${c.n==='RTX 3060'?'selected':''}>${c.n} (${c.v})</option>`).join('');
 }
+function filterSelect(inputId, selectId){
+  const q=document.getElementById(inputId).value.toLowerCase();
+  const sel=document.getElementById(selectId);
+  Array.from(sel.options).forEach(opt=>{
+    opt.hidden=!opt.text.toLowerCase().includes(q);
+  });
+}
+document.getElementById('bnCpuSearch').addEventListener('input',()=>filterSelect('bnCpuSearch','bnCpu'));
+document.getElementById('bnGpuSearch').addEventListener('input',()=>filterSelect('bnGpuSearch','bnGpu'));
+
 function calcBottleneck(){
   const cpu=CPUS[+document.getElementById('bnCpu').value];
   const gpuName=document.getElementById('bnGpu').value;
@@ -1472,12 +1590,12 @@ function calcBottleneck(){
   const psuW=+document.getElementById('bnPsu').value;
   if(!cpu||!gpu)return;
 
-  const resMult=res===1080?1:res===1440?1.45:2.1;
+  const resMult=res===1080?1:res===1440?1.5:2.2;
   const gpuLoad=gpu.s*resMult;
   const cpuScore=cpu.s;
   const ratio=gpuLoad/cpuScore;
   let bn=0;
-  if(ratio>1.15)bn=Math.min(90,Math.round((ratio-1)*100));
+  if(ratio>1.1)bn=Math.min(90,Math.round((ratio-1)*100));
   else if(ratio<0.85)bn=Math.min(60,Math.round((1-ratio)*70));
   const cpuBn=bn;
   const gpuBn=ratio<0.85?Math.round((1-ratio)*70):0;
@@ -1485,6 +1603,9 @@ function calcBottleneck(){
   let ramPen=0;
   if(ram<8)ramPen=25;else if(ram<16)ramPen=10;else if(ram<32&&gpu.s>20)ramPen=5;
   const totalBn=Math.min(95,cpuBn+ramPen);
+
+  const diskType=disk.startsWith('hdd')?'hdd':disk.startsWith('nvme')?'nvme':'ssd';
+  const fps1080=Math.round(Math.min(gpu.s*4,cpuScore*1.4));
 
   let verdict,cls,tips;
   if(totalBn<10){verdict='✅ مفيش عنق زجاجة — جهازك متوازن';cls='good';tips='جهازك متوازن جداً، استمتع بالألعاب من غير ما تقلق.';}
@@ -1495,7 +1616,7 @@ function calcBottleneck(){
   if(cpuBn>15)tipsList.push(`🔧 <b>المعالج (${cpu.n.split('/')[0].trim()}) بيخنق الكارت</b> — الكارت أقوى من المعالج، فمش هتستفيد من قوته كاملة. فكّر في ترقية المعالج (والبوردة لو محتاجة).`);
   if(gpuBn>15)tipsList.push(`🎮 <b>الكارت (${gpu.n}) أضعف من المعالج</b> — المعالج بتاعك قوي والكارت هو اللي بيحد. ترقية الكارت هتفرق معاك جداً.`);
   if(ramPen>=10)tipsList.push(`💾 <b>الرام ${ram}GB قليلة</b> — الألعاب الحديثة بتحتاج 16GB على الأقل. لو عندك 8GB أو أقل، الترقية دي رخيصة وهتفرق.`);
-  if(disk==='hdd')tipsList.push(`💽 <b>عندك HDD</b> — مش بيأثر على الفريمات بس بيخلي التحميل والشاشة السودا طويلة. SSD بـ 300 جنيه هيغير تجربتك.`);
+  if(diskType==='hdd')tipsList.push(`💽 <b>عندك HDD</b> — مش بيأثر على الفريمات بس بيخلي التحميل والشاشة السودا طويلة. SSD بـ 300 جنيه هيغير تجربتك.`);
   if(psuW<psu(gpu))tipsList.push(`🔌 <b>الباور ${psuW}W قليل</b> — الكارت ده محتاج ${psu(gpu)}W على الأقل. متغامرش بباور ضعيف، ممكن يبوظ الجهاز.`);
   if(tipsList.length===0)tipsList.push('✅ كل القطع متوازنة — مفيش ترقية ضرورية دلوقتي.');
 
@@ -1507,16 +1628,19 @@ function calcBottleneck(){
       <div class="bn-bar-row"><span class="lbl">🔧 المعالج</span><span class="bn-bar"><i class="cpu" style="width:${Math.min(100,cpuScore)}%"></i></span><span class="val">${cpuScore}</span></div>
       <div class="bn-bar-row"><span class="lbl">🎮 الكارت</span><span class="bn-bar"><i class="gpu" style="width:${Math.min(100,gpuLoad/1.2)}%"></i></span><span class="val">${Math.round(gpuLoad)}</span></div>
     </div>
+    <div class="bn-fps">🎯 <b>FPS متوقع (1080p High):</b> ~${fps1080} FPS<br><small style="color:var(--muted)">تقريبي — الألعاب الخفيفة (Valorant, CS2) هتبقى أعلى، والتقيلة (Cyberpunk, Starfield) هتبقى أقل.</small></div>
     <div class="bn-tips"><b>💡 النصايح:</b><br>${tipsList.join('<br><br>')}</div>
     <div class="cmp-src" style="margin-top:0">
-      <p class="src-title">🔍 تأكد من مصادر رسمية:</p>
+      <p class="src-title">🔍 تأكد من مواقع رسمية:</p>
       <div class="src-btns">
-        <a class="src-btn tc" target="_blank" rel="noopener" href="https://technical.city/en/video/${tcSlug(gpu)}">📊 technical.city</a>
-        <a class="src-btn ub" target="_blank" rel="noopener" href="${ubURL(gpu.n)}">📈 UserBenchmark</a>
+        <a class="src-btn pb" target="_blank" rel="noopener" href="https://pc-builds.com/bottleneck-calculator/">🧮 PC-Builds</a>
+        <a class="src-btn wb" target="_blank" rel="noopener" href="https://www.willitbottleneck.com/">📊 WillItBottleneck</a>
+        <a class="src-btn bc" target="_blank" rel="noopener" href="https://bottleneckcalculatr.com/">⚡ BottleneckCalculatr</a>
+        <a class="src-btn tc" target="_blank" rel="noopener" href="https://technical.city/en/video/${tcSlug(gpu)}">📈 technical.city</a>
+        <a class="src-btn ub" target="_blank" rel="noopener" href="${ubURL(gpu.n)}">📉 UserBenchmark</a>
         <a class="src-btn pp" target="_blank" rel="noopener" href="https://pcpartpicker.com/products/video-card/">🔧 PCPartPicker</a>
-        <a class="src-btn yt" target="_blank" rel="noopener" href="${ytURL([cpu.n.split('/')[0].trim(),gpu.n])}">▶️ YouTube</a>
       </div>
-      <p class="src-note">⚠️ الحاسبة دي تقديرية بناءً على نقاط أداء تقريبية — للأرقام الدقيقة راجع المصادر الرسمية فوق. الدقة بتقل مع الكروت القديمة جداً.</p>
+      <p class="src-note">⚠️ الحاسبة دي تقديرية بناءً على نقاط أداء تقريبية — للأرقام الدقيقة راجع المواقع الرسمية فوق. الدقة بتقل مع الكروت القديمة جداً.</p>
     </div>`;
 }
 document.getElementById('bnCalc').addEventListener('click',calcBottleneck);
