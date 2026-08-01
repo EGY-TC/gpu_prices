@@ -136,6 +136,52 @@ select.sort{background:var(--panel);border:1px solid var(--line);color:var(--tex
 .cta-banner.bn .cta-btn{background:var(--cyan);color:#06222a}
 .cta-banner.cp .cta-btn{background:var(--violet);color:#1a1428}
 .cta-btn:hover{filter:brightness(1.15);transform:scale(1.05)}
+.battle-sec{max-width:1180px;margin:1.4rem auto 0;padding:0 2rem}
+.battle-head{text-align:center;margin-bottom:1.1rem}
+.battle-kick{display:inline-flex;align-items:center;gap:.5rem;background:rgba(182,156,240,.12);border:1px solid rgba(182,156,240,.34);color:var(--violet);font-family:var(--display);font-size:.72rem;padding:.3rem .8rem;border-radius:30px;margin-bottom:.6rem}
+.battle-dot{width:6px;height:6px;border-radius:50%;background:var(--violet);animation:blink 1.2s infinite}
+.battle-h{font-family:var(--display);font-weight:800;font-size:clamp(1.4rem,4vw,2rem)}
+.battle-sub{color:var(--muted);font-size:.88rem;margin-top:.3rem}
+.battle-arena{display:grid;grid-template-columns:1fr auto 1fr;gap:1rem;align-items:stretch;max-width:820px;margin:auto}
+.battle-card{position:relative;background:linear-gradient(160deg,var(--panel2),var(--panel));border:1px solid var(--line);border-radius:16px;padding:1.6rem 1.2rem;cursor:pointer;transition:.25s;text-align:center;display:flex;flex-direction:column;align-items:center;gap:.6rem;min-height:150px;justify-content:center;overflow:hidden}
+.battle-card:hover:not(.locked){border-color:var(--violet);transform:translateY(-4px);box-shadow:0 18px 40px -18px rgba(182,156,240,.45)}
+.battle-card.win{border-color:var(--nv);box-shadow:0 0 0 2px rgba(154,214,90,.4),0 18px 40px -18px rgba(154,214,90,.5);animation:battlePulse .6s ease}
+.battle-card.lose{border-color:var(--amd);opacity:.72}
+.battle-card.correct::before{content:"✅";position:absolute;top:8px;inset-inline-end:10px;font-size:1.1rem}
+.battle-card.wrong::before{content:"❌";position:absolute;top:8px;inset-inline-end:10px;font-size:1.1rem}
+@keyframes battlePulse{0%{transform:scale(1)}40%{transform:scale(1.045)}100%{transform:scale(1)}}
+.battle-brand-tag{font-family:var(--mono);font-size:.68rem;color:var(--muted);letter-spacing:.08em}
+.battle-name{font-family:var(--display);font-weight:700;font-size:1.15rem;line-height:1.3}
+.battle-pick{font-size:.72rem;color:var(--muted);background:var(--ink);border:1px solid var(--line);padding:.25rem .7rem;border-radius:20px}
+.battle-card.locked .battle-pick{display:none}
+.battle-reveal{font-family:var(--mono);font-size:.8rem;color:var(--gold);min-height:1.2em}
+.battle-vs{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.5rem;padding:0 .3rem}
+.battle-vs-txt{font-family:var(--display);font-weight:800;font-size:1.3rem;color:var(--violet);background:var(--panel);border:2px solid var(--violet);width:52px;height:52px;border-radius:50%;display:flex;align-items:center;justify-content:center}
+.battle-streak{font-size:.68rem;color:var(--muted);white-space:nowrap;text-align:center}
+.battle-streak b{color:var(--gold);font-family:var(--mono)}
+.battle-footer{text-align:center;margin-top:1rem;min-height:2.4rem}
+.battle-result{font-family:var(--display);font-size:.95rem}
+.battle-next{margin-top:.6rem;background:var(--violet);color:#1a1428;border:none;padding:.6rem 1.4rem;border-radius:30px;font-family:var(--display);font-weight:700;font-size:.86rem;cursor:pointer;transition:.2s}
+.battle-next:hover{filter:brightness(1.12);transform:translateY(-2px)}
+@media(max-width:700px){.battle-arena{grid-template-columns:1fr;gap:.7rem}.battle-vs{flex-direction:row;justify-content:center}.battle-card{min-height:110px;padding:1.1rem}}
+.tools-form-head{font-family:var(--display);font-weight:700;color:var(--warm);font-size:.9rem;margin-bottom:.6rem}
+.tool-tabs{display:flex;gap:.5rem;margin-bottom:1rem;background:var(--ink);border:1px solid var(--line);border-radius:10px;padding:.3rem}
+.tool-tab{flex:1;background:none;border:none;color:var(--muted);padding:.6rem .5rem;border-radius:7px;font-family:var(--display);font-weight:700;font-size:.85rem;cursor:pointer;transition:.2s}
+.tool-tab.active{background:var(--panel2);color:var(--gold);box-shadow:0 4px 14px -6px rgba(0,0,0,.5)}
+.tool-tab:hover:not(.active){color:var(--text)}
+.bn-result-wrap{min-width:0}
+.spec-vs-row{display:grid;grid-template-columns:70px 1fr 70px;gap:.6rem;align-items:center;margin-bottom:.7rem;font-size:.8rem}
+.spec-vs-row .sv-lbl{color:var(--muted);text-align:center}
+.spec-vs-row .sv-you{font-family:var(--mono);text-align:left;font-weight:700}
+.spec-vs-row .sv-need{font-family:var(--mono);text-align:right;color:var(--muted);font-size:.72rem}
+.sv-track{position:relative;height:20px;background:var(--ink);border:1px solid var(--line);border-radius:5px;overflow:hidden}
+.sv-track i{position:absolute;inset-inline-start:0;top:0;height:100%;transition:width .8s ease}
+.sv-track i.pass{background:linear-gradient(to left,var(--nv),#4d8a2a)}
+.sv-track i.warn{background:linear-gradient(to left,var(--warm),#a5762a)}
+.sv-track i.fail{background:linear-gradient(to left,var(--amd),#a84848)}
+.sv-track .sv-mark{position:absolute;top:-2px;bottom:-2px;width:2px;background:var(--gold)}
+.sv-status{font-size:.68rem;font-weight:700;text-align:center}
+.sv-status.pass{color:var(--nv)}.sv-status.warn{color:var(--warm)}.sv-status.fail{color:var(--amd)}
 .list-sec{max-width:1180px;margin:auto;padding:1.2rem 2rem 6rem}
 .meta{color:var(--muted);font-size:.83rem;margin-bottom:.9rem}
 .meta b{color:var(--warm);font-family:var(--mono)}
@@ -567,6 +613,35 @@ footer b{color:var(--warm);font-family:var(--display)}
       <div class="cta-banner cp" id="ctaCmp"><div class="cta-txt"><h2 data-i18n="ctaCmpT">⚖️ قارن كروت جنب بعض</h2><p data-i18n="ctaCmpD">أداء، سعر، استهلاك وFPS في جدول واحد</p></div><button class="cta-btn" data-i18n="ctaCmpB">قارن ←</button></div>
     </div>
   </header>
+  <section class="battle-sec">
+    <div class="battle-head">
+      <span class="battle-kick"><span class="battle-dot"></span> <span data-i18n="battleKick">تحدي سريع</span></span>
+      <h2 class="battle-h"><span data-i18n="battleTitle">⚔️ تحدي الكروت</span></h2>
+      <p class="battle-sub" data-i18n="battleSub">مين أقوى؟ خمّن قبل ما تشوف الأرقام</p>
+    </div>
+    <div class="battle-arena" id="battleArena">
+      <button type="button" class="battle-card" id="battleL" data-side="L">
+        <span class="battle-brand-tag" id="bL_brand"></span>
+        <span class="battle-name" id="bL_name">—</span>
+        <span class="battle-pick" data-i18n="battlePick">دوس هنا لو فاكر ده الأقوى</span>
+        <span class="battle-reveal" id="bL_reveal"></span>
+      </button>
+      <div class="battle-vs">
+        <span class="battle-vs-txt">VS</span>
+        <span class="battle-streak"><span data-i18n="battleStreak">أفضل سلسلة</span>: <b id="battleStreak">0</b></span>
+      </div>
+      <button type="button" class="battle-card" id="battleR" data-side="R">
+        <span class="battle-brand-tag" id="bR_brand"></span>
+        <span class="battle-name" id="bR_name">—</span>
+        <span class="battle-pick" data-i18n="battlePick">دوس هنا لو فاكر ده الأقوى</span>
+        <span class="battle-reveal" id="bR_reveal"></span>
+      </button>
+    </div>
+    <div class="battle-footer">
+      <span class="battle-result" id="battleResult"></span>
+      <button type="button" class="battle-next hidden" id="battleNext" data-i18n="battleNext">🔄 جولة جديدة</button>
+    </div>
+  </section>
   <section class="list-sec" id="listSec">
     <p class="meta"><span data-i18n="show">معروض</span> <b id="shown">0</b> <span data-i18n="of">من</span> <b id="total2">0</b> <span data-i18n="total">كارت</span></p>
     <div id="rows"></div>
@@ -601,13 +676,14 @@ footer b{color:var(--warm);font-family:var(--display)}
   </div></div>
   <div class="dwrap"><div id="cmpContent"></div></div>
 </main>
-<main id="bnView" class="hidden">
-  <div class="crumb"><button class="back-btn" id="bnBack" data-i18n="back">→ رجوع</button><span>GPUVault / <b data-i18n="bnTitle">حاسبة عنق الزجاجة 🧮</b></span></div>
+<main id="toolsView" class="hidden">
+  <div class="crumb"><button class="back-btn" id="toolsBack" data-i18n="back">→ رجوع</button><span>GPUVault / <b data-i18n="toolsTitle">أدوات الفحص 🧮</b></span></div>
   <div class="dwrap">
-    <div class="sec-head"><span class="sec-tag c3">🧮</span><h2 data-i18n="bnTitle">حاسبة عنق الزجاجة (Bottleneck)</h2><span class="sec-line"></span></div>
-    <div class="bn-intro"><b data-i18n="bnIntro">إيه هو عنق الزجاجة؟</b> <span data-i18n="bnIntro2">الحاسبة بتحسب قوة كل قطعة على مقياس موحّد (مكافئ PassMark للمعالج و3DMark للكارت)، وبتقارنهم حسب دقة الشاشة — في 1080p المعالج ليه وزن أكبر، وفي 4K الكارت هو الحد غالباً. النتيجة: نسبة الاختناق + القطعة المختنقة + نسب استخدام زي Task Manager.</span></div>
+    <div class="sec-head"><span class="sec-tag c3">🧮🎮</span><h2 data-i18n="toolsTitle">أدوات الفحص</h2><span class="sec-line"></span></div>
+    <div class="bn-intro"><b data-i18n="toolsIntro">إزاي بتشتغل؟</b> <span data-i18n="toolsIntro2">اختار مواصفات جهازك مرة واحدة من الشمال، وبعدين استخدم أي أداة من الاتنين من غير ما تدخل بياناتك تاني: "عنق الزجاجة" يقولك أنهي قطعة بتحد التانية، و"تقدر تشغلها؟" يقارن جهازك بمتطلبات أي لعبة. الحسابات مبنية على مقاييس أداء موحّدة (زي PassMark/3DMark) وتصنيف متطلبات الألعاب حسب سنتها ونوعها.</span></div>
     <div class="bn-grid">
       <div class="bn-form">
+        <p class="tools-form-head" data-i18n="toolsSpecsHead">1️⃣ مواصفات جهازك</p>
         <div class="bn-field"><label>🔧 <span data-i18n="cpu">المعالج (CPU)</span> <small>— <span data-i18n="cpuPh2">اكتب عشان تفلتر</span></small></label><input type="text" id="bnCpuSearch" class="bn-search" data-i18n-ph="cpuPh" placeholder="🔍 دوّر على المعالج..."><select id="bnCpu" size="6" aria-label="CPU list"></select></div>
         <div class="bn-field"><label>🎮 <span data-i18n="gpu">كارت الشاشة (GPU)</span> <small>— <span data-i18n="gpuPh2">اكتب عشان تفلتر</span></small></label><input type="text" id="bnGpuSearch" class="bn-search" data-i18n-ph="gpuPh" placeholder="🔍 دوّر على الكارت..."><select id="bnGpu" size="6" aria-label="GPU list"></select></div>
         <div class="bn-field"><label>🖥️ <span data-i18n="res">دقة الشاشة</span></label><select id="bnRes" aria-label="Resolution"><option value="1080">1080p (Full HD)</option><option value="1440">1440p (2K)</option><option value="2160">2160p (4K)</option></select></div>
@@ -620,36 +696,34 @@ footer b{color:var(--warm);font-family:var(--display)}
           <optgroup label="HEDT / Server"><option value="x99">Intel X99 (LGA2011-3)</option><option value="x299">Intel X299 (LGA2066)</option><option value="w480">Intel W480/W680 (Xeon W)</option><option value="trx40">AMD TRX40 (sTRX4)</option><option value="wrx80">AMD WRX80/90 (sWRX8/9)</option></optgroup>
           <optgroup label="Laptop"><option value="laptop_old">لوحة لابتوب قديمة (2010–2016)</option><option value="laptop_mid">لوحة لابتوب متوسطة (2017–2021)</option><option value="laptop_new">لوحة لابتوب حديثة (2022+)</option></optgroup>
         </select></div>
-        <button class="gold-btn" id="bnCalc" style="width:100%;margin-top:.5rem;background:var(--warm)" data-i18n="bnCalc">🧮 احسب عنق الزجاجة</button>
       </div>
-      <div class="bn-result" id="bnResult"><div class="bn-empty"><b>🧮</b><span data-i18n="bnEmpty">اختار قطع جهازك من الشمال واضغط "احسب"</span></div></div>
+      <div class="bn-result-wrap">
+        <div class="tool-tabs">
+          <button type="button" class="tool-tab active" id="tabBn" data-tool="bn">🧮 <span data-i18n="bn">عنق الزجاجة</span></button>
+          <button type="button" class="tool-tab" id="tabRunit" data-tool="runit">🎮 <span data-i18n="runit">تقدر تشغلها؟</span></button>
+        </div>
+        <div id="panelBn">
+          <button class="gold-btn" id="bnCalc" style="width:100%;margin-bottom:1rem;background:var(--warm)" data-i18n="bnCalc">🧮 احسب عنق الزجاجة</button>
+          <div class="bn-result" id="bnResult"><div class="bn-empty"><b>🧮</b><span data-i18n="bnEmpty">اختار قطع جهازك من الشمال واضغط "احسب"</span></div></div>
+        </div>
+        <div id="panelRunit" class="hidden">
+          <p class="tools-form-head" data-i18n="toolsGameHead">2️⃣ اختار اللعبة</p>
+          <div class="bn-field"><input type="text" id="ruGameSearch" class="bn-search" data-i18n-ph="runitGamePh" placeholder="🔍 دوّر على اللعبة..."><select id="ruGame" size="6" aria-label="Game list"></select></div>
+          <button class="gold-btn" id="ruCalc" style="width:100%;margin:.7rem 0 1rem;background:var(--cyan)" data-i18n="runitCalc">🎮 اتأكد تقدر تشغلها</button>
+          <div class="bn-result" id="ruResult"><div class="bn-empty"><b>🎮</b><span data-i18n="runitEmpty">اختار جهازك واللعبة واضغط "اتأكد"</span></div></div>
+        </div>
+      </div>
     </div>
   </div>
 </main>
-<main id="runitView" class="hidden">
-  <div class="crumb"><button class="back-btn" id="runitBack" data-i18n="back">→ رجوع</button><span>GPUVault / <b data-i18n="runitTitle">تقدر تشغلها؟ 🎮</b></span></div>
-  <div class="dwrap">
-    <div class="sec-head"><span class="sec-tag c2">🎮</span><h2 data-i18n="runitTitle">تقدر تشغلها؟</h2><span class="sec-line"></span></div>
-    <div class="bn-intro"><b data-i18n="runitIntro">إزاي بتشتغل؟</b> <span data-i18n="runitIntro2">اختار مواصفات جهازك واللعبة، والحاسبة هتقارن قوة الكارت والمعالج والرام عندك بمتطلبات اللعبة التقريبية (الحد الأدنى والموصى بها) وتقولك هتشتغل ولا لأ وعلى أنهي إعدادات تقريباً. الأرقام تقديرية مبنية على تصنيف كل لعبة حسب سنتها ونوعها، مش مسحوبة حرفياً من صفحة كل لعبة.</span></div>
-    <div class="bn-grid">
-      <div class="bn-form">
-        <div class="bn-field"><label>🔧 <span data-i18n="cpu">المعالج (CPU)</span> <small>— <span data-i18n="cpuPh2">اكتب عشان تفلتر</span></small></label><input type="text" id="ruCpuSearch" class="bn-search" data-i18n-ph="cpuPh" placeholder="🔍 دوّر على المعالج..."><select id="ruCpu" size="6" aria-label="CPU list"></select></div>
-        <div class="bn-field"><label>🎮 <span data-i18n="gpu">كارت الشاشة (GPU)</span> <small>— <span data-i18n="gpuPh2">اكتب عشان تفلتر</span></small></label><input type="text" id="ruGpuSearch" class="bn-search" data-i18n-ph="gpuPh" placeholder="🔍 دوّر على الكارت..."><select id="ruGpu" size="6" aria-label="GPU list"></select></div>
-        <div class="bn-field"><label>💾 <span data-i18n="ram">الرام (RAM)</span></label><select id="ruRam" aria-label="RAM"><option value="1">1 GB</option><option value="2">2 GB</option><option value="4">4 GB</option><option value="6">6 GB</option><option value="8">8 GB</option><option value="10">10 GB</option><option value="12">12 GB</option><option value="16" selected>16 GB</option><option value="20">20 GB</option><option value="24">24 GB</option><option value="32">32 GB</option><option value="48">48 GB</option><option value="64">64 GB</option></select></div>
-        <div class="bn-field"><label>🎯 <span data-i18n="runitGame">اللعبة</span> <small>— <span data-i18n="cpuPh2">اكتب عشان تفلتر</span></small></label><input type="text" id="ruGameSearch" class="bn-search" data-i18n-ph="runitGamePh" placeholder="🔍 دوّر على اللعبة..."><select id="ruGame" size="8" aria-label="Game list"></select></div>
-        <button class="gold-btn" id="ruCalc" style="width:100%;margin-top:.5rem;background:var(--cyan)" data-i18n="runitCalc">🎮 اتأكد تقدر تشغلها</button>
-      </div>
-      <div class="bn-result" id="ruResult"><div class="bn-empty"><b>🎮</b><span data-i18n="runitEmpty">اختار جهازك واللعبة واضغط "اتأكد"</span></div></div>
-    </div>
-  </div>
-</main>
-<footer><b>GPUVault</b> — <span data-i18n="footer">أسعار كروت الشاشة في مصر • مستعمل: دوبيزل + فيسبوك • جديد: نون + أمازون + Sigma + Maximum</span><br><span data-i18n="footerNote">الأسعار تقريبية (يوليو 2026) وبتتغير يومياً — اتأكد قبل الشراء</span></footer>
+<footer><b>GPUVault</b> — <span data-i18n="footer">أسعار كروت الشاشة في مصر • مستعمل: دوبيزل + فيسبوك ماركت بليس + جروبات البيع والشراء • جديد: البدر جروب + Sigma + Maximum + نون + أمازون</span><br><span data-i18n="footerNote">الأسعار تقديرية وممكن تختلف حسب حالة الكارت والبائع — ديه مش أسعار مسحوبة لحظياً، فاتأكد من السعر الفعلي قبل الشراء (يوليو 2026)</span></footer>
 <div class="cmp-bar" id="cmpBar">
   <div class="cb-head"><span class="cb-ico">⚖️</span><span class="cb-title" data-i18n="cmpBarTitle">قايمة المقارنة</span><span class="cb-count"><b id="cbN">0</b>/4</span></div>
   <div class="cb-chips" id="cbChips"></div>
   <div class="cb-actions"><button class="cb-clear" id="cbClear" data-i18n="cmpClearAll">مسح الكل</button><button class="cb-go" id="cbGo" data-i18n="cmpNow">قارن دلوقتي ←</button></div>
 </div>
 <button class="top-btn" id="topBtn" aria-label="فوق">↑</button>
+<div id="toast"></div>
 <script>
 let CARDS=[
 {n:"GeForce 8400 GS",b:"nv",y:2007,v:"256MB",w:30,s:.08,u:120,nw:null,a:"Tesla"},
@@ -998,7 +1072,74 @@ let CARDS=[
 {n:"Radeon RX 550X",b:"amd",y:2018,v:"4GB",w:50,s:1.4,u:1480,nw:null,a:"Polaris"},
 {n:"RX 6750 XT Mining",b:"amd",y:2022,v:"12GB",w:250,s:12,u:12480,nw:null,a:"RDNA 2"},
 {n:"RTX 4070 Ti 12GB OC",b:"nv",y:2023,v:"12GB",w:290,s:22.6,u:28480,nw:42980,a:"Ada"},
-{n:"RTX 5070 Founders",b:"nv",y:2025,v:"12GB",w:250,s:21.2,u:28480,nw:42980,a:"Blackwell"}
+{n:"RTX 5070 Founders",b:"nv",y:2025,v:"12GB",w:250,s:21.2,u:28480,nw:42980,a:"Blackwell"},
+{n:"MX150",b:"nv",y:2017,v:"2GB",w:25,s:1.1,u:7480,nw:null,a:"Pascal Mobile"},
+{n:"MX250",b:"nv",y:2019,v:"2GB",w:25,s:1.4,u:8480,nw:null,a:"Pascal Mobile"},
+{n:"MX330",b:"nv",y:2020,v:"2GB",w:25,s:1.5,u:8980,nw:null,a:"Pascal Mobile"},
+{n:"MX350",b:"nv",y:2020,v:"2GB",w:25,s:1.8,u:9980,nw:null,a:"Pascal Mobile"},
+{n:"MX450",b:"nv",y:2020,v:"2GB",w:25,s:2.2,u:11480,nw:null,a:"Turing Mobile"},
+{n:"MX550",b:"nv",y:2022,v:"2GB",w:25,s:2.6,u:13480,nw:null,a:"Turing Mobile"},
+{n:"MX570",b:"nv",y:2023,v:"2GB",w:25,s:2.8,u:14980,nw:null,a:"Ampere Mobile"},
+{n:"RTX 2050 Mobile",b:"nv",y:2022,v:"4GB",w:45,s:4,u:15980,nw:null,a:"Ampere"},
+{n:"RTX 3050 Mobile",b:"nv",y:2021,v:"4GB",w:60,s:5.4,u:17980,nw:null,a:"Ampere"},
+{n:"RTX 3050 Ti Mobile",b:"nv",y:2021,v:"4GB",w:60,s:6,u:19480,nw:null,a:"Ampere"},
+{n:"RTX 3060 Mobile",b:"nv",y:2021,v:"6GB",w:115,s:8.6,u:23980,nw:null,a:"Ampere"},
+{n:"RTX 3070 Mobile",b:"nv",y:2021,v:"8GB",w:125,s:11,u:28980,nw:null,a:"Ampere"},
+{n:"RTX 3070 Ti Mobile",b:"nv",y:2021,v:"8GB",w:150,s:12.3,u:32980,nw:null,a:"Ampere"},
+{n:"RTX 3080 Mobile",b:"nv",y:2021,v:"8GB",w:150,s:13.5,u:38980,nw:null,a:"Ampere"},
+{n:"RTX 3080 Ti Mobile",b:"nv",y:2021,v:"16GB",w:175,s:14.8,u:44980,nw:null,a:"Ampere"},
+{n:"RTX 4050 Mobile",b:"nv",y:2023,v:"6GB",w:75,s:8.6,u:24980,nw:null,a:"Ada"},
+{n:"RTX 4060 Mobile",b:"nv",y:2023,v:"8GB",w:115,s:11.2,u:28980,nw:null,a:"Ada"},
+{n:"RTX 4070 Mobile",b:"nv",y:2023,v:"8GB",w:140,s:15.8,u:37980,nw:null,a:"Ada"},
+{n:"RTX 4080 Mobile",b:"nv",y:2023,v:"12GB",w:175,s:20.6,u:49980,nw:null,a:"Ada"},
+{n:"RTX 4090 Mobile",b:"nv",y:2023,v:"16GB",w:175,s:23.5,u:64980,nw:null,a:"Ada"},
+{n:"RTX 5060 Mobile",b:"nv",y:2025,v:"8GB",w:115,s:13,u:32980,nw:null,a:"Blackwell"},
+{n:"RTX 5070 Mobile",b:"nv",y:2025,v:"8GB",w:140,s:18,u:41980,nw:null,a:"Blackwell"},
+{n:"RTX 5070 Ti Mobile",b:"nv",y:2025,v:"12GB",w:175,s:22,u:52980,nw:null,a:"Blackwell"},
+{n:"RTX 5080 Mobile",b:"nv",y:2025,v:"16GB",w:175,s:26,u:68980,nw:null,a:"Blackwell"},
+{n:"RTX 5090 Mobile",b:"nv",y:2025,v:"24GB",w:175,s:29,u:89980,nw:null,a:"Blackwell"},
+{n:"RX 6850M XT",b:"amd",y:2022,v:"12GB",w:165,s:13,u:27980,nw:null,a:"RDNA 2"},
+{n:"RX 7600M XT",b:"amd",y:2023,v:"8GB",w:120,s:10,u:22980,nw:null,a:"RDNA 3"},
+{n:"RX 7700S",b:"amd",y:2023,v:"8GB",w:100,s:9,u:20480,nw:null,a:"RDNA 3"},
+{n:"RX 7900M",b:"amd",y:2024,v:"16GB",w:175,s:19,u:48980,nw:null,a:"RDNA 3"},
+{n:"Arc A350M",b:"int",y:2022,v:"4GB",w:35,s:2,u:10980,nw:null,a:"Xe"},
+{n:"Arc A370M",b:"int",y:2022,v:"4GB",w:35,s:2.5,u:12480,nw:null,a:"Xe"},
+{n:"Arc A530M",b:"int",y:2022,v:"4GB",w:65,s:3.6,u:14480,nw:null,a:"Xe"},
+{n:"Arc A550M",b:"int",y:2022,v:"4GB",w:65,s:4.3,u:15980,nw:null,a:"Xe"},
+{n:"Arc A730M",b:"int",y:2022,v:"8GB",w:120,s:6.5,u:19980,nw:null,a:"Xe"},
+{n:"Arc A770M",b:"int",y:2022,v:"16GB",w:150,s:7.4,u:23980,nw:null,a:"Xe"},
+{n:"GeForce GT 1030 DDR4",b:"nv",y:2018,v:"2GB",w:30,s:1.1,u:1480,nw:null,a:"Pascal"},
+{n:"GTX 1650 Mobile",b:"nv",y:2019,v:"4GB",w:50,s:3,u:13480,nw:null,a:"Turing"},
+{n:"GTX 1660 Ti Mobile",b:"nv",y:2019,v:"6GB",w:80,s:4.8,u:17480,nw:null,a:"Turing"},
+{n:"Quadro T2000",b:"nv",y:2019,v:"4GB",w:60,s:3.9,u:15980,nw:null,a:"Turing"},
+{n:"Quadro RTX 3000 Mobile",b:"nv",y:2019,v:"6GB",w:80,s:6.3,u:22980,nw:null,a:"Turing"},
+{n:"RTX A2000 Mobile",b:"nv",y:2021,v:"4GB",w:60,s:5.6,u:21980,nw:null,a:"Ampere"},
+{n:"RTX A3000 Mobile",b:"nv",y:2021,v:"6GB",w:80,s:8.2,u:27980,nw:null,a:"Ampere"},
+{n:"RTX A4000 Mobile",b:"nv",y:2021,v:"8GB",w:110,s:10.7,u:33980,nw:null,a:"Ampere"},
+{n:"RTX A5000 Mobile",b:"nv",y:2021,v:"16GB",w:130,s:13.2,u:42980,nw:null,a:"Ampere"},
+{n:"RTX 500 Ada Mobile",b:"nv",y:2023,v:"4GB",w:35,s:4,u:17980,nw:null,a:"Ada"},
+{n:"RTX 1000 Ada Mobile",b:"nv",y:2023,v:"6GB",w:50,s:6.5,u:21980,nw:null,a:"Ada"},
+{n:"RTX 2000 Ada Mobile",b:"nv",y:2023,v:"8GB",w:65,s:8.8,u:26980,nw:null,a:"Ada"},
+{n:"RTX 3000 Ada Mobile",b:"nv",y:2023,v:"8GB",w:80,s:12,u:33980,nw:null,a:"Ada"},
+{n:"RTX 4000 Ada Mobile",b:"nv",y:2023,v:"12GB",w:110,s:16,u:41980,nw:null,a:"Ada"},
+{n:"RTX 5000 Ada Mobile",b:"nv",y:2023,v:"16GB",w:140,s:21,u:53980,nw:null,a:"Ada"},
+{n:"GeForce 305M",b:"nv",y:2010,v:"512MB",w:23,s:0.1,u:350,nw:null,a:"Tesla"},
+{n:"GeForce GT 335M",b:"nv",y:2010,v:"1GB",w:28,s:0.15,u:450,nw:null,a:"Tesla"},
+{n:"GeForce GT 540M",b:"nv",y:2011,v:"1GB",w:35,s:0.3,u:780,nw:null,a:"Fermi"},
+{n:"GeForce GT 630M",b:"nv",y:2012,v:"1GB",w:35,s:0.35,u:880,nw:null,a:"Fermi"},
+{n:"GeForce GT 730M",b:"nv",y:2013,v:"2GB",w:33,s:0.5,u:1280,nw:null,a:"Kepler"},
+{n:"GeForce GTX 850M",b:"nv",y:2014,v:"2GB",w:45,s:1.2,u:2480,nw:null,a:"Maxwell"},
+{n:"GeForce GTX 950M",b:"nv",y:2015,v:"2GB",w:50,s:1.4,u:2980,nw:null,a:"Maxwell"},
+{n:"GeForce GTX 960M",b:"nv",y:2015,v:"2GB",w:60,s:1.7,u:3480,nw:null,a:"Maxwell"},
+{n:"GeForce GTX 1050 Mobile",b:"nv",y:2016,v:"4GB",w:45,s:2.1,u:6480,nw:null,a:"Pascal"},
+{n:"GeForce GTX 1060 Mobile",b:"nv",y:2016,v:"6GB",w:80,s:3.6,u:9480,nw:null,a:"Pascal"},
+{n:"GeForce GTX 1070 Mobile",b:"nv",y:2016,v:"8GB",w:115,s:5.3,u:12980,nw:null,a:"Pascal"},
+{n:"GeForce GTX 1080 Mobile",b:"nv",y:2017,v:"8GB",w:150,s:6.7,u:15980,nw:null,a:"Pascal"},
+{n:"Radeon HD 8570",b:"amd",y:2013,v:"2GB",w:65,s:0.7,u:780,nw:null,a:"GCN"},
+{n:"Radeon R5 M330",b:"amd",y:2015,v:"2GB",w:25,s:0.4,u:650,nw:null,a:"GCN"},
+{n:"Radeon R7 M440",b:"amd",y:2016,v:"2GB",w:35,s:0.6,u:980,nw:null,a:"GCN"},
+{n:"Radeon RX 550M",b:"amd",y:2018,v:"2GB",w:35,s:0.9,u:4480,nw:null,a:"Polaris"},
+{n:"Radeon RX 560X Mobile",b:"amd",y:2018,v:"4GB",w:50,s:1.5,u:5980,nw:null,a:"Polaris"}
 ];
 const CPUS=[
 {n:"Intel Core 2 Duo E4300",s:3},{n:"Intel Core 2 Duo E6300",s:4},{n:"Intel Core 2 Duo E6600",s:5},{n:"Intel Core 2 Duo E7200",s:5},{n:"Intel Core 2 Duo E7400",s:6},{n:"Intel Core 2 Duo E8200",s:6},{n:"Intel Core 2 Duo E8400",s:7},{n:"Intel Core 2 Duo E8500",s:7},{n:"Intel Core 2 Duo E8600",s:8},
@@ -1615,8 +1756,22 @@ let currentList=[],visibleCount=24,renderedCount=0,lastQuery='';
 const isFav=n=>favs.includes(n);
 const EGP=()=>lang==='ar'?'ج.م':'EGP';
 const I18N={
-ar:{cards:'الكروت',bn:'عنق الزجاجة',fav:'المفضلة',cmp:'قارن',tips:'نصايح',search:'دوّر بالاسم أو الماركة أو المعمارية...',all:'الكل',allP:'كل الأسعار',u3:'أقل من 3k',u8:'⭐ 8k وتحت',r815:'8–15k',r1530:'15–30k',o30:'+30k',sPerf:'من الأقوى للأضعف 💪',sCheap:'من الأرخص للأغلى',sVal:'الأفضل قيمة ⭐',sNew:'الأحدث',total:'كارت',avg:'متوسط المستعمل (ج.م)',cheap:'أرخص كارت (ج.م)',src:'تحديث يومي',ctaT:'🧮 حاسبة عنق الزجاجة',ctaD:'اعرف أنهي قطعة بتخنق جهازك بدقة حسب دقة الشاشة',ctaB:'احسب ←',ctaCmpT:'⚖️ قارن كروت جنب بعض',ctaCmpD:'أداء، سعر، استهلاك وFPS في جدول واحد',ctaCmpB:'قارن ←',show:'معروض',of:'من',more:'عرض المزيد',rem:'باقي',noRes:'مفيش كارت بالمواصفات دي',noFav:'مفيش كروت في المفضلة — دوس ♥ جنب أي كارت',reset:'امسح الفلاتر',used:'مستعمل',new:'جديد',usedOnly:'مستعمل بس',value:'قيمة ⭐',favAdded:'اتضاف للمفضلة ❤️',favRemoved:'اتشال من المفضلة',cmpMax:'المقارنة بحد أقصى 4 كروت',bnTitle:'حاسبة عنق الزجاجة (Bottleneck)',bnIntro:'إيه هو عنق الزجاجة؟',bnIntro2:'الحاسبة بتحسب قوة كل قطعة على مقياس موحّد (مكافئ PassMark للمعالج و3DMark للكارت)، وبتقارنهم حسب دقة الشاشة — في 1080p المعالج ليه وزن أكبر، وفي 4K الكارت هو الحد غالباً. النتيجة: نسبة الاختناق + القطعة المختنقة + نسب استخدام زي Task Manager.',bnCalc:'🧮 احسب عنق الزجاجة',cpu:'المعالج (CPU)',gpu:'كارت الشاشة (GPU)',res:'دقة الشاشة',ram:'الرام (RAM)',disk:'الهارد (Storage)',psu:'الباور سبلاي (PSU)',mb:'البوردة (Motherboard)',cpuPh:'🔍 دوّر على المعالج...',gpuPh:'🔍 دوّر على الكارت...',cpuPh2:'اكتب عشان تفلتر',gpuPh2:'اكتب عشان تفلتر',bnScore:'نسبة عنق الزجاجة',bnMain:'القطعة المختنقة الرئيسية',bnWhoCpu:'المعالج (CPU)',bnWhoGpu:'كارت الشاشة (GPU)',bnWhoRam:'الرام (RAM)',bnWhoMb:'البوردة (Motherboard)',bnWhoPsu:'الباور (PSU)',bnWhoNone:'مفيش — الجهاز متوازن',bnFps:'FPS متوقع (1080p High):',bnTips:'💡 النصايح:',bnEmpty:'اختار قطع جهازك من الشمال واضغط "احسب"',bnGood:'✅ مفيش عنق زجاجة — جهازك متوازن',bnMid:'🟡 عنق زجاجة بسيط — مقبول',bnBad:'🔴 عنق زجاجة كبير — فيه قطعة بتخنق التانية',bnGoodTip:'جهازك متوازن جداً، استمتع بالألعاب من غير ما تقلق.',bnMidTip:'فيه اختناق بسيط بس مش هيأثر كتير على تجربتك.',bnBadTip:'فيه قطعة بتحد من أداء الباقي بشكل واضح. شوف النصايح تحت.',bnAllGood:'✅ كل القطع متوازنة — مفيش ترقية ضرورية دلوقتي.',bnCpuBn:'المعالج بيخنق الكارت',bnCpuTip:'الكارت أقوى من المعالج، فمش هتستفيد من قوته كاملة. فكّر في ترقية المعالج.',bnGpuBn:'الكارت أضعف من المعالج',bnGpuTip:'المعالج بتاعك قوي والكارت هو اللي بيحد. ترقية الكارت هتفرق جداً.',bnRamLow:'الرام قليلة',bnRamTip:'الألعاب الحديثة بتحتاج 16GB على الأقل. الترقية دي رخيصة وهتفرق.',bnMbBn:'البوردة بتخنق المعالج',bnMbTip:'البوردة قديمة على المعالج ده — الـ VRM والـ PCIe مش هيدّوا المعالج حقه.',bnHdd:'عندك HDD',bnHddTip:'مش بيأثر على الفريمات بس بيخلي التحميل طويل. SSD هيغير تجربتك.',bnPsuLow:'الباور قليل',bnPsuTip:'الكارت ده محتاج باور أقوى. متغامرش بباور ضعيف.',bnApprox:'تقريبي — الألعاب الخفيفة هتبقى أعلى، والتقيلة هتبقى أقل.',bnWhoPcie:'البوردة/الـ PCIe',bnPcieBn:'البوردة قديمة جداً على الكارت ده',bnPcieTip:'بورد قديم بـ PCIe قديم أو سرعة أقل بيحد كارت الشاشة القوي، حتى لو المعالج تمام. غالباً محتاج ترقية بوردة.',runit:'تقدر تشغلها؟',runitTitle:'تقدر تشغلها؟ 🎮',runitIntro:'إزاي بتشتغل؟',runitIntro2:'اختار مواصفات جهازك واللعبة، والحاسبة هتقارن قوة الكارت والمعالج والرام عندك بمتطلبات اللعبة التقريبية (الحد الأدنى والموصى بها) وتقولك هتشتغل ولا لأ وعلى أنهي إعدادات تقريباً. الأرقام تقديرية مبنية على تصنيف كل لعبة حسب سنتها ونوعها، مش مسحوبة حرفياً من صفحة كل لعبة.',runitGame:'اللعبة',runitGamePh:'🔍 دوّر على اللعبة...',runitCalc:'🎮 اتأكد تقدر تشغلها',runitEmpty:'اختار جهازك واللعبة واضغط "اتأكد"',runitYes:'✅ هتشتغل كويس',runitRec:'🟡 هتشتغل — لكن على إعدادات متوسطة',runitNo:'🔴 مش هتشتغل كويس على الجهاز ده',runitMinReq:'الحد الأدنى',runitRecReq:'الموصى بها',runitYourSpecs:'مواصفاتك',runitGpuScore:'قوة الكارت',runitCpuScore:'قوة المعالج',runitRamReq:'الرام',runitVerdictYesTip:'جهازك بيغطي متطلبات اللعبة الموصى بها براحة — توقع تجربة سلسة.',runitVerdictRecTip:'جهازك بيغطي الحد الأدنى بس أقل من الموصى بها — العب على إعدادات منخفضة/متوسطة.',runitVerdictNoTip:'جهازك تحت الحد الأدنى للعبة دي — هتلاقي أداء ضعيف أو اللعبة ممكن متفتحش خالص.',runitWhatLow:'اللي ناقصك',runitGpuLow:'الكارت أضعف من المطلوب',runitCpuLow:'المعالج أضعف من المطلوب',runitRamLow:'الرام أقل من المطلوب',runitNote:'* المتطلبات تقديرية بترتكز على سنة إصدار اللعبة ونوعها، مش أرقام رسمية من كل ناشر.',cmpTitle:'قارن الكروت',cmpHeroKick:'⚖️ مقارنة GPUVault',cmpHeroTitle:'قارن <em>كروت الشاشة</em>',cmpHeroSub:'اختار لحد 4 كروت وقارنهم جنب بعض — أداء، سعر، استهلاك، FPS في الألعاب',cmpHeroAdd:'➕ ضيف للمقارنة',cmpAdd:'➕ ضيف',cmpEmpty:'لسه مختارتش كروت — اختار من فوق أو دوس ⚖ جنب أي كارت',cmpPerf:'فرق الأداء *',cmpVal:'القيمة (ج.م/نقطة)',cmpBest:'الأحسن في الصف',cmpSel:'مختار',cmpOpen:'افتح صفحة المقارنة جنب بعض',cmpNow:'قارن دلوقتي ←',cmpBarTitle:'قايمة المقارنة',cmpClearAll:'مسح الكل',cmpEmptyBar:'اختار كروت للمقارنة بزرار ⚖',clear:'مسح',detSpecs:'المواصفات',detGames:'أداء الألعاب — 1080p',detPower:'الباور والاستهلاك',detVerdict:'الحكم النهائي',detAlts:'بدائل بنفس السعر (الأحسن في إيه)',detFav:'ضيف للمفضلة',detFavOn:'في المفضلة',detCmp:'قارن',detWhy:'ليه',detWho:'مين يشتريه؟',detUsed:'متوسط المستعمل',detNew:'متوسط الجديد',detRange:'النطاق',detNewDiff:'فرق الجديد',detNoNew:'مفيش جديد',detUsedOnly:'مستعمل بس',detMfg:'المصنع',detArch:'المعمارية',detYear:'سنة الإصدار',detVram:'الذاكرة',detDx:'DirectX',detPerf:'نقاط الأداء',detTdp:'الاستهلاك',detPsu:'الباور المقترح',detPw:'الباور الإضافي',detDim:'أبعاد الكارت',detSlot:'سمك الكارت',detCase:'الكيسة الموصى بها',detFans:'مراوح الكارت',detGameNote:'📊 أرقام تقريبية بتختلف حسب البروسيسور والرامات — 60+ فريم = سلس • دوس على أي لعبة',detPowerNote:'من أصل 575W (RTX 5090)',detPwComp:'⚡ مقارنة الاستهلاك',detDaily:'الحمل اليومي',detPros:'✅ المميزات',detCons:'⚠️ العيوب',detAltHead:'كل بديل بيقولك هو أحسن من الكارت ده في إيه بالظبط',detHover:'عدّي بالماوس — المراوح هتسرع',tipTitle:'قبل ما تشتري',back:'→ رجوع',deal:'🔥 صفقة اليوم',liveBadge:'أسعار محدّثة يومياً',sub:'كارت من NVIDIA وAMD وIntel بأسعار حقيقية + مقارنات أداء.',footer:'أسعار كروت الشاشة في مصر • مستعمل: دوبيزل + فيسبوك ماركت بليس + جروبات البيع والشراء • جديد: البدر جروب + Sigma + Maximum + نون + أمازون',footerNote:'الأسعار تقديرية بتتراجع لمتوسط إعلانات السوق وممكن تختلف حسب حالة الكارت والبائع — ديه مش أسعار مسحوبة لحظياً، فاتأكد من السعر الفعلي قبل الشراء (يوليو 2026)',dealPerf:'ج.م لكل نقطة أداء',fpsSmooth:'✅ سلس جداً — هتعلّب براحة',fpsOk:'🟡 قابل للعب — نزل الإعدادات شوية',fpsBad:'🔴 هتعاني — دوّر على كارت أقوى',rTop:'أداء قمة، وسعره مبرر لقوته — من أقوى اختيارات السوق.',rHighVal:'أداء عالي وسعره مبرر — قيمة ممتازة لفئته.',rHigh:'أداء عالي يناسب الفئة العليا و1440p.',rMid:'توازن كويس بين السعر والأداء — اختيار آمن لفئته.',rOld:'كارت قديم — مناسب للألعاب الخفيفة والأونلاين بس.',rEco:'كارت اقتصادي — للألعاب الخفيفة والأونلاين على 1080p.',rWeak:'ضعيف جداً — للشاشة والمهام الخفيفة بس، مش للألعاب الحديثة.',w0:'لتشغيل الشاشة والمهام الخفيفة بس — مش للألعاب',w1:'للألعاب الخفيفة (LoL، ألعاب قديمة) على إعدادات منخفضة',w2:'لألعاب الأونلاين (Valorant، CS2، Fortnite) على 1080p',w3:'لـ 1080p Medium/High — أحلى توازن لجهاز اقتصادي',w4:'لـ 1080p Ultra و1440p Medium — كارت شامل',w5:'لـ 1440p مريح على إعدادات عالية',w6:'لـ 1440p Ultra و4K خفيف',w7:'لـ 4K على أعلى إعدادات — قمة الأداء',pNoPw:'مش محتاج باور إضافي — أي باور سبلاي يشيله',pValue:'من أفضل قيمة مقابل السعر في السوق ⭐',pVramBig:'ذاكرة كبيرة مناسبة للألعاب الحديثة:',pVramOk:'ذاكرة كافية لأغلب ألعاب 1080p الحالية',pModern:'حديث بيدعم ',pNvenc:'بيدعم NVENC — ممتاز للاستريم والتسجيل',p1440:'حلو جداً للـ 1440p',p1080u:'حلو جداً للـ 1080p Ultra',p4k:'أداء 4K ممتاز',pIntPrice:'سعره منافس جداً مقابل الأداء',pCheapUsed:'سعر مستعمل مغري للميزانيات المحدودة',pEff:'كفاءة طاقة ممتازة',pPerW:'نقطة/واط',cHighPw:'استهلاك عالي — محتاج باور ',cVramLow:'ذاكرة قليلة لألعاب 2026: ',cVram8:'8GB بدأت تبقى حد أدنى لألعاب 2026 على إعدادات عالية',cOld:'قديم — أغلب المعروض مستعمل ومن غير ضمان',cWeak:'مش هيشيل الألعاب الحديثة التقيلة',cIntDrv:'درايفرات Intel لسه بتتحسّن — اتأكد من توافق ألعابك',cNoNew:'مفيش منه جديد — هتدور على مستعمل نضيف',cGenPw:'جيل استهلاكه عالي نسبياً مقارنة بالأحدث',cExpensive:'سعره عالي مقابل الأداء — فيه بدائل أرخص',cMining:'كارت تعدين سابق — افحصه كويس قبل الشراء',cLowEff:'كفاءة طاقة ضعيفة نسبياً',cBus:'ناقل 128-bit بيحد الأداء في الدقات العالية',altCheap:'💰 أرخص لكل نقطة',altStrong:'⚡ أقوى أداء',altCool:'🔋 أوفر كهربا',altVram:'🧠 ذاكرة أكبر',altNew:'🆕 أحدث جيل',altEq:'⚖️ بديل مكافئ',langToast:'تم التغيير للعربية 🇪',themeLight:'الوضع النهاري ☀️',themeDark:'الوضع الليلي 🌙'},
-en:{cards:'Cards',bn:'Bottleneck',fav:'Favorites',cmp:'Compare',tips:'Tips',search:'Search by name, brand, or architecture...',all:'All',allP:'All Prices',u3:'Under 3k',u8:'Under 8k ⭐',r815:'8–15k',r1530:'15–30k',o30:'30k+',sPerf:'Strongest to Weakest 💪',sCheap:'Cheapest to Most Expensive',sVal:'Best Value ⭐',sNew:'Newest',total:'cards',avg:'Avg Used (EGP)',cheap:'Cheapest Card (EGP)',src:'Daily updates',ctaT:'🧮 Bottleneck Calculator',ctaD:'Find which component bottlenecks your PC, accurately per resolution',ctaB:'Calculate ←',ctaCmpT:'⚖️ Compare cards side by side',ctaCmpD:'Performance, price, power & FPS in one table',ctaCmpB:'Compare ←',show:'Showing',of:'of',more:'Load More',rem:'left',noRes:'No cards match these specs',noFav:'No favorites yet — tap ♥ next to any card',reset:'Reset Filters',used:'Used',new:'New',usedOnly:'Used only',value:'Value ⭐',favAdded:'Added to favorites ❤️',favRemoved:'Removed from favorites',cmpMax:'Compare up to 4 cards max',bnTitle:'Bottleneck Calculator',bnIntro:'What is a bottleneck?',bnIntro2:'The calculator scores each part on a unified scale (PassMark-equivalent for CPU, 3DMark-equivalent for GPU) and compares them per resolution — at 1080p the CPU matters more, at 4K the GPU is usually the limit. Result: bottleneck % + the bottlenecking part + Task-Manager-style usage.',bnCalc:'🧮 Calculate Bottleneck',cpu:'CPU',gpu:'GPU',res:'Resolution',ram:'RAM',disk:'Storage',psu:'PSU',mb:'Motherboard',cpuPh:'🔍 Search CPU...',gpuPh:'🔍 Search GPU...',cpuPh2:'type to filter',gpuPh2:'type to filter',bnScore:'Bottleneck Percentage',bnMain:'Main bottleneck',bnWhoCpu:'CPU',bnWhoGpu:'GPU',bnWhoRam:'RAM',bnWhoMb:'Motherboard',bnWhoPsu:'PSU',bnWhoNone:'None — balanced',bnFps:'Estimated FPS (1080p High):',bnTips:'💡 Tips:',bnEmpty:'Select your components on the left and click "Calculate"',bnGood:'✅ No bottleneck — your PC is balanced',bnMid:'🟡 Slight bottleneck — acceptable',bnBad:'🔴 Major bottleneck — a component is holding back the rest',bnGoodTip:'Your PC is very balanced, enjoy gaming without worry.',bnMidTip:'Slight bottleneck but won\'t affect your experience much.',bnBadTip:'A component is significantly limiting the rest. See tips below.',bnAllGood:'✅ All components are balanced — no upgrade needed right now.',bnCpuBn:'CPU is bottlenecking the GPU',bnCpuTip:'The GPU is stronger than the CPU, so you won\'t get full performance. Consider a CPU upgrade.',bnGpuBn:'GPU weaker than CPU',bnGpuTip:'Your CPU is strong and the GPU is the limiting factor. A GPU upgrade will help a lot.',bnRamLow:'Low RAM',bnRamTip:'Modern games need at least 16GB. This upgrade is cheap and makes a difference.',bnMbBn:'Motherboard limits the CPU',bnMbTip:'The board is too old for this CPU — VRM & PCIe won\'t deliver full performance.',bnHdd:'You have an HDD',bnHddTip:'Doesn\'t affect FPS but makes loading slow. An SSD will change your experience.',bnPsuLow:'Weak PSU',bnPsuTip:'This GPU needs a stronger PSU. Don\'t risk a weak PSU.',bnApprox:'Approximate — light games will be higher, heavy games will be lower.',bnWhoPcie:'Motherboard / PCIe',bnPcieBn:'Motherboard is too old for this GPU',bnPcieTip:'An old board with older/slower PCIe limits a powerful GPU even if the CPU is fine. You likely need a board upgrade.',runit:'Can You Run It?',runitTitle:'Can You Run It? 🎮',runitIntro:'How does it work?',runitIntro2:'Pick your PC specs and a game, and the calculator compares your GPU/CPU/RAM power against the game\'s approximate requirements (minimum and recommended) and tells you whether it will run and roughly on what settings. Numbers are estimated from each game\'s year and genre category, not scraped verbatim from each game\'s store page.',runitGame:'Game',runitGamePh:'🔍 Search for a game...',runitCalc:'🎮 Check if you can run it',runitEmpty:'Pick your specs and a game, then click "Check"',runitYes:'✅ Runs great',runitRec:'🟡 Will run — on medium settings',runitNo:'🔴 Won\'t run well on this PC',runitMinReq:'Minimum',runitRecReq:'Recommended',runitYourSpecs:'Your specs',runitGpuScore:'GPU power',runitCpuScore:'CPU power',runitRamReq:'RAM',runitVerdictYesTip:'Your PC comfortably covers the recommended requirements — expect a smooth experience.',runitVerdictRecTip:'Your PC covers the minimum but not the recommended requirements — play on low/medium settings.',runitVerdictNoTip:'Your PC is below the minimum requirements — expect poor performance or the game may not launch at all.',runitWhatLow:'What\'s short',runitGpuLow:'GPU weaker than required',runitCpuLow:'CPU weaker than required',runitRamLow:'RAM below requirement',runitNote:'* Requirements are estimated based on the game\'s release year and genre, not official numbers from every publisher.',cmpTitle:'Compare Cards',cmpHeroKick:'⚖️ GPUVault Compare',cmpHeroTitle:'Compare <em>Graphics Cards</em>',cmpHeroSub:'Pick up to 4 cards and compare side by side — performance, price, power, FPS in games',cmpHeroAdd:'➕ Add to Compare',cmpAdd:'➕ Add',cmpEmpty:'No cards selected yet — pick from above or tap ⚖ next to any card',cmpPerf:'Perf Diff *',cmpVal:'Value (EGP/point)',cmpBest:'Best in row',cmpSel:'Selected',cmpOpen:'Open comparison page side by side',cmpNow:'Compare Now ←',cmpBarTitle:'Comparison List',cmpClearAll:'Clear all',cmpEmptyBar:'Pick cards to compare with ⚖',clear:'Clear',detSpecs:'Specifications',detGames:'Game Performance — 1080p',detPower:'Power & Consumption',detVerdict:'Final Verdict',detAlts:'Alternatives (better at what?)',detFav:'Add to Favorites',detFavOn:'In Favorites',detCmp:'Compare',detWhy:'Why',detWho:'Who should buy it?',detUsed:'Avg Used',detNew:'Avg New',detRange:'Range',detNewDiff:'New premium',detNoNew:'No new',detUsedOnly:'Used only',detMfg:'Manufacturer',detArch:'Architecture',detYear:'Release Year',detVram:'Memory',detDx:'DirectX',detPerf:'Performance Score',detTdp:'Power Draw',detPsu:'Recommended PSU',detPw:'Power Connectors',detDim:'Card Dimensions',detSlot:'Card Thickness',detCase:'Recommended Case',detFans:'Card Fans',detGameNote:'📊 Approximate numbers depending on CPU & RAM — 60+ FPS = smooth • click any game',detPowerNote:'out of 575W (RTX 5090)',detPwComp:'⚡ Power Comparison',detDaily:'Daily load',detPros:'✅ Pros',detCons:'⚠️ Cons',detAltHead:'Each alternative tells you exactly what it beats this card at',detHover:'Hover — fans will speed up',tipTitle:'Before You Buy',back:'→ Back',deal:'🔥 Deal of the Day',liveBadge:'Prices updated daily',sub:'cards from NVIDIA, AMD & Intel with real prices + performance comparisons.',footer:'GPU Prices in Egypt • Used: Dubizzle + Facebook Marketplace + trading groups • New: Badr Group + Sigma + Maximum + Noon + Amazon',footerNote:'Prices are estimated market averages and can vary by condition and seller — not a live feed, so confirm the real price before buying (July 2026)',dealPerf:'EGP per performance point',fpsSmooth:'✅ Very smooth — play comfortably',fpsOk:'🟡 Playable — lower settings a bit',fpsBad:'🔴 You\'ll struggle — look for a stronger card',rTop:'Top performance, price justified by its power — one of the strongest choices.',rHighVal:'High performance at a fair price — excellent value for its class.',rHigh:'High performance suited for the high-end tier and 1440p.',rMid:'Good balance between price and performance — a safe choice for its class.',rOld:'Old card — only for light and online games.',rEco:'Budget card — for light and online games at 1080p.',rWeak:'Very weak — for display and light tasks only, not modern games.',w0:'For display and light tasks only — not for gaming',w1:'For light games (LoL, old titles) on low settings',w2:'For online games (Valorant, CS2, Fortnite) at 1080p',w3:'For 1080p Medium/High — best balance for a budget rig',w4:'For 1080p Ultra and 1440p Medium — an all-rounder',w5:'For comfortable 1440p on high settings',w6:'For 1440p Ultra and light 4K',w7:'For 4K on max settings — peak performance',pNoPw:'No extra power needed — any PSU runs it',pValue:'Among the best value for money in the market ⭐',pVramBig:'Large memory suited for modern games:',pVramOk:'Enough memory for most current 1080p games',pModern:'Modern, supports ',pNvenc:'Supports NVENC — great for streaming & recording',p1440:'Great for 1440p',p1080u:'Great for 1080p Ultra',p4k:'Excellent 4K performance',pIntPrice:'Very competitive price for the performance',pCheapUsed:'Attractive used price for tight budgets',pEff:'Excellent power efficiency',pPerW:'pt/W',cHighPw:'High power draw — needs a real ',cVramLow:'Low memory for 2026 games: ',cVram8:'8GB is becoming the minimum for 2026 games on high settings',cOld:'Old — most listings are used with no warranty',cWeak:'Won\'t handle heavy modern games',cIntDrv:'Intel drivers still improving — check your games\' compatibility',cNoNew:'No new stock — you\'ll hunt for a clean used one',cGenPw:'This generation draws relatively high power vs newer ones',cExpensive:'Pricey for the performance — cheaper alternatives exist',cMining:'Ex-mining card — inspect carefully before buying',cLowEff:'Weak power efficiency',cBus:'128-bit bus limits performance at high resolutions',altCheap:'💰 Cheaper per point',altStrong:'⚡ Stronger',altCool:'🔋 Lower power',altVram:'🧠 More VRAM',altNew:'🆕 Newer gen',altEq:'⚖️ Equivalent',langToast:'Switched to English 🇬🇧',themeLight:'Light mode ☀️',themeDark:'Dark mode 🌙'}
+ar:{cards:'الكروت',bn:'عنق الزجاجة',fav:'المفضلة',cmp:'قارن',tips:'نصايح',search:'دوّر بالاسم أو الماركة أو المعمارية...',all:'الكل',allP:'كل الأسعار',u3:'أقل من 3k',u8:'⭐ 8k وتحت',r815:'8–15k',r1530:'15–30k',o30:'+30k',sPerf:'من الأقوى للأضعف 💪',sCheap:'من الأرخص للأغلى',sVal:'الأفضل قيمة ⭐',sNew:'الأحدث',total:'كارت',avg:'متوسط المستعمل (ج.م)',cheap:'أرخص كارت (ج.م)',src:'تحديث يومي',ctaT:'🧮 حاسبة عنق الزجاجة',ctaD:'اعرف أنهي قطعة بتخنق جهازك بدقة حسب دقة الشاشة',ctaB:'احسب ←',ctaCmpT:'⚖️ قارن كروت جنب بعض',ctaCmpD:'أداء، سعر، استهلاك وFPS في جدول واحد',ctaCmpB:'قارن ←',show:'معروض',of:'من',more:'عرض المزيد',rem:'باقي',noRes:'مفيش كارت بالمواصفات دي',noFav:'مفيش كروت في المفضلة — دوس ♥ جنب أي كارت',reset:'امسح الفلاتر',used:'مستعمل',new:'جديد',usedOnly:'مستعمل بس',value:'قيمة ⭐',favAdded:'اتضاف للمفضلة ❤️',favRemoved:'اتشال من المفضلة',cmpMax:'المقارنة بحد أقصى 4 كروت',bnTitle:'حاسبة عنق الزجاجة (Bottleneck)',bnIntro:'إيه هو عنق الزجاجة؟',bnIntro2:'الحاسبة بتحسب قوة كل قطعة على مقياس موحّد (مكافئ PassMark للمعالج و3DMark للكارت)، وبتقارنهم حسب دقة الشاشة — في 1080p المعالج ليه وزن أكبر، وفي 4K الكارت هو الحد غالباً. النتيجة: نسبة الاختناق + القطعة المختنقة + نسب استخدام زي Task Manager.',bnCalc:'🧮 احسب عنق الزجاجة',cpu:'المعالج (CPU)',gpu:'كارت الشاشة (GPU)',res:'دقة الشاشة',ram:'الرام (RAM)',disk:'الهارد (Storage)',psu:'الباور سبلاي (PSU)',mb:'البوردة (Motherboard)',cpuPh:'🔍 دوّر على المعالج...',gpuPh:'🔍 دوّر على الكارت...',cpuPh2:'اكتب عشان تفلتر',gpuPh2:'اكتب عشان تفلتر',bnScore:'نسبة عنق الزجاجة',bnMain:'القطعة المختنقة الرئيسية',bnWhoCpu:'المعالج (CPU)',bnWhoGpu:'كارت الشاشة (GPU)',bnWhoRam:'الرام (RAM)',bnWhoMb:'البوردة (Motherboard)',bnWhoPsu:'الباور (PSU)',bnWhoNone:'مفيش — الجهاز متوازن',bnFps:'FPS متوقع (1080p High):',bnTips:'💡 النصايح:',bnEmpty:'اختار قطع جهازك من الشمال واضغط "احسب"',bnGood:'✅ مفيش عنق زجاجة — جهازك متوازن',bnMid:'🟡 عنق زجاجة بسيط — مقبول',bnBad:'🔴 عنق زجاجة كبير — فيه قطعة بتخنق التانية',bnGoodTip:'جهازك متوازن جداً، استمتع بالألعاب من غير ما تقلق.',bnMidTip:'فيه اختناق بسيط بس مش هيأثر كتير على تجربتك.',bnBadTip:'فيه قطعة بتحد من أداء الباقي بشكل واضح. شوف النصايح تحت.',bnAllGood:'✅ كل القطع متوازنة — مفيش ترقية ضرورية دلوقتي.',bnCpuBn:'المعالج بيخنق الكارت',bnCpuTip:'الكارت أقوى من المعالج، فمش هتستفيد من قوته كاملة. فكّر في ترقية المعالج.',bnGpuBn:'الكارت أضعف من المعالج',bnGpuTip:'المعالج بتاعك قوي والكارت هو اللي بيحد. ترقية الكارت هتفرق جداً.',bnRamLow:'الرام قليلة',bnRamTip:'الألعاب الحديثة بتحتاج 16GB على الأقل. الترقية دي رخيصة وهتفرق.',bnMbBn:'البوردة بتخنق المعالج',bnMbTip:'البوردة قديمة على المعالج ده — الـ VRM والـ PCIe مش هيدّوا المعالج حقه.',bnHdd:'عندك HDD',bnHddTip:'مش بيأثر على الفريمات بس بيخلي التحميل طويل. SSD هيغير تجربتك.',bnPsuLow:'الباور قليل',bnPsuTip:'الكارت ده محتاج باور أقوى. متغامرش بباور ضعيف.',bnApprox:'تقريبي — الألعاب الخفيفة هتبقى أعلى، والتقيلة هتبقى أقل.',bnWhoPcie:'البوردة/الـ PCIe',bnPcieBn:'البوردة قديمة جداً على الكارت ده',bnPcieTip:'بورد قديم بـ PCIe قديم أو سرعة أقل بيحد كارت الشاشة القوي، حتى لو المعالج تمام. غالباً محتاج ترقية بوردة.',
+bnMinor:'🟢 اختناق بسيط جداً — نادراً ما تلاحظه',bnBandExcellent:'توازن ممتاز',bnBandMinor:'اختناق بسيط',bnBandNoticeable:'اختناق ملحوظ',bnBandMajor:'اختناق كبير',bnHealth:'تقييم الجهاز',
+toolsTitle:'أدوات الفحص',toolsIntro:'إزاي بتشتغل؟',toolsIntro2:'اختار مواصفات جهازك مرة واحدة من الشمال، وبعدين استخدم أي أداة من الاتنين من غير ما تدخل بياناتك تاني: "عنق الزجاجة" يقولك أنهي قطعة بتحد التانية، و"تقدر تشغلها؟" يقارن جهازك بمتطلبات أي لعبة. الحسابات مبنية على مقاييس أداء موحّدة (زي PassMark/3DMark) وتصنيف متطلبات الألعاب حسب سنتها ونوعها.',toolsSpecsHead:'1️⃣ مواصفات جهازك',toolsGameHead:'2️⃣ اختار اللعبة',
+svPass:'✅ تمام',svWarn:'🟡 على الحافة',svFail:'🔴 ضعيف',
+runitLowFps:'فريمات قليلة/دروبات',runitStutter:'تهنيج ولاج في الأماكن الزحمة',runitLagSwap:'لاج وتهنيج من قلة الرام',runitMismatchGpu:'الكارت هو نقطة ضعفك هنا — هو اللي هيحدد جودة الصورة',runitMismatchCpu:'المعالج هو نقطة ضعفك هنا — هو اللي هيحدد ثبات الفريمات',runitAllGood:'✅ كل حاجة متوازنة لمتطلبات اللعبة دي.',
+runitMinHint:'~720-1080p, إعدادات منخفضة, ~30 FPS',runitRecHint:'~1080-1440p, إعدادات عالية, 60+ FPS',
+battleKick:'تحدي سريع',battleTitle:'⚔️ تحدي الكروت',battleSub:'مين أقوى؟ خمّن قبل ما تشوف الأرقام',battlePick:'دوس هنا لو فاكر ده الأقوى',battleStreak:'أفضل سلسلة',battleNext:'🔄 جولة جديدة',battleCorrect:'🎉 صح! كده كده كنت عارف',battleWrong:'😅 غلط — جرب تاني',
+runit:'تقدر تشغلها؟',runitTitle:'تقدر تشغلها؟ 🎮',runitIntro:'إزاي بتشتغل؟',runitIntro2:'اختار مواصفات جهازك واللعبة، والحاسبة هتقارن قوة الكارت والمعالج والرام عندك بمتطلبات اللعبة التقريبية (الحد الأدنى والموصى بها) وتقولك هتشتغل ولا لأ وعلى أنهي إعدادات تقريباً. الأرقام تقديرية مبنية على تصنيف كل لعبة حسب سنتها ونوعها، مش مسحوبة حرفياً من صفحة كل لعبة.',runitGame:'اللعبة',runitGamePh:'🔍 دوّر على اللعبة...',runitCalc:'🎮 اتأكد تقدر تشغلها',runitEmpty:'اختار جهازك واللعبة واضغط "اتأكد"',runitYes:'✅ هتشتغل كويس',runitRec:'🟡 هتشتغل — لكن على إعدادات متوسطة',runitNo:'🔴 مش هتشتغل كويس على الجهاز ده',runitMinReq:'الحد الأدنى',runitRecReq:'الموصى بها',runitYourSpecs:'مواصفاتك',runitGpuScore:'قوة الكارت',runitCpuScore:'قوة المعالج',runitRamReq:'الرام',runitVerdictYesTip:'جهازك بيغطي متطلبات اللعبة الموصى بها براحة — توقع تجربة سلسة.',runitVerdictRecTip:'جهازك بيغطي الحد الأدنى بس أقل من الموصى بها — العب على إعدادات منخفضة/متوسطة.',runitVerdictNoTip:'جهازك تحت الحد الأدنى للعبة دي — هتلاقي أداء ضعيف أو اللعبة ممكن متفتحش خالص.',runitWhatLow:'اللي ناقصك',runitGpuLow:'الكارت أضعف من المطلوب',runitCpuLow:'المعالج أضعف من المطلوب',runitRamLow:'الرام أقل من المطلوب',runitNote:'* المتطلبات تقديرية بترتكز على سنة إصدار اللعبة ونوعها، مش أرقام رسمية من كل ناشر.',cmpTitle:'قارن الكروت',cmpHeroKick:'⚖️ مقارنة GPUVault',cmpHeroTitle:'قارن <em>كروت الشاشة</em>',cmpHeroSub:'اختار لحد 4 كروت وقارنهم جنب بعض — أداء، سعر، استهلاك، FPS في الألعاب',cmpHeroAdd:'➕ ضيف للمقارنة',cmpAdd:'➕ ضيف',cmpEmpty:'لسه مختارتش كروت — اختار من فوق أو دوس ⚖ جنب أي كارت',cmpPerf:'فرق الأداء *',cmpVal:'القيمة (ج.م/نقطة)',cmpBest:'الأحسن في الصف',cmpSel:'مختار',cmpOpen:'افتح صفحة المقارنة جنب بعض',cmpNow:'قارن دلوقتي ←',cmpBarTitle:'قايمة المقارنة',cmpClearAll:'مسح الكل',cmpEmptyBar:'اختار كروت للمقارنة بزرار ⚖',clear:'مسح',detSpecs:'المواصفات',detGames:'أداء الألعاب — 1080p',detPower:'الباور والاستهلاك',detVerdict:'الحكم النهائي',detAlts:'بدائل بنفس السعر (الأحسن في إيه)',detFav:'ضيف للمفضلة',detFavOn:'في المفضلة',detCmp:'قارن',detWhy:'ليه',detWho:'مين يشتريه؟',detUsed:'متوسط المستعمل',detNew:'متوسط الجديد',detRange:'النطاق',detNewDiff:'فرق الجديد',detNoNew:'مفيش جديد',detUsedOnly:'مستعمل بس',detMfg:'المصنع',detArch:'المعمارية',detYear:'سنة الإصدار',detVram:'الذاكرة',detDx:'DirectX',detPerf:'نقاط الأداء',detTdp:'الاستهلاك',detPsu:'الباور المقترح',detPw:'الباور الإضافي',detDim:'أبعاد الكارت',detSlot:'سمك الكارت',detCase:'الكيسة الموصى بها',detFans:'مراوح الكارت',detGameNote:'📊 أرقام تقريبية بتختلف حسب البروسيسور والرامات — 60+ فريم = سلس • دوس على أي لعبة',detPowerNote:'من أصل 575W (RTX 5090)',detPwComp:'⚡ مقارنة الاستهلاك',detDaily:'الحمل اليومي',detPros:'✅ المميزات',detCons:'⚠️ العيوب',detAltHead:'كل بديل بيقولك هو أحسن من الكارت ده في إيه بالظبط',detHover:'عدّي بالماوس — المراوح هتسرع',tipTitle:'قبل ما تشتري',back:'→ رجوع',deal:'🔥 صفقة اليوم',liveBadge:'أسعار محدّثة يومياً',sub:'كارت من NVIDIA وAMD وIntel بأسعار حقيقية + مقارنات أداء.',footer:'أسعار كروت الشاشة في مصر • مستعمل: دوبيزل + فيسبوك ماركت بليس + جروبات البيع والشراء • جديد: البدر جروب + Sigma + Maximum + نون + أمازون',footerNote:'الأسعار تقديرية بتتراجع لمتوسط إعلانات السوق وممكن تختلف حسب حالة الكارت والبائع — ديه مش أسعار مسحوبة لحظياً، فاتأكد من السعر الفعلي قبل الشراء (يوليو 2026)',dealPerf:'ج.م لكل نقطة أداء',fpsSmooth:'✅ سلس جداً — هتعلّب براحة',fpsOk:'🟡 قابل للعب — نزل الإعدادات شوية',fpsBad:'🔴 هتعاني — دوّر على كارت أقوى',rTop:'أداء قمة، وسعره مبرر لقوته — من أقوى اختيارات السوق.',rHighVal:'أداء عالي وسعره مبرر — قيمة ممتازة لفئته.',rHigh:'أداء عالي يناسب الفئة العليا و1440p.',rMid:'توازن كويس بين السعر والأداء — اختيار آمن لفئته.',rOld:'كارت قديم — مناسب للألعاب الخفيفة والأونلاين بس.',rEco:'كارت اقتصادي — للألعاب الخفيفة والأونلاين على 1080p.',rWeak:'ضعيف جداً — للشاشة والمهام الخفيفة بس، مش للألعاب الحديثة.',w0:'لتشغيل الشاشة والمهام الخفيفة بس — مش للألعاب',w1:'للألعاب الخفيفة (LoL، ألعاب قديمة) على إعدادات منخفضة',w2:'لألعاب الأونلاين (Valorant، CS2، Fortnite) على 1080p',w3:'لـ 1080p Medium/High — أحلى توازن لجهاز اقتصادي',w4:'لـ 1080p Ultra و1440p Medium — كارت شامل',w5:'لـ 1440p مريح على إعدادات عالية',w6:'لـ 1440p Ultra و4K خفيف',w7:'لـ 4K على أعلى إعدادات — قمة الأداء',pNoPw:'مش محتاج باور إضافي — أي باور سبلاي يشيله',pValue:'من أفضل قيمة مقابل السعر في السوق ⭐',pVramBig:'ذاكرة كبيرة مناسبة للألعاب الحديثة:',pVramOk:'ذاكرة كافية لأغلب ألعاب 1080p الحالية',pModern:'حديث بيدعم ',pNvenc:'بيدعم NVENC — ممتاز للاستريم والتسجيل',p1440:'حلو جداً للـ 1440p',p1080u:'حلو جداً للـ 1080p Ultra',p4k:'أداء 4K ممتاز',pIntPrice:'سعره منافس جداً مقابل الأداء',pCheapUsed:'سعر مستعمل مغري للميزانيات المحدودة',pEff:'كفاءة طاقة ممتازة',pPerW:'نقطة/واط',cHighPw:'استهلاك عالي — محتاج باور ',cVramLow:'ذاكرة قليلة لألعاب 2026: ',cVram8:'8GB بدأت تبقى حد أدنى لألعاب 2026 على إعدادات عالية',cOld:'قديم — أغلب المعروض مستعمل ومن غير ضمان',cWeak:'مش هيشيل الألعاب الحديثة التقيلة',cIntDrv:'درايفرات Intel لسه بتتحسّن — اتأكد من توافق ألعابك',cNoNew:'مفيش منه جديد — هتدور على مستعمل نضيف',cGenPw:'جيل استهلاكه عالي نسبياً مقارنة بالأحدث',cExpensive:'سعره عالي مقابل الأداء — فيه بدائل أرخص',cMining:'كارت تعدين سابق — افحصه كويس قبل الشراء',cLowEff:'كفاءة طاقة ضعيفة نسبياً',cBus:'ناقل 128-bit بيحد الأداء في الدقات العالية',altCheap:'💰 أرخص لكل نقطة',altStrong:'⚡ أقوى أداء',altCool:'🔋 أوفر كهربا',altVram:'🧠 ذاكرة أكبر',altNew:'🆕 أحدث جيل',altEq:'⚖️ بديل مكافئ',langToast:'تم التغيير للعربية 🇪',themeLight:'الوضع النهاري ☀️',themeDark:'الوضع الليلي 🌙'},
+en:{cards:'Cards',bn:'Bottleneck',fav:'Favorites',cmp:'Compare',tips:'Tips',search:'Search by name, brand, or architecture...',all:'All',allP:'All Prices',u3:'Under 3k',u8:'Under 8k ⭐',r815:'8–15k',r1530:'15–30k',o30:'30k+',sPerf:'Strongest to Weakest 💪',sCheap:'Cheapest to Most Expensive',sVal:'Best Value ⭐',sNew:'Newest',total:'cards',avg:'Avg Used (EGP)',cheap:'Cheapest Card (EGP)',src:'Daily updates',ctaT:'🧮 Bottleneck Calculator',ctaD:'Find which component bottlenecks your PC, accurately per resolution',ctaB:'Calculate ←',ctaCmpT:'⚖️ Compare cards side by side',ctaCmpD:'Performance, price, power & FPS in one table',ctaCmpB:'Compare ←',show:'Showing',of:'of',more:'Load More',rem:'left',noRes:'No cards match these specs',noFav:'No favorites yet — tap ♥ next to any card',reset:'Reset Filters',used:'Used',new:'New',usedOnly:'Used only',value:'Value ⭐',favAdded:'Added to favorites ❤️',favRemoved:'Removed from favorites',cmpMax:'Compare up to 4 cards max',bnTitle:'Bottleneck Calculator',bnIntro:'What is a bottleneck?',bnIntro2:'The calculator scores each part on a unified scale (PassMark-equivalent for CPU, 3DMark-equivalent for GPU) and compares them per resolution — at 1080p the CPU matters more, at 4K the GPU is usually the limit. Result: bottleneck % + the bottlenecking part + Task-Manager-style usage.',bnCalc:'🧮 Calculate Bottleneck',cpu:'CPU',gpu:'GPU',res:'Resolution',ram:'RAM',disk:'Storage',psu:'PSU',mb:'Motherboard',cpuPh:'🔍 Search CPU...',gpuPh:'🔍 Search GPU...',cpuPh2:'type to filter',gpuPh2:'type to filter',bnScore:'Bottleneck Percentage',bnMain:'Main bottleneck',bnWhoCpu:'CPU',bnWhoGpu:'GPU',bnWhoRam:'RAM',bnWhoMb:'Motherboard',bnWhoPsu:'PSU',bnWhoNone:'None — balanced',bnFps:'Estimated FPS (1080p High):',bnTips:'💡 Tips:',bnEmpty:'Select your components on the left and click "Calculate"',bnGood:'✅ No bottleneck — your PC is balanced',bnMid:'🟡 Slight bottleneck — acceptable',bnBad:'🔴 Major bottleneck — a component is holding back the rest',bnGoodTip:'Your PC is very balanced, enjoy gaming without worry.',bnMidTip:'Slight bottleneck but won\'t affect your experience much.',bnBadTip:'A component is significantly limiting the rest. See tips below.',bnAllGood:'✅ All components are balanced — no upgrade needed right now.',bnCpuBn:'CPU is bottlenecking the GPU',bnCpuTip:'The GPU is stronger than the CPU, so you won\'t get full performance. Consider a CPU upgrade.',bnGpuBn:'GPU weaker than CPU',bnGpuTip:'Your CPU is strong and the GPU is the limiting factor. A GPU upgrade will help a lot.',bnRamLow:'Low RAM',bnRamTip:'Modern games need at least 16GB. This upgrade is cheap and makes a difference.',bnMbBn:'Motherboard limits the CPU',bnMbTip:'The board is too old for this CPU — VRM & PCIe won\'t deliver full performance.',bnHdd:'You have an HDD',bnHddTip:'Doesn\'t affect FPS but makes loading slow. An SSD will change your experience.',bnPsuLow:'Weak PSU',bnPsuTip:'This GPU needs a stronger PSU. Don\'t risk a weak PSU.',bnApprox:'Approximate — light games will be higher, heavy games will be lower.',bnWhoPcie:'Motherboard / PCIe',bnPcieBn:'Motherboard is too old for this GPU',bnPcieTip:'An old board with older/slower PCIe limits a powerful GPU even if the CPU is fine. You likely need a board upgrade.',
+bnMinor:'🟢 Very minor bottleneck — rarely noticeable',bnBandExcellent:'Excellent balance',bnBandMinor:'Minor bottleneck',bnBandNoticeable:'Noticeable bottleneck',bnBandMajor:'Major bottleneck',bnHealth:'System health',
+toolsTitle:'Diagnostic Tools',toolsIntro:'How does it work?',toolsIntro2:'Enter your PC specs once on the left, then use either tool without re-entering anything: "Bottleneck" tells you which part is holding the other back, and "Can You Run It?" compares your PC to any game\'s requirements. Calculations use normalized performance scores (PassMark/3DMark-style) and game requirement tiers by year and genre.',toolsSpecsHead:'1️⃣ Your PC specs',toolsGameHead:'2️⃣ Pick a game',
+svPass:'✅ Good',svWarn:'🟡 Borderline',svFail:'🔴 Weak',
+runitLowFps:'low FPS / frame drops',runitStutter:'stutter in busy scenes',runitLagSwap:'lag/stutter from RAM shortage',runitMismatchGpu:'Your GPU is the weak link here — it sets your visual quality ceiling',runitMismatchCpu:'Your CPU is the weak link here — it sets your frame-rate stability',runitAllGood:'✅ Everything is balanced for this game\'s requirements.',
+runitMinHint:'~720-1080p, low settings, ~30 FPS',runitRecHint:'~1080-1440p, high settings, 60+ FPS',
+battleKick:'Quick challenge',battleTitle:'⚔️ GPU Battle',battleSub:'Which one\'s stronger? Guess before you see the numbers',battlePick:'Tap here if you think this one wins',battleStreak:'Best streak',battleNext:'🔄 New round',battleCorrect:'🎉 Correct! Nailed it',battleWrong:'😅 Wrong — try again',
+runit:'Can You Run It?',runitTitle:'Can You Run It? 🎮',runitIntro:'How does it work?',runitIntro2:'Pick your PC specs and a game, and the calculator compares your GPU/CPU/RAM power against the game\'s approximate requirements (minimum and recommended) and tells you whether it will run and roughly on what settings. Numbers are estimated from each game\'s year and genre category, not scraped verbatim from each game\'s store page.',runitGame:'Game',runitGamePh:'🔍 Search for a game...',runitCalc:'🎮 Check if you can run it',runitEmpty:'Pick your specs and a game, then click "Check"',runitYes:'✅ Runs great',runitRec:'🟡 Will run — on medium settings',runitNo:'🔴 Won\'t run well on this PC',runitMinReq:'Minimum',runitRecReq:'Recommended',runitYourSpecs:'Your specs',runitGpuScore:'GPU power',runitCpuScore:'CPU power',runitRamReq:'RAM',runitVerdictYesTip:'Your PC comfortably covers the recommended requirements — expect a smooth experience.',runitVerdictRecTip:'Your PC covers the minimum but not the recommended requirements — play on low/medium settings.',runitVerdictNoTip:'Your PC is below the minimum requirements — expect poor performance or the game may not launch at all.',runitWhatLow:'What\'s short',runitGpuLow:'GPU weaker than required',runitCpuLow:'CPU weaker than required',runitRamLow:'RAM below requirement',runitNote:'* Requirements are estimated based on the game\'s release year and genre, not official numbers from every publisher.',cmpTitle:'Compare Cards',cmpHeroKick:'⚖️ GPUVault Compare',cmpHeroTitle:'Compare <em>Graphics Cards</em>',cmpHeroSub:'Pick up to 4 cards and compare side by side — performance, price, power, FPS in games',cmpHeroAdd:'➕ Add to Compare',cmpAdd:'➕ Add',cmpEmpty:'No cards selected yet — pick from above or tap ⚖ next to any card',cmpPerf:'Perf Diff *',cmpVal:'Value (EGP/point)',cmpBest:'Best in row',cmpSel:'Selected',cmpOpen:'Open comparison page side by side',cmpNow:'Compare Now ←',cmpBarTitle:'Comparison List',cmpClearAll:'Clear all',cmpEmptyBar:'Pick cards to compare with ⚖',clear:'Clear',detSpecs:'Specifications',detGames:'Game Performance — 1080p',detPower:'Power & Consumption',detVerdict:'Final Verdict',detAlts:'Alternatives (better at what?)',detFav:'Add to Favorites',detFavOn:'In Favorites',detCmp:'Compare',detWhy:'Why',detWho:'Who should buy it?',detUsed:'Avg Used',detNew:'Avg New',detRange:'Range',detNewDiff:'New premium',detNoNew:'No new',detUsedOnly:'Used only',detMfg:'Manufacturer',detArch:'Architecture',detYear:'Release Year',detVram:'Memory',detDx:'DirectX',detPerf:'Performance Score',detTdp:'Power Draw',detPsu:'Recommended PSU',detPw:'Power Connectors',detDim:'Card Dimensions',detSlot:'Card Thickness',detCase:'Recommended Case',detFans:'Card Fans',detGameNote:'📊 Approximate numbers depending on CPU & RAM — 60+ FPS = smooth • click any game',detPowerNote:'out of 575W (RTX 5090)',detPwComp:'⚡ Power Comparison',detDaily:'Daily load',detPros:'✅ Pros',detCons:'⚠️ Cons',detAltHead:'Each alternative tells you exactly what it beats this card at',detHover:'Hover — fans will speed up',tipTitle:'Before You Buy',back:'→ Back',deal:'🔥 Deal of the Day',liveBadge:'Prices updated daily',sub:'cards from NVIDIA, AMD & Intel with real prices + performance comparisons.',footer:'GPU Prices in Egypt • Used: Dubizzle + Facebook Marketplace + trading groups • New: Badr Group + Sigma + Maximum + Noon + Amazon',footerNote:'Prices are estimated market averages and can vary by condition and seller — not a live feed, so confirm the real price before buying (July 2026)',dealPerf:'EGP per performance point',fpsSmooth:'✅ Very smooth — play comfortably',fpsOk:'🟡 Playable — lower settings a bit',fpsBad:'🔴 You\'ll struggle — look for a stronger card',rTop:'Top performance, price justified by its power — one of the strongest choices.',rHighVal:'High performance at a fair price — excellent value for its class.',rHigh:'High performance suited for the high-end tier and 1440p.',rMid:'Good balance between price and performance — a safe choice for its class.',rOld:'Old card — only for light and online games.',rEco:'Budget card — for light and online games at 1080p.',rWeak:'Very weak — for display and light tasks only, not modern games.',w0:'For display and light tasks only — not for gaming',w1:'For light games (LoL, old titles) on low settings',w2:'For online games (Valorant, CS2, Fortnite) at 1080p',w3:'For 1080p Medium/High — best balance for a budget rig',w4:'For 1080p Ultra and 1440p Medium — an all-rounder',w5:'For comfortable 1440p on high settings',w6:'For 1440p Ultra and light 4K',w7:'For 4K on max settings — peak performance',pNoPw:'No extra power needed — any PSU runs it',pValue:'Among the best value for money in the market ⭐',pVramBig:'Large memory suited for modern games:',pVramOk:'Enough memory for most current 1080p games',pModern:'Modern, supports ',pNvenc:'Supports NVENC — great for streaming & recording',p1440:'Great for 1440p',p1080u:'Great for 1080p Ultra',p4k:'Excellent 4K performance',pIntPrice:'Very competitive price for the performance',pCheapUsed:'Attractive used price for tight budgets',pEff:'Excellent power efficiency',pPerW:'pt/W',cHighPw:'High power draw — needs a real ',cVramLow:'Low memory for 2026 games: ',cVram8:'8GB is becoming the minimum for 2026 games on high settings',cOld:'Old — most listings are used with no warranty',cWeak:'Won\'t handle heavy modern games',cIntDrv:'Intel drivers still improving — check your games\' compatibility',cNoNew:'No new stock — you\'ll hunt for a clean used one',cGenPw:'This generation draws relatively high power vs newer ones',cExpensive:'Pricey for the performance — cheaper alternatives exist',cMining:'Ex-mining card — inspect carefully before buying',cLowEff:'Weak power efficiency',cBus:'128-bit bus limits performance at high resolutions',altCheap:'💰 Cheaper per point',altStrong:'⚡ Stronger',altCool:'🔋 Lower power',altVram:'🧠 More VRAM',altNew:'🆕 Newer gen',altEq:'⚖️ Equivalent',langToast:'Switched to English 🇬🇧',themeLight:'Light mode ☀️',themeDark:'Dark mode 🌙'}
 };
 function t(k){return (I18N[lang]&&I18N[lang][k]!==undefined)?I18N[lang][k]:k}
 function toast(msg){let el=document.getElementById('toast');el.textContent=msg;el.classList.add('show');clearTimeout(el._t);el._t=setTimeout(()=>el.classList.remove('show'),2400)}
@@ -1708,7 +1863,7 @@ function openCard(name){const c=CARDS.find(x=>x.n===name);if(!c)return;currentCa
 const dc=document.getElementById('detailContent');
 dc.addEventListener('click',e=>{const alt=e.target.closest('.alt-row');if(alt){openCard(alt.dataset.n);return}const fav=e.target.closest('#detailFav');if(fav){toggleFav(fav.dataset.fav);return}const cmp=e.target.closest('#detailCmp');if(cmp){toggleCmp(cmp.dataset.cmp);return}const gg=e.target.closest('.gg-card');if(gg){curGame=gg.dataset.g;const sel=document.getElementById('gameSelect');if(sel)sel.value=curGame;document.querySelectorAll('.gg-card').forEach(x=>x.classList.toggle('sel',x.dataset.g===curGame));updateGameBig();return}});
 dc.addEventListener('change',e=>{if(e.target.id==='gameSelect'){curGame=e.target.value;document.querySelectorAll('.gg-card').forEach(x=>x.classList.toggle('sel',x.dataset.g===curGame));updateGameBig()}});
-function hideAllViews(){['listView','detailView','compareView','bnView','runitView'].forEach(id=>document.getElementById(id).classList.add('hidden'))}
+function hideAllViews(){['listView','detailView','compareView','toolsView'].forEach(id=>document.getElementById(id).classList.add('hidden'))}
 function showList(){hideAllViews();document.getElementById('listView').classList.remove('hidden')}
 document.getElementById('backBtn').addEventListener('click',showList);
 document.getElementById('logoBtn').addEventListener('click',()=>{showList();scrollTo({top:0,behavior:'smooth'})});
@@ -1716,73 +1871,127 @@ document.getElementById('navList').addEventListener('click',()=>{showList();show
 document.getElementById('navFav').addEventListener('click',function(){showList();showFavOnly=!showFavOnly;this.classList.toggle('active',showFavOnly);applyFilters();document.getElementById('listSec').scrollIntoView({behavior:'smooth'})});
 document.getElementById('navCmp').addEventListener('click',showCompare);
 document.getElementById('navTips').addEventListener('click',()=>{showList();setTimeout(()=>document.getElementById('tips').scrollIntoView({behavior:'smooth'}),60)});
-document.getElementById('navBn').addEventListener('click',showBn);
-document.getElementById('bnBack').addEventListener('click',showList);
-document.getElementById('navRunit').addEventListener('click',showRunit);
-document.getElementById('runitBack').addEventListener('click',showList);
-document.getElementById('ctaBn').addEventListener('click',showBn);
+document.getElementById('navBn').addEventListener('click',()=>showTools('bn'));
+document.getElementById('navRunit').addEventListener('click',()=>showTools('runit'));
+document.getElementById('toolsBack').addEventListener('click',showList);
+document.getElementById('ctaBn').addEventListener('click',()=>showTools('bn'));
 document.getElementById('ctaCmp').addEventListener('click',showCompare);
 addEventListener('keydown',e=>{if(e.key==='Escape')showList()});
 function applyLang(){document.documentElement.lang=lang;document.documentElement.dir=lang==='ar'?'rtl':'ltr';document.getElementById('langSel').value=lang;document.querySelectorAll('[data-i18n]').forEach(el=>{const k=el.getAttribute('data-i18n');if(I18N[lang][k]!==undefined)el.textContent=I18N[lang][k]});document.querySelectorAll('[data-i18n-html]').forEach(el=>{const k=el.getAttribute('data-i18n-html');if(I18N[lang][k]!==undefined)el.innerHTML=I18N[lang][k]});document.querySelectorAll('[data-i18n-ph]').forEach(el=>{const k=el.getAttribute('data-i18n-ph');if(I18N[lang][k]!==undefined)el.placeholder=I18N[lang][k]});applyFilters();updateCmpBar();if(!document.getElementById('compareView').classList.contains('hidden'))renderCompare();if(currentCard&&!document.getElementById('detailView').classList.contains('hidden')){const sc=scrollY;openCard(currentCard);scrollTo({top:sc})}showDeal()}
 document.getElementById('langSel').addEventListener('change',e=>{lang=e.target.value;localStorage.setItem('lang',lang);applyLang();toast(t('langToast'))});
-function showBn(){hideAllViews();document.getElementById('bnView').classList.remove('hidden');scrollTo({top:0})}
-function initBnSelects(){const cpuSel=document.getElementById('bnCpu');cpuSel.innerHTML=CPUS.map((c,i)=>`<option value="${i}" ${i===50?'selected':''}>${c.n}</option>`).join('');const gpuSel=document.getElementById('bnGpu');const gamingGpus=CARDS.filter(c=>!/Quadro|Radeon Pro|TITAN|RTX \d000|RTX 6000|A\d{4}|CMP|Mobile/i.test(c.n)).sort((a,b)=>b.s-a.s);gpuSel.innerHTML=gamingGpus.map(c=>`<option value="${c.n}" ${c.n==='RTX 3060'?'selected':''}>${c.n} (${c.v})</option>`).join('')}
+function showTools(tab){hideAllViews();document.getElementById('toolsView').classList.remove('hidden');setToolTab(tab||'bn');scrollTo({top:0})}
+function setToolTab(tab){document.getElementById('tabBn').classList.toggle('active',tab==='bn');document.getElementById('tabRunit').classList.toggle('active',tab==='runit');document.getElementById('panelBn').classList.toggle('hidden',tab!=='bn');document.getElementById('panelRunit').classList.toggle('hidden',tab!=='runit')}
+document.getElementById('tabBn').addEventListener('click',()=>setToolTab('bn'));
+document.getElementById('tabRunit').addEventListener('click',()=>setToolTab('runit'));
+function initBnSelects(){const cpuSel=document.getElementById('bnCpu');cpuSel.innerHTML=CPUS.map((c,i)=>`<option value="${i}" ${i===50?'selected':''}>${c.n}</option>`).join('');const gpuSel=document.getElementById('bnGpu');const gamingGpus=CARDS.filter(c=>!/Quadro|Radeon Pro|TITAN|RTX \d000|RTX 6000|A\d{4}|CMP|Instinct|FirePro|Tesla/i.test(c.n)).sort((a,b)=>b.s-a.s);gpuSel.innerHTML=gamingGpus.map(c=>`<option value="${c.n}" ${c.n==='RTX 3060'?'selected':''}>${c.n} (${c.v})</option>`).join('')}
 function filterSelect(inputId,selectId){const q=document.getElementById(inputId).value.toLowerCase();const sel=document.getElementById(selectId);Array.from(sel.options).forEach(opt=>{opt.hidden=!opt.text.toLowerCase().includes(q)})}
 document.getElementById('bnCpuSearch').addEventListener('input',()=>filterSelect('bnCpuSearch','bnCpu'));
 document.getElementById('bnGpuSearch').addEventListener('input',()=>filterSelect('bnGpuSearch','bnGpu'));
+/* ===== Bottleneck: normalized-score model, calibrated to match the 0-10/10-20/20-30/30+ bands used by
+   independent bottleneck calculators (bottleneckcalculatr.com, pc-builds.com, willitbottleneck.com) ===== */
 function calcBottleneck(){const cpu=CPUS[+document.getElementById('bnCpu').value];const gpu=CARDS.find(c=>c.n===document.getElementById('bnGpu').value);const res=+document.getElementById('bnRes').value;const ram=+document.getElementById('bnRam').value;const disk=document.getElementById('bnDisk').value;const psuW=+document.getElementById('bnPsu').value;const mb=document.getElementById('bnMb').value;if(!cpu||!gpu)return;
   const g3d=6500*Math.pow(Math.max(0.01,gpu.s/2.6),0.6);const pm=6300*Math.pow(Math.max(0.01,cpu.s/29),1.73);
   const G={1080:1,1440:0.62,2160:0.30},C={1080:1,1440:0.82,2160:0.62};const gpuLim=g3d*G[res],cpuLim=pm*C[res];const ratio=cpuLim/Math.max(0.1,gpuLim);
-  const baseBn=Math.min(80,Math.round((1-Math.min(ratio,1/ratio))*100));let mainCore,cpuUsage,gpuUsage;
+  const baseBn=Math.min(85,Math.round((1-Math.min(ratio,1/ratio))*100));let mainCore,cpuUsage,gpuUsage;
   if(ratio>1.18){mainCore='cpu';cpuUsage=99;gpuUsage=Math.max(22,Math.min(92,Math.round(99/ratio)))}else if(ratio<0.85){mainCore='gpu';gpuUsage=99;cpuUsage=Math.max(22,Math.min(92,Math.round(99*ratio)))}else{mainCore='balanced';cpuUsage=Math.max(58,Math.min(95,Math.round(80+(1-ratio)*45)));gpuUsage=Math.max(62,Math.min(98,Math.round(84+(ratio-1)*35)))}
   let ramPen=0;if(ram<8)ramPen=18;else if(ram<16)ramPen=7;else if(ram<32&&gpu.s>20)ramPen=3;const mbScore=MB_SCORE[mb]||30;let mbPen=0;if(cpu.s>mbScore*1.6)mbPen=Math.min(22,Math.round((cpu.s/mbScore-1.6)*20));const need=psu(gpu);let psuPen=0;if(psuW<need)psuPen=Math.min(28,Math.round((need-psuW)/7));
   let pciePen=0;if(mbScore<20&&gpu.s>8)pciePen=Math.min(16,Math.round((gpu.s-8)*0.7));
-  const totalBn=Math.min(95,Math.round(baseBn+ramPen+mbPen+psuPen+pciePen));const contribs=[{w:mainCore,v:baseBn},{w:'ram',v:ramPen},{w:'mb',v:mbPen},{w:'psu',v:psuPen},{w:'pcie',v:pciePen}].filter(x=>x.w!=='balanced'&&x.v>0).sort((a,b)=>b.v-a.v);const mainBn=(contribs[0]&&contribs[0].v>4)?contribs[0].w:(totalBn<10?'none':mainCore);
-  const eff=1-(ramPen+mbPen+psuPen+pciePen)/100*0.5;const fps=Math.max(8,Math.round(Math.min(gpuLim,cpuLim)*0.018*eff));let verdict,cls;if(totalBn<10){verdict=t('bnGood');cls='good'}else if(totalBn<25){verdict=t('bnMid');cls='mid'}else{verdict=t('bnBad');cls='bad'}
+  const totalBn=Math.min(96,Math.round(baseBn+ramPen+mbPen+psuPen+pciePen));const contribs=[{w:mainCore,v:baseBn},{w:'ram',v:ramPen},{w:'mb',v:mbPen},{w:'psu',v:psuPen},{w:'pcie',v:pciePen}].filter(x=>x.w!=='balanced'&&x.v>0).sort((a,b)=>b.v-a.v);const mainBn=(contribs[0]&&contribs[0].v>4)?contribs[0].w:(totalBn<10?'none':mainCore);
+  const eff=1-(ramPen+mbPen+psuPen+pciePen)/100*0.5;const fps=Math.max(8,Math.round(Math.min(gpuLim,cpuLim)*0.018*eff));
+  let verdict,cls,band;
+  if(totalBn<10){verdict=t('bnGood');cls='good';band=t('bnBandExcellent')}
+  else if(totalBn<20){verdict=t('bnMinor');cls='good';band=t('bnBandMinor')}
+  else if(totalBn<30){verdict=t('bnMid');cls='mid';band=t('bnBandNoticeable')}
+  else{verdict=t('bnBad');cls='bad';band=t('bnBandMajor')}
+  const healthScore=Math.max(4,100-totalBn);
   const whoLabel=mainBn==='cpu'?t('bnWhoCpu'):mainBn==='gpu'?t('bnWhoGpu'):mainBn==='ram'?t('bnWhoRam'):mainBn==='mb'?t('bnWhoMb'):mainBn==='psu'?t('bnWhoPsu'):mainBn==='pcie'?t('bnWhoPcie'):t('bnWhoNone');const tipsList=[];
   if(mainBn==='cpu')tipsList.push(`🔧 <b>${t('bnCpuBn')}</b> — ${t('bnCpuTip')}`);if(mainBn==='gpu')tipsList.push(`🎮 <b>${t('bnGpuBn')}</b> — ${t('bnGpuTip')}`);if(ramPen>=7)tipsList.push(`💾 <b>${t('bnRamLow')} (${ram}GB)</b> — ${t('bnRamTip')}`);if(mbPen>0)tipsList.push(`🔲 <b>${t('bnMbBn')}</b> — ${t('bnMbTip')}`);if(pciePen>3)tipsList.push(`🔌 <b>${t('bnPcieBn')}</b> — ${t('bnPcieTip')}`);if(psuPen>0)tipsList.push(`🔌 <b>${t('bnPsuLow')} (${psuW}W)</b> — ${t('bnPsuTip')} (${need}W)`);if(disk.startsWith('hdd'))tipsList.push(`💽 <b>${t('bnHdd')}</b> — ${t('bnHddTip')}`);if(tipsList.length===0)tipsList.push(t('bnAllGood'));
-  document.getElementById('bnResult').innerHTML=`<div class="bn-score"><b style="color:${cls==='good'?'var(--nv)':cls==='mid'?'var(--warm)':'var(--amd)'}">${totalBn}%</b><span>${t('bnScore')}</span></div><div class="bn-verdict ${cls}">${verdict}</div><div class="bn-mainwho">${t('bnMain')}: <b>${whoLabel}</b></div><div class="bn-bars"><div class="bn-bar-row"><span class="lbl">🔧 ${t('cpu')}</span><span class="bn-bar"><i class="cpu" style="width:${cpuUsage}%"></i></span><span class="val">${cpuUsage}%</span></div><div class="bn-bar-row"><span class="lbl">🎮 ${t('gpu')}</span><span class="bn-bar"><i class="gpu" style="width:${gpuUsage}%"></i></span><span class="val">${gpuUsage}%</span></div></div><div class="bn-fps">🎯 <b>${t('bnFps')}</b> ~${fps} FPS<br><small style="color:var(--muted)">${t('bnApprox')}</small></div><div class="bn-tips"><b>${t('bnTips')}</b><br>${tipsList.join('<br><br>')}</div>`}
+  document.getElementById('bnResult').innerHTML=`<div class="bn-score"><b style="color:${cls==='good'?'var(--nv)':cls==='mid'?'var(--warm)':'var(--amd)'}">${totalBn}%</b><span>${t('bnScore')} · ${band}</span></div><div class="bn-verdict ${cls}">${verdict}</div><div class="bn-mainwho">${t('bnMain')}: <b>${whoLabel}</b> &nbsp;•&nbsp; ${t('bnHealth')}: <b style="color:var(--gold)">${healthScore}/100</b></div><div class="bn-bars"><div class="bn-bar-row"><span class="lbl">🔧 ${t('cpu')}</span><span class="bn-bar"><i class="cpu" style="width:${cpuUsage}%"></i></span><span class="val">${cpuUsage}%</span></div><div class="bn-bar-row"><span class="lbl">🎮 ${t('gpu')}</span><span class="bn-bar"><i class="gpu" style="width:${gpuUsage}%"></i></span><span class="val">${gpuUsage}%</span></div></div><div class="bn-fps">🎯 <b>${t('bnFps')}</b> ~${fps} FPS<br><small style="color:var(--muted)">${t('bnApprox')}</small></div><div class="bn-tips"><b>${t('bnTips')}</b><br>${tipsList.join('<br><br>')}</div>`}
 document.getElementById('bnCalc').addEventListener('click',calcBottleneck);
 initBnSelects();
-function showRunit(){hideAllViews();document.getElementById('runitView').classList.remove('hidden');scrollTo({top:0})}
 function initRunitSelects(){
-  const cpuSel=document.getElementById('ruCpu');cpuSel.innerHTML=CPUS.map((c,i)=>`<option value="${i}" ${i===50?'selected':''}>${c.n}</option>`).join('');
-  const gpuSel=document.getElementById('ruGpu');const gamingGpus=CARDS.filter(c=>!/Quadro|Radeon Pro|TITAN|RTX \d000|RTX 6000|A\d{4}|CMP|Instinct|FirePro|Tesla|Mobile/i.test(c.n)).sort((a,b)=>b.s-a.s);
-  gpuSel.innerHTML=gamingGpus.map(c=>`<option value="${c.n}" ${c.n==='RTX 3060'?'selected':''}>${c.n} (${c.v})</option>`).join('');
   const gameSel=document.getElementById('ruGame');const sortedGames=[...RUNIT_GAMES].sort((a,b)=>a.n.localeCompare(b.n));
   gameSel.innerHTML=sortedGames.map((g,i)=>`<option value="${g.n}" ${i===0?'selected':''}>${g.n} (${g.y})</option>`).join('');
 }
-document.getElementById('ruCpuSearch').addEventListener('input',()=>filterSelect('ruCpuSearch','ruCpu'));
-document.getElementById('ruGpuSearch').addEventListener('input',()=>filterSelect('ruGpuSearch','ruGpu'));
 document.getElementById('ruGameSearch').addEventListener('input',()=>filterSelect('ruGameSearch','ruGame'));
+/* ===== Can You Run It: per-component your-spec vs game-requirement comparison (min & recommended),
+   modelled on the side-by-side approach used by pcgamebenchmark.com / systemrequirementslab.com ===== */
+function svRow(label,have,needMin,needRec,unit,scaleMax){
+  const pass = have>=needRec, warn = !pass && have>=needMin;
+  const cls = pass?'pass':(warn?'warn':'fail');
+  const pct = Math.max(4,Math.min(100,Math.round(have/scaleMax*100)));
+  const markPct = Math.max(2,Math.min(98,Math.round(needMin/scaleMax*100)));
+  const status = pass?t('svPass'):(warn?t('svWarn'):t('svFail'));
+  return `<div class="spec-vs-row"><span class="sv-lbl">${label}</span><div><div class="sv-track"><i class="${cls}" style="width:${pct}%"></i><span class="sv-mark" style="inset-inline-start:${markPct}%"></span></div><div class="sv-status ${cls}">${status}</div></div><span class="sv-you">${have}${unit}</span></div>`;
+}
 function calcRunIt(){
-  const cpu=CPUS[+document.getElementById('ruCpu').value];const gpu=CARDS.find(c=>c.n===document.getElementById('ruGpu').value);
-  const ram=+document.getElementById('ruRam').value;const game=RUNIT_GAMES.find(g=>g.n===document.getElementById('ruGame').value);
+  const cpu=CPUS[+document.getElementById('bnCpu').value];const gpu=CARDS.find(c=>c.n===document.getElementById('bnGpu').value);
+  const ram=+document.getElementById('bnRam').value;const game=RUNIT_GAMES.find(g=>g.n===document.getElementById('ruGame').value);
   if(!cpu||!gpu||!game)return;
   const gpuOk_rec=gpu.s>=game.rg, gpuOk_min=gpu.s>=game.mg;
   const cpuOk_rec=cpu.s>=game.rc, cpuOk_min=cpu.s>=game.mc;
-  const ramOk=ram>=game.ram;
+  const ramOk_rec=ram>=Math.max(game.ram,8), ramOk_min=ram>=game.ram;
   let cls,verdict,tip;
-  if(gpuOk_rec&&cpuOk_rec&&ramOk){cls='good';verdict=t('runitYes');tip=t('runitVerdictYesTip')}
-  else if(gpuOk_min&&cpuOk_min&&ramOk){cls='mid';verdict=t('runitRec');tip=t('runitVerdictRecTip')}
+  if(gpuOk_rec&&cpuOk_rec&&ramOk_rec){cls='good';verdict=t('runitYes');tip=t('runitVerdictYesTip')}
+  else if(gpuOk_min&&cpuOk_min&&ramOk_min){cls='mid';verdict=t('runitRec');tip=t('runitVerdictRecTip')}
   else{cls='bad';verdict=t('runitNo');tip=t('runitVerdictNoTip')}
-  const lacking=[];if(!gpuOk_min)lacking.push(t('runitGpuLow'));if(!cpuOk_min)lacking.push(t('runitCpuLow'));if(!ramOk)lacking.push(t('runitRamLow'));
-  const pct=(have,need)=>Math.max(4,Math.min(100,Math.round(have/need*100)));
+  // diagnose the *specific* limiting part, and its severity, like a real GPU/CPU bottleneck warning
+  const gpuGap=gpu.s/game.mg, cpuGap=cpu.s/game.mc;
+  const lacking=[];
+  if(!gpuOk_min)lacking.push(`🎮 ${t('runitGpuLow')} — ${t('runitLowFps')}`);
+  if(!cpuOk_min)lacking.push(`🔧 ${t('runitCpuLow')} — ${t('runitStutter')}`);
+  if(!ramOk_min)lacking.push(`💾 ${t('runitRamLow')} — ${t('runitLagSwap')}`);
+  if(gpuOk_min&&cpuOk_min&&ramOk_min&&!(gpuOk_rec&&cpuOk_rec&&ramOk_rec)){
+    if(!gpuOk_rec&&cpuOk_rec)lacking.push(`⚖️ ${t('runitMismatchGpu')}`);
+    else if(!cpuOk_rec&&gpuOk_rec)lacking.push(`⚖️ ${t('runitMismatchCpu')}`);
+  }
   document.getElementById('ruResult').innerHTML=`
   <div class="bn-verdict ${cls}" style="margin-bottom:1rem">${verdict}</div>
   <div class="bn-mainwho">${game.n} <span style="color:var(--muted)">(${game.y})</span></div>
-  <div class="bn-bars" style="margin-top:1rem">
-    <div class="bn-bar-row"><span class="lbl">🎮 ${t('runitGpuScore')}</span><span class="bn-bar"><i class="gpu" style="width:${pct(gpu.s,game.rg)}%"></i></span><span class="val">${gpu.s}</span></div>
-    <div class="bn-bar-row"><span class="lbl">🔧 ${t('runitCpuScore')}</span><span class="bn-bar"><i class="cpu" style="width:${pct(cpu.s,game.rc)}%"></i></span><span class="val">${cpu.s}</span></div>
-  </div>
-  <div class="bn-fps">${tip}<br><br>
-  <b>${t('runitMinReq')}:</b> GPU ${game.mg}/${MAX_S} • CPU ${game.mc} • RAM ${game.ram}GB<br>
-  <b>${t('runitRecReq')}:</b> GPU ${game.rg}/${MAX_S} • CPU ${game.rc} • RAM ${Math.max(game.ram,8)}GB</div>
-  ${lacking.length?`<div class="bn-tips"><b>${t('runitWhatLow')}:</b><br>${lacking.join('<br>')}</div>`:''}
+  <p class="tools-form-head" style="margin:1rem 0 .5rem">${t('runitYourSpecs')} <span style="color:var(--muted);font-weight:400;font-size:.75rem">vs ${t('runitMinReq')}/${t('runitRecReq')}</span></p>
+  ${svRow('🎮 GPU',gpu.s,game.mg,game.rg,'',Math.max(game.rg*1.3,MAX_S))}
+  ${svRow('🔧 CPU',cpu.s,game.mc,game.rc,'',Math.max(game.rc*1.3,98))}
+  ${svRow('💾 RAM',ram,game.ram,Math.max(game.ram,8),'GB',Math.max(game.ram*2,32))}
+  <div class="bn-fps" style="margin-top:1rem">${tip}<br><br>
+  <b>${t('runitMinReq')}</b> (${t('runitMinHint')}): GPU ${game.mg}/${MAX_S} • CPU ${game.mc} • RAM ${game.ram}GB<br>
+  <b>${t('runitRecReq')}</b> (${t('runitRecHint')}): GPU ${game.rg}/${MAX_S} • CPU ${game.rc} • RAM ${Math.max(game.ram,8)}GB</div>
+  ${lacking.length?`<div class="bn-tips"><b>${t('runitWhatLow')}:</b><br>${lacking.join('<br>')}</div>`:`<div class="bn-tips">${t('runitAllGood')}</div>`}
   <p class="g-note" style="margin-top:.8rem">${t('runitNote')}</p>`;
 }
 document.getElementById('ruCalc').addEventListener('click',calcRunIt);
 initRunitSelects();
+/* ===== ⚔️ GPU Battle mini-game ===== */
+let battleState=null,battleStreak=+(localStorage.getItem('battle_streak')||0),battleCur=0;
+document.getElementById('battleStreak').textContent=battleStreak;
+function newBattle(){
+  const pool=CARDS.filter(c=>c.s>0.3);
+  let a=pool[Math.floor(Math.random()*pool.length)],b=pool[Math.floor(Math.random()*pool.length)];
+  let tries=0;while((b.n===a.n||Math.abs(Math.log(a.s/b.s))>2.3)&&tries<40){b=pool[Math.floor(Math.random()*pool.length)];tries++}
+  battleState={a,b,answered:false};
+  document.getElementById('bL_brand').textContent=BN[a.b];document.getElementById('bL_name').textContent=a.n;
+  document.getElementById('bR_brand').textContent=BN[b.b];document.getElementById('bR_name').textContent=b.n;
+  document.getElementById('bL_reveal').textContent='';document.getElementById('bR_reveal').textContent='';
+  document.getElementById('battleL').className='battle-card';document.getElementById('battleR').className='battle-card';
+  document.getElementById('battleResult').textContent='';document.getElementById('battleNext').classList.add('hidden');
+}
+function pickBattle(side){
+  if(!battleState||battleState.answered)return;battleState.answered=true;
+  const {a,b}=battleState;const winner=a.s>=b.s?'L':'R';const correct=side===winner;
+  const lEl=document.getElementById('battleL'),rEl=document.getElementById('battleR');
+  lEl.classList.add('locked');rEl.classList.add('locked');
+  lEl.classList.add(winner==='L'?'win':'lose');rEl.classList.add(winner==='R'?'win':'lose');
+  document.getElementById(side==='L'?'battleL':'battleR').classList.add(correct?'correct':'wrong');
+  document.getElementById('bL_reveal').textContent=`${a.s} pts`;document.getElementById('bR_reveal').textContent=`${b.s} pts`;
+  if(correct){battleCur++;if(battleCur>battleStreak){battleStreak=battleCur;localStorage.setItem('battle_streak',battleStreak);document.getElementById('battleStreak').textContent=battleStreak}}
+  else{battleCur=0}
+  document.getElementById('battleResult').textContent=correct?t('battleCorrect'):t('battleWrong');
+  document.getElementById('battleResult').style.color=correct?'var(--nv)':'var(--amd)';
+  document.getElementById('battleNext').classList.remove('hidden');
+}
+document.getElementById('battleL').addEventListener('click',()=>pickBattle('L'));
+document.getElementById('battleR').addEventListener('click',()=>pickBattle('R'));
+document.getElementById('battleNext').addEventListener('click',newBattle);
+newBattle();
 function applyTheme(){document.body.classList.toggle('light',theme==='light');document.getElementById('themeBtn').textContent=theme==='light'?'☀️':'';if(currentCard&&!document.getElementById('detailView').classList.contains('hidden')){const sc=scrollY;openCard(currentCard);scrollTo({top:sc})}}
 document.getElementById('themeBtn').addEventListener('click',()=>{theme=theme==='light'?'dark':'light';localStorage.setItem('theme',theme);applyTheme();toast(theme==='light'?t('themeLight'):t('themeDark'))});
 const navEl=document.getElementById('nav');addEventListener('scroll',()=>navEl.classList.toggle('scrolled',scrollY>40),{passive:true});
